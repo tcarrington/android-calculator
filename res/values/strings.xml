@@ -7,5 +7,6 @@
     <string name="d_button">D</string>
     <string name="e_button">E</string>
 	<string name="f_button">F</string>
+	<string name= "div_button">/</string>
 
 </resources>
