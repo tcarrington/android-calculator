@@ -146,44 +146,105 @@ public class MainActivity extends Activity {
 		DisplayMetrics metrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
 		int height = metrics.heightPixels;
-		Button button_one = (Button) findViewById(R.id.button_1);
-		Button button_two = (Button) findViewById(R.id.button_2);
-		Button button_three = (Button) findViewById(R.id.button_3);
-		Button add_button = (Button) findViewById(R.id.add_button);
+		Button d_button = (Button) findViewById(R.id.d_button);
+		Button e_button = (Button) findViewById(R.id.e_button);
+		Button f_button = (Button) findViewById(R.id.f_button);
+		Button a_button = (Button) findViewById(R.id.a_button);
+		Button b_button = (Button) findViewById(R.id.b_button);
+		Button c_button = (Button) findViewById(R.id.c_button);
+		Button button_7 = (Button) findViewById(R.id.button_7);
+		Button button_8 = (Button) findViewById(R.id.button_8);
+		Button button_9 = (Button) findViewById(R.id.button_9);
+		Button button_4 = (Button) findViewById(R.id.button_4);
+		Button button_5 = (Button) findViewById(R.id.button_5);
+		Button button_6 = (Button) findViewById(R.id.button_6);
+		Button button_1 = (Button) findViewById(R.id.button_1);
+		Button button_2 = (Button) findViewById(R.id.button_2);
+		Button button_3 = (Button) findViewById(R.id.button_3);
+		Button button_0 = (Button) findViewById(R.id.button_0);
 		
 	    // Check which radio button was clicked
 	    switch(view.getId()) {
 	        case R.id.bin_radio:
 	            if (checked)
 	                // TODO: add logic for binary calculations and conversions
-	            	button_one.setHeight((height/9)-32);
-	    			button_two.setHeight((height/9)-16);
-	    			button_three.setHeight((height/9)-16);
-	    			add_button.setHeight((height/9)-16);
+	            	f_button.setEnabled(false);
+	            	e_button.setEnabled(false);
+	            	d_button.setEnabled(false);
+	            	c_button.setEnabled(false);
+	            	b_button.setEnabled(false);
+	            	a_button.setEnabled(false);
+	            	button_9.setEnabled(false);
+	            	button_8.setEnabled(false);
+	            	button_7.setEnabled(false);
+	            	button_6.setEnabled(false);
+	            	button_5.setEnabled(false);
+	            	button_4.setEnabled(false);
+	            	button_3.setEnabled(false);
+	            	button_2.setEnabled(false);
+	            	button_1.setEnabled(true);
+	            	button_0.setEnabled(true);
 	            break;
 	        case R.id.oct_radio:
 	            if (checked)
 	                // TODO: add logic for octal calculations and conversions
-	            	button_one.setHeight((height/9)-16);
-	    			button_two.setHeight((height/9)-32);
-	    			button_three.setHeight((height/9)-16);
-	    			add_button.setHeight((height/9)-16);
+	            	f_button.setEnabled(false);
+	            	e_button.setEnabled(false);
+	            	d_button.setEnabled(false);
+	            	c_button.setEnabled(false);
+	            	b_button.setEnabled(false);
+	            	a_button.setEnabled(false);
+	            	button_9.setEnabled(false);
+	            	button_8.setEnabled(false);
+	            	button_7.setEnabled(true);
+	            	button_6.setEnabled(true);
+	            	button_5.setEnabled(true);
+	            	button_4.setEnabled(true);
+	            	button_3.setEnabled(true);
+	            	button_2.setEnabled(true);
+	            	button_1.setEnabled(true);
+	            	button_0.setEnabled(true);
 	            break;
 	        case R.id.dec_radio:
 	        	if (checked)
 	        		// TODO: add logic for decimal calculations and conversions
-		    		button_one.setHeight((height/9)-16);
-		    		button_two.setHeight((height/9)-16);
-	    			button_three.setHeight((height/9)-32);
-	    			add_button.setHeight((height/9)-16);
+	            	f_button.setEnabled(false);
+	            	e_button.setEnabled(false);
+	            	d_button.setEnabled(false);
+	            	c_button.setEnabled(false);
+	            	b_button.setEnabled(false);
+	            	a_button.setEnabled(false);
+	            	button_9.setEnabled(true);
+	            	button_8.setEnabled(true);
+	            	button_7.setEnabled(true);
+	            	button_6.setEnabled(true);
+	            	button_5.setEnabled(true);
+	            	button_4.setEnabled(true);
+	            	button_3.setEnabled(true);
+	            	button_2.setEnabled(true);
+	            	button_1.setEnabled(true);
+	            	button_0.setEnabled(true);
 	        	break;
 	        case R.id.hex_radio:
 	        	if(checked)
 	        		// TODO: add logic for hexadecimal calculations and conversions
-		    		button_one.setHeight((height/9)-16);
-		    		button_two.setHeight((height/9)-16);
-		    		button_three.setHeight((height/9)-16);
-	    			add_button.setHeight((height/9)-32);
+	            	f_button.setEnabled(true);
+	            	e_button.setEnabled(true);
+	            	d_button.setEnabled(true);
+	            	c_button.setEnabled(true);
+	            	b_button.setEnabled(true);
+	            	a_button.setEnabled(true);
+	            	button_9.setEnabled(true);
+	            	button_8.setEnabled(true);
+	            	button_7.setEnabled(true);
+	            	button_6.setEnabled(true);
+	            	button_5.setEnabled(true);
+	            	button_4.setEnabled(true);
+	            	button_3.setEnabled(true);
+	            	button_2.setEnabled(true);
+	            	button_1.setEnabled(true);
+	            	button_0.setEnabled(true);
+
 	        	break;
 	    }
 	}
