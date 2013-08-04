@@ -111,6 +111,12 @@ public class MainActivity extends Activity {
 		decimal_button.setHeight((height/9)-16);
 		plusminus_button.setHeight((height/9)-16);
 		equal_button.setHeight((height/9)-16);
+		//set defaults for radio buttons
+		bin_radio.setChecked(true);
+		oct_radio.setChecked(false);
+		dec_radio.setChecked(false);
+		hex_radio.setChecked(false);
+		
 		
 
 	}
