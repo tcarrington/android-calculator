@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
 	double solutionDouble = 0.0;
 	String solutionString;
 	boolean operationFlag = false;
-	public String curRadioButton = "bin_button";
+	String curRadioButton = "bin_button";
 	
 	//start of main code
 	@Override
@@ -129,7 +129,7 @@ public class MainActivity extends Activity {
 		hex_radio.setChecked(false);
 		//required assignment for leading zero at onCreate()
 		displayValue = "0";
-		
+
 	}
 
 	@Override
@@ -143,9 +143,7 @@ public class MainActivity extends Activity {
 	public void onRadioButtonClicked(View view) {
 	    // Is the button now checked?
 	    boolean checked = ((RadioButton) view).isChecked();
-		DisplayMetrics metrics = new DisplayMetrics();
-		getWindowManager().getDefaultDisplay().getMetrics(metrics);
-		int height = metrics.heightPixels;
+	    
 		Button d_button = (Button) findViewById(R.id.d_button);
 		Button e_button = (Button) findViewById(R.id.e_button);
 		Button f_button = (Button) findViewById(R.id.f_button);
@@ -453,17 +451,45 @@ public class MainActivity extends Activity {
 	public void send_equal(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
 		operand2 = display.getText().toString();
-		if(operation == "+")
+		if(operation == "+") {
+			if(curRadioButton == "bin_button") {
+				//convert do decimal and back
+				int binValue1 = 0;
+				int binValue2 = 0;
+				int binSolution = 0;
+				for(int i = 0; i < operand1.length(); i ++) {
+					binValue1 += (int)Math.pow((Double.parseDouble(Character.toString(operand1.charAt(operand1.length()-1-i)))*2), i);
+				}
+				for(int i = 0; i < operand2.length(); i ++) {
+					binValue1 += (int)Math.pow((Double.parseDouble(Character.toString(operand2.charAt(operand2.length()-1-i)))*2), i);
+				}
+				binSolution = binValue1 + binValue2;
+				
+			}
+			else if(curRadioButton == "oct_button") {
+				
+			}
+			else if(curRadioButton == "dec_button") {
+				
+			}
+			else if(curRadioButton == "hex_button") {
+				
+			}
 			solutionDouble = Double.parseDouble(operand1) + Double.parseDouble(operand2);
-		else if(operation == "-")
+		}
+		else if(operation == "-") {
 			solutionDouble = Double.parseDouble(operand1) - Double.parseDouble(operand2);
-		else if(operation == "*")
+		}
+		else if(operation == "*") {
 			solutionDouble = Double.parseDouble(operand1) * Double.parseDouble(operand2);
-		else if(operation == "/")
+		}
+		else if(operation == "/") {
 			solutionDouble = Double.parseDouble(operand1) / Double.parseDouble(operand2);
+		}
 		solutionString = String.valueOf(solutionDouble);
 		display.setText(solutionString);
 		displayValue = "0";
 	}
+	
 
 }
