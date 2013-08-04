@@ -18,6 +18,7 @@
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
         android:layout_below = "@id/display"
+        android:background = "@null"
         android:text = "@string/d_button" /> 
     <Button
         android:id = "@+id/e_button"
@@ -25,6 +26,7 @@
         android:layout_height = "wrap_content"
         android:layout_below = "@id/display"
         android:layout_toRightOf = "@id/d_button"
+        android:background = "@null"
         android:text="@string/e_button" />
     <Button
         android:id = "@+id/f_button"
@@ -32,6 +34,7 @@
         android:layout_height = "wrap_content"
         android:layout_below = "@id/display"
         android:layout_toRightOf = "@id/e_button"
+        android:background = "@null"
         android:text="@string/f_button" />
     <Button
         android:id = "@+id/clear_button"
@@ -48,6 +51,7 @@
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
         android:layout_below = "@id/d_button"
+        android:background = "@null"
         android:text = "@string/a_button" /> 
     <Button
         android:id = "@+id/b_button"
@@ -55,6 +59,7 @@
         android:layout_height = "wrap_content"
         android:layout_below = "@id/e_button"
         android:layout_toRightOf = "@id/a_button"
+        android:background = "@null"
         android:text="@string/b_button" />
     <Button
         android:id = "@+id/c_button"
@@ -62,6 +67,7 @@
         android:layout_height = "wrap_content"
         android:layout_below = "@id/f_button"
         android:layout_toRightOf = "@id/b_button"
+        android:background = "@null"
         android:text="@string/c_button" />
     <Button
         android:id = "@+id/div_button"
@@ -69,6 +75,7 @@
         android:layout_height = "wrap_content"
         android:layout_below = "@id/clear_button"
         android:layout_toRightOf = "@id/c_button"
+        android:background = "@null"
         android:text = "@string/div_button" />
     <!-- End of second row -->
  
@@ -78,6 +85,7 @@
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
         android:layout_below = "@id/a_button"
+        android:background = "@null"
         android:text = "@string/button_7" /> 
     <Button
         android:id = "@+id/button_8"
@@ -85,6 +93,7 @@
         android:layout_height = "wrap_content"
         android:layout_below = "@id/b_button"
         android:layout_toRightOf = "@id/button_7"
+        android:background = "@null"
         android:text="@string/button_8" />
     <Button
         android:id = "@+id/button_9"
@@ -92,6 +101,7 @@
         android:layout_height = "wrap_content"
         android:layout_below = "@id/c_button"
         android:layout_toRightOf = "@id/button_8"
+        android:background = "@null"
         android:text="@string/button_9" />
     <Button
         android:id = "@+id/mult_button"
@@ -99,6 +109,7 @@
         android:layout_height = "wrap_content"
         android:layout_below = "@id/div_button"
         android:layout_toRightOf = "@id/button_9"
+        android:background = "@null"
         android:text = "@string/mult_button" />
     <!-- End of third row -->
     
@@ -108,6 +119,7 @@
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
         android:layout_below = "@id/button_7"
+        android:background = "@null"
         android:text = "@string/button_4" /> 
     <Button
         android:id = "@+id/button_5"
@@ -115,6 +127,7 @@
         android:layout_height = "wrap_content"
         android:layout_below = "@id/button_8"
         android:layout_toRightOf = "@id/button_4"
+        android:background = "@null"
         android:text="@string/button_5" />
     <Button
         android:id = "@+id/button_6"
@@ -122,6 +135,7 @@
         android:layout_height = "wrap_content"
         android:layout_below = "@id/button_9"
         android:layout_toRightOf = "@id/button_5"
+        android:background = "@null"
         android:text="@string/button_6" />
     <Button
         android:id = "@+id/sub_button"
@@ -129,6 +143,7 @@
         android:layout_height = "wrap_content"
         android:layout_below = "@id/mult_button"
         android:layout_toRightOf = "@id/button_6"
+        android:background = "@null"
         android:text = "@string/sub_button" />
     <!-- End of 4th row -->
     
@@ -138,6 +153,7 @@
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
         android:layout_below = "@id/button_4"
+        android:background = "@null"
         android:text = "@string/button_1" /> 
     <Button
         android:id = "@+id/button_2"
@@ -145,6 +161,7 @@
         android:layout_height = "wrap_content"
         android:layout_below = "@id/button_5"
         android:layout_toRightOf = "@id/button_1"
+        android:background = "@null"
         android:text="@string/button_2" />
     <Button
         android:id = "@+id/button_3"
@@ -152,6 +169,7 @@
         android:layout_height = "wrap_content"
         android:layout_below = "@id/button_6"
         android:layout_toRightOf = "@id/button_2"
+        android:background = "@null"
         android:text="@string/button_3" />
     <Button
         android:id = "@+id/add_button"
@@ -159,6 +177,7 @@
         android:layout_height = "wrap_content"
         android:layout_below = "@id/sub_button"
         android:layout_toRightOf = "@id/button_3"
+        android:background = "@null"
         android:text = "@string/add_button" />
     <!-- End of 5th row -->
     
@@ -168,6 +187,7 @@
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
         android:layout_below = "@id/button_1"
+        android:background = "@null"
         android:text = "@string/button_0" /> 
     <Button
         android:id = "@+id/decimal_button"
@@ -175,6 +195,7 @@
         android:layout_height = "wrap_content"
         android:layout_below = "@id/button_2"
         android:layout_toRightOf = "@id/button_0"
+        android:background = "@null"
         android:text="@string/decimal_button" />
     <Button
         android:id = "@+id/plusminus_button"
@@ -182,6 +203,7 @@
         android:layout_height = "wrap_content"
         android:layout_below = "@id/button_3"
         android:layout_toRightOf = "@id/decimal_button"
+        android:background = "@null"
         android:text="@string/plusminus_button" />
     <Button
         android:id = "@+id/equal_button"
@@ -189,6 +211,7 @@
         android:layout_height = "wrap_content"
         android:layout_below = "@id/add_button"
         android:layout_toRightOf = "@id/plusminus_button"
+        android:background = "@null"
         android:text = "@string/equal_button" />
     <!-- End of 6th row -->
     

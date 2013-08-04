@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -17,6 +18,8 @@ public class MainActivity extends Activity {
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
 		
 		int width = metrics.widthPixels;
+		int height = metrics.heightPixels;
+		TextView display = (TextView) findViewById(R.id.display);
 		Button d_button = (Button) findViewById(R.id.d_button);
 		Button e_button = (Button) findViewById(R.id.e_button);
 		Button f_button = (Button) findViewById(R.id.f_button);
@@ -41,6 +44,8 @@ public class MainActivity extends Activity {
 		Button decimal_button = (Button) findViewById(R.id.decimal_button);
 		Button plusminus_button = (Button) findViewById(R.id.plusminus_button);
 		Button equal_button = (Button) findViewById(R.id.equal_button);
+		//width formatting
+		display.setWidth(width-16);
 		d_button.setWidth((width/4)-16);
 		e_button.setWidth((width/4)-16);
 		f_button.setWidth((width/4)-16);
@@ -66,6 +71,33 @@ public class MainActivity extends Activity {
 		decimal_button.setWidth((width/4)-16);
 		plusminus_button.setWidth((width/4)-16);
 		equal_button.setWidth((width/4)-16);
+		//height formatting
+		display.setHeight(((height*2)/9)-16);
+		d_button.setHeight((height/9)-16);
+		e_button.setHeight((height/9)-16);
+		f_button.setHeight((height/9)-16);
+		clear_button.setHeight((height/9)-16);
+		a_button.setHeight((height/9)-16);
+		b_button.setHeight((height/9)-16);
+		c_button.setHeight((height/9)-16);
+		div_button.setHeight((height/9)-16);
+		button_7.setHeight((height/9)-16);
+		button_8.setHeight((height/9)-16);
+		button_9.setHeight((height/9)-16);
+		mult_button.setHeight((height/9)-16);
+		button_4.setHeight((height/9)-16);
+		button_5.setHeight((height/9)-16);
+		button_6.setHeight((height/9)-16);
+		sub_button.setHeight((height/9)-16);
+		button_1.setHeight((height/9)-16);
+		button_2.setHeight((height/9)-16);
+		button_3.setHeight((height/9)-16);
+		add_button.setHeight((height/9)-16);
+		mult_button.setHeight((height/9)-16);
+		button_0.setHeight((height/9)-16);
+		decimal_button.setHeight((height/9)-16);
+		plusminus_button.setHeight((height/9)-16);
+		equal_button.setHeight((height/9)-16);
 		
 
 	}
