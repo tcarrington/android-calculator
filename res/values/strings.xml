@@ -7,25 +7,26 @@
     <string name="d_button">D</string>
     <string name="e_button">E</string>
 	<string name="f_button">F</string>
-	<string name= "div_button">/</string>
+	<string name= "clear_button">clr</string>
 	<string name="c_button">C</string>
     <string name="b_button">B</string>
 	<string name="a_button">A</string>
-	<string name= "mult_button">*</string>
+	<string name= "div_button">/</string>
 	<string name="button_7">7</string>
     <string name="button_8">8</string>
 	<string name="button_9">9</string>
-	<string name= "sub_button">-</string>
+	<string name= "mult_button">*</string>
 	<string name="button_4">4</string>
     <string name="button_5">5</string>
 	<string name="button_6">6</string>
-	<string name= "add_button">+</string>
+	<string name= "sub_button">-</string>
 	<string name="button_1">1</string>
     <string name="button_2">2</string>
 	<string name="button_3">3</string>
-	<string name= "equal_button">=</string>
+	<string name= "add_button">+</string>
 	<string name="button_0">1</string>
     <string name="decimal_button">.</string>
 	<string name="plusminus_button">+/-</string>
+	<string name="equal_button">=</string>
 
 </resources>
