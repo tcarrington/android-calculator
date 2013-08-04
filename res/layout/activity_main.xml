@@ -103,7 +103,8 @@
         android:layout_below = "@id/d_button"
         style="?android:attr/borderlessButtonStyle"
         android:text = "@string/a_button"
-        android:textSize="32sp" /> 
+        android:textSize="32sp"
+        android:onClick="send_a" /> 
     <Button
         android:id = "@+id/b_button"
         android:layout_width = "wrap_content"
@@ -112,7 +113,8 @@
         android:layout_toRightOf = "@id/a_button"
         style="?android:attr/borderlessButtonStyle"
         android:text="@string/b_button"
-        android:textSize="32sp" />
+        android:textSize="32sp"
+        android:onClick="send_b" />
     <Button
         android:id = "@+id/c_button"
         android:layout_width = "wrap_content"
@@ -121,7 +123,8 @@
         android:layout_toRightOf = "@id/b_button"
         style="?android:attr/borderlessButtonStyle"
         android:text="@string/c_button"
-        android:textSize="32sp" />
+        android:textSize="32sp"
+        android:onClick="send_c" />
     <Button
         android:id = "@+id/div_button"
         android:layout_width = "wrap_content"
@@ -130,7 +133,8 @@
         android:layout_toRightOf = "@id/c_button"
         style="?android:attr/borderlessButtonStyle"
         android:text = "@string/div_button"
-        android:textSize="32sp" />
+        android:textSize="32sp"
+        android:onClick="send_div" />
     <!-- End of second row -->
  
     <!-- Start of third row -->
@@ -141,7 +145,8 @@
         android:layout_below = "@id/a_button"
         style="?android:attr/borderlessButtonStyle"
         android:text = "@string/button_7"
-        android:textSize="32sp" /> 
+        android:textSize="32sp"
+        android:onClick="send_7" /> 
     <Button
         android:id = "@+id/button_8"
         android:layout_width = "wrap_content"
@@ -150,7 +155,8 @@
         android:layout_toRightOf = "@id/button_7"
         style="?android:attr/borderlessButtonStyle"
         android:text="@string/button_8"
-        android:textSize="32sp" />
+        android:textSize="32sp"
+        android:onClick="send_8" />
     <Button
         android:id = "@+id/button_9"
         android:layout_width = "wrap_content"
@@ -159,7 +165,8 @@
         android:layout_toRightOf = "@id/button_8"
         style="?android:attr/borderlessButtonStyle"
         android:text="@string/button_9"
-        android:textSize="32sp" />
+        android:textSize="32sp"
+        android:onClick="send_9" />
     <Button
         android:id = "@+id/mult_button"
         android:layout_width = "wrap_content"
@@ -168,7 +175,8 @@
         android:layout_toRightOf = "@id/button_9"
         style="?android:attr/borderlessButtonStyle"
         android:text = "@string/mult_button"
-        android:textSize="32sp" />
+        android:textSize="32sp"
+        android:onClick="send_mult" />
     <!-- End of third row -->
     
     <!-- Start of fourth row -->
@@ -179,7 +187,8 @@
         android:layout_below = "@id/button_7"
         style="?android:attr/borderlessButtonStyle"
         android:text = "@string/button_4"
-        android:textSize="32sp" /> 
+        android:textSize="32sp"
+        android:onClick="send_4" /> 
     <Button
         android:id = "@+id/button_5"
         android:layout_width = "wrap_content"
@@ -188,7 +197,8 @@
         android:layout_toRightOf = "@id/button_4"
         style="?android:attr/borderlessButtonStyle"
         android:text="@string/button_5"
-        android:textSize="32sp" />
+        android:textSize="32sp"
+        android:onClick="send_5" />
     <Button
         android:id = "@+id/button_6"
         android:layout_width = "wrap_content"
@@ -197,7 +207,8 @@
         android:layout_toRightOf = "@id/button_5"
         style="?android:attr/borderlessButtonStyle"
         android:text="@string/button_6"
-        android:textSize="32sp" />
+        android:textSize="32sp"
+        android:onClick="send_6" />
     <Button
         android:id = "@+id/sub_button"
         android:layout_width = "wrap_content"
@@ -206,7 +217,8 @@
         android:layout_toRightOf = "@id/button_6"
         style="?android:attr/borderlessButtonStyle"
         android:text = "@string/sub_button"
-        android:textSize="32sp" />
+        android:textSize="32sp"
+        android:onClick="send_sub" />
     <!-- End of 4th row -->
     
     <!-- Start of 5th row -->
@@ -259,7 +271,8 @@
         android:layout_below = "@id/button_1"
         style="?android:attr/borderlessButtonStyle"
         android:text = "@string/button_0"
-        android:textSize="32sp" /> 
+        android:textSize="32sp"
+        android:onClick="send_0" /> 
     <Button
         android:id = "@+id/decimal_button"
         android:layout_width = "wrap_content"
@@ -268,7 +281,8 @@
         android:layout_toRightOf = "@id/button_0"
         style="?android:attr/borderlessButtonStyle"
         android:text="@string/decimal_button"
-        android:textSize="32sp" />
+        android:textSize="32sp"
+        android:onClick="send_decimal" />
     <Button
         android:id = "@+id/plusminus_button"
         android:layout_width = "wrap_content"
@@ -277,7 +291,8 @@
         android:layout_toRightOf = "@id/decimal_button"
         style="?android:attr/borderlessButtonStyle"
         android:text="@string/plusminus_button"
-        android:textSize="32sp" />
+        android:textSize="32sp"
+        android:onClick="send_plusminus" />
     <Button
         android:id = "@+id/equal_button"
         android:layout_width = "wrap_content"
@@ -286,7 +301,8 @@
         android:layout_toRightOf = "@id/plusminus_button"
         style="?android:attr/borderlessButtonStyle"
         android:text = "@string/equal_button"
-        android:textSize="32sp" />
+        android:textSize="32sp"
+        android:onClick="send_equal" />
     <!-- End of 6th row -->
     
 

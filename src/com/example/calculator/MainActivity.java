@@ -184,6 +184,111 @@ public class MainActivity extends Activity {
 	    }
 	}
 	
+	//first row of buttons
+	public void send_d(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "D";
+		display.setText(displayValue);
+	}
+	public void send_e(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "E";
+		display.setText(displayValue);
+	}
+	public void send_f(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "F";
+		display.setText(displayValue);
+	}
+	public void send_clear(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "clr";
+		display.setText(displayValue);
+	}
+	
+	//second row of buttons
+	public void send_a(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "A";
+		display.setText(displayValue);
+	}
+	public void send_b(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "B";
+		display.setText(displayValue);
+	}
+	public void send_c(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "C";
+		display.setText(displayValue);
+	}
+	public void send_div(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "/";
+		display.setText(displayValue);
+	}
+	
+	//third row of buttons
+	public void send_7(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "7";
+		display.setText(displayValue);
+	}
+	public void send_8(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "8";
+		display.setText(displayValue);
+	}
+	public void send_9(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "9";
+		display.setText(displayValue);
+	}
+	public void send_mult(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "*";
+		display.setText(displayValue);
+	}
+	
+	//fourth row of buttons
+	public void send_4(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "4";
+		display.setText(displayValue);
+	}
+	public void send_5(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "5";
+		display.setText(displayValue);
+	}
+	public void send_6(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "6";
+		display.setText(displayValue);
+	}
+	public void send_sub(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "-";
+		display.setText(displayValue);
+	}
+	
+	//fifth row of buttons
 	public void send_1(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
 		displayValue = display.getText().toString();
@@ -206,6 +311,32 @@ public class MainActivity extends Activity {
 		TextView display = (TextView) findViewById(R.id.display);
 		displayValue = display.getText().toString();
 		displayValue += "+";
+		display.setText(displayValue);
+	}
+	
+	//sixth row of buttons
+	public void send_0(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "0";
+		display.setText(displayValue);
+	}
+	public void send_decimal(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += ".";
+		display.setText(displayValue);
+	}
+	public void send_plusminus(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "+/-";
+		display.setText(displayValue);
+	}
+	public void send_equal(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "=";
 		display.setText(displayValue);
 	}
 
