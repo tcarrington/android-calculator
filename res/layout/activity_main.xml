@@ -10,21 +10,51 @@
         android:id = "@+id/display"
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
-        android:text = "@string/title_mainactivity" />
+        android:text = "@string/display" />
+    
+    <!-- Start of radio button list -->
+    <RadioButton
+        android:id = "@+id/bin_radio"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_below = "@id/display"
+        android:text = "@string/bin_radio" />
+    <RadioButton
+        android:id = "@+id/oct_radio"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_below = "@id/display"
+        android:layout_toRightOf = "@id/bin_radio"
+        android:text = "@string/oct_radio" />    
+    <RadioButton
+        android:id = "@+id/dec_radio"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_below = "@id/display"
+        android:layout_toRightOf = "@id/oct_radio"
+        android:text = "@string/dec_radio" />
+    <RadioButton
+        android:id = "@+id/hex_radio"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_below = "@id/display"
+        android:layout_toRightOf = "@id/dec_radio"
+        android:text = "@string/hex_radio" />
+    <!-- End of radio button list -->
     
     <!-- Start of first row -->
     <Button
         android:id = "@+id/d_button"
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
-        android:layout_below = "@id/display"
+        android:layout_below = "@id/bin_radio"
         style="?android:attr/borderlessButtonStyle"
         android:text = "@string/d_button" /> 
     <Button
         android:id = "@+id/e_button"
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
-        android:layout_below = "@id/display"
+        android:layout_below = "@id/oct_radio"
         android:layout_toRightOf = "@id/d_button"
         style="?android:attr/borderlessButtonStyle"
         android:text="@string/e_button" />
@@ -32,7 +62,7 @@
         android:id = "@+id/f_button"
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
-        android:layout_below = "@id/display"
+        android:layout_below = "@id/dec_radio"
         android:layout_toRightOf = "@id/e_button"
         style="?android:attr/borderlessButtonStyle"
         android:text="@string/f_button" />
@@ -40,7 +70,7 @@
         android:id = "@+id/clear_button"
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
-        android:layout_below = "@id/display"
+        android:layout_below = "@id/hex_radio"
         android:layout_toRightOf = "@id/f_button"
  		style="?android:attr/borderlessButtonStyle"
         android:text = "@string/clear_button" />

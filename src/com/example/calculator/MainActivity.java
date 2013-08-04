@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -20,6 +21,10 @@ public class MainActivity extends Activity {
 		int width = metrics.widthPixels;
 		int height = metrics.heightPixels;
 		TextView display = (TextView) findViewById(R.id.display);
+		RadioButton bin_radio = (RadioButton) findViewById(R.id.bin_radio);
+		RadioButton oct_radio = (RadioButton) findViewById(R.id.oct_radio);
+		RadioButton dec_radio = (RadioButton) findViewById(R.id.dec_radio);
+		RadioButton hex_radio = (RadioButton) findViewById(R.id.hex_radio);
 		Button d_button = (Button) findViewById(R.id.d_button);
 		Button e_button = (Button) findViewById(R.id.e_button);
 		Button f_button = (Button) findViewById(R.id.f_button);
@@ -46,6 +51,10 @@ public class MainActivity extends Activity {
 		Button equal_button = (Button) findViewById(R.id.equal_button);
 		//width formatting
 		display.setWidth(width-16);
+		bin_radio.setWidth((width/4)-16);
+		oct_radio.setWidth((width/4)-16);
+		dec_radio.setWidth((width/4)-16);
+		hex_radio.setWidth((width/4)-16);
 		d_button.setWidth((width/4)-16);
 		e_button.setWidth((width/4)-16);
 		f_button.setWidth((width/4)-16);
@@ -73,6 +82,10 @@ public class MainActivity extends Activity {
 		equal_button.setWidth((width/4)-16);
 		//height formatting
 		display.setHeight(((height*2)/9)-16);
+		bin_radio.setHeight((height/9)-16);
+		oct_radio.setHeight((height/9)-16);
+		dec_radio.setHeight((height/9)-16);
+		hex_radio.setHeight((height/9)-16);
 		d_button.setHeight((height/9)-16);
 		e_button.setHeight((height/9)-16);
 		f_button.setHeight((height/9)-16);
