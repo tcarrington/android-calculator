@@ -31,5 +31,6 @@
 	<string name="button_0">0</string>
 	<string name="plusminus_button">+/-</string>
 	<string name="equal_button">=</string>
+	<string name="mod_button">%</string>
 
 </resources>

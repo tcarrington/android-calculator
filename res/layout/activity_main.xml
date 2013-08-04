@@ -293,10 +293,17 @@
         android:text = "@string/equal_button"
         android:textSize="32sp"
         android:onClick="send_equal" />
+    <Button
+        android:id = "@+id/mod_button"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_below = "@id/button_3"
+        android:layout_toRightOf = "@id/equal_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:text = "@string/mod_button"
+        android:textSize="32sp"
+        android:onClick="send_mod" />
     <!-- End of 6th row -->
-    
-
-
 
 
 </RelativeLayout>

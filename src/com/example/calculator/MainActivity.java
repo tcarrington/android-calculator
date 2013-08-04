@@ -59,6 +59,7 @@ public class MainActivity extends Activity {
 		Button button_0 = (Button) findViewById(R.id.button_0);
 		Button plusminus_button = (Button) findViewById(R.id.plusminus_button);
 		Button equal_button = (Button) findViewById(R.id.equal_button);
+		Button mod_button = (Button) findViewById(R.id.mod_button);
 		//width formatting
 		display.setWidth(width-16);
 		bin_radio.setWidth((width/4)-16);
@@ -88,7 +89,8 @@ public class MainActivity extends Activity {
 		mult_button.setWidth((width/4)-16);
 		button_0.setWidth((width/4)-16);
 		plusminus_button.setWidth((width/4)-16);
-		equal_button.setWidth(((width*2)/4)-16);
+		equal_button.setWidth((width/4)-16);
+		mod_button.setWidth((width/4)-16);
 		//height formatting
 		display.setHeight(((height*2)/9)-16);
 		bin_radio.setHeight((height/9)-16);
@@ -119,6 +121,7 @@ public class MainActivity extends Activity {
 		button_0.setHeight((height/9)-16);
 		plusminus_button.setHeight((height/9)-16);
 		equal_button.setHeight((height/9)-16);
+		mod_button.setHeight((height/9)-16);
 		//set defaults for radio buttons
 		bin_radio.setChecked(true);
 		oct_radio.setChecked(false);
@@ -464,6 +467,12 @@ public class MainActivity extends Activity {
 		display.setText(solutionString);
 		operand1 = solutionString;
 		displayValue = "0";
+	}
+	public void send_mod(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "%";
+		display.setText(displayValue);
 	}
 	
 
