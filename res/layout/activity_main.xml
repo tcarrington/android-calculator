@@ -8,9 +8,10 @@
 
     <TextView
         android:id = "@+id/display"
-        android:layout_width = "wrap_content"
+        android:layout_width = "fill_parent"
         android:layout_height = "wrap_content"
         android:text = "@string/initial_display"
+        android:gravity = "right"
         android:textSize="32sp" />
     
     <!-- Start of radio group -->
