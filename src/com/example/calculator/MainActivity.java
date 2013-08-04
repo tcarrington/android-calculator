@@ -191,26 +191,42 @@ public class MainActivity extends Activity {
 	//first row of buttons
 	public void send_d(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "D";
+		if(displayValue == "0")
+			displayValue = "D";
+		else {
+			displayValue = display.getText().toString();
+			displayValue += "D";
+		}
 		display.setText(displayValue);
 	}
 	public void send_e(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "E";
+		if(displayValue == "0")
+			displayValue = "E";
+		else {
+			displayValue = display.getText().toString();
+			displayValue += "E";
+		}
 		display.setText(displayValue);
 	}
 	public void send_f(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "F";
+		if(displayValue == "0")
+			displayValue = "F";
+		else {
+			displayValue = display.getText().toString();
+			displayValue += "F";
+		}
 		display.setText(displayValue);
 	}
 	public void send_clear(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
 		displayValue = display.getText().toString();
 		displayValue = "0";
+		operand1 = "0";
+		operand2 = "0";
+		solutionDouble = 0.0;
+		solutionString = "0";
 		display.setText(displayValue);
 	}
 	
@@ -235,61 +251,85 @@ public class MainActivity extends Activity {
 	}
 	public void send_div(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "/";
-		display.setText(displayValue);
+		operand1 = display.getText().toString();
+		operation = "/";
+		displayValue = "0";
 	}
 	
 	//third row of buttons
 	public void send_7(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "7";
+		if(displayValue == "0")
+			displayValue = "7";
+		else {
+			displayValue = display.getText().toString();
+			displayValue += "7";
+		}
 		display.setText(displayValue);
 	}
 	public void send_8(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "8";
+		if(displayValue == "0")
+			displayValue = "8";
+		else {
+			displayValue = display.getText().toString();
+			displayValue += "8";
+		}
 		display.setText(displayValue);
 	}
 	public void send_9(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "9";
+		if(displayValue == "0")
+			displayValue = "9";
+		else {
+			displayValue = display.getText().toString();
+			displayValue += "9";
+		}
 		display.setText(displayValue);
 	}
 	public void send_mult(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "*";
-		display.setText(displayValue);
+		operand1 = display.getText().toString();
+		operation = "*";
+		displayValue = "0";
 	}
 	
 	//fourth row of buttons
 	public void send_4(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "4";
+		if(displayValue == "0")
+			displayValue = "4";
+		else {
+			displayValue = display.getText().toString();
+			displayValue += "4";
+		}
 		display.setText(displayValue);
 	}
 	public void send_5(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "5";
+		if(displayValue == "0")
+			displayValue = "5";
+		else {
+			displayValue = display.getText().toString();
+			displayValue += "5";
+		}
 		display.setText(displayValue);
 	}
 	public void send_6(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "6";
+		if(displayValue == "0")
+			displayValue = "6";
+		else {
+			displayValue = display.getText().toString();
+			displayValue += "6";
+		}
 		display.setText(displayValue);
 	}
 	public void send_sub(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "-";
-		display.setText(displayValue);
+		operand1 = display.getText().toString();
+		operation = "-";
+		displayValue = "0";
 	}
 	
 	//fifth row of buttons
@@ -326,18 +366,6 @@ public class MainActivity extends Activity {
 	public void send_add(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
 		operand1 = display.getText().toString();
-		/*
-		if(operationFlag){
-			if(operation == "+")
-				
-			else if(operation == "-")
-				//do something
-			else if(operation == "*")
-				//do something
-			else if(operation == "/")
-				//do something
-		}
-		*/
 		operation = "+";
 		displayValue = "0";
 	}
@@ -374,6 +402,7 @@ public class MainActivity extends Activity {
 			solutionDouble = Double.parseDouble(operand1) / Double.parseDouble(operand2);
 		solutionString = String.valueOf(solutionDouble);
 		display.setText(solutionString);
+		displayValue = "0";
 	}
 
 }
