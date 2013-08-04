@@ -1,6 +1,5 @@
 package com.example.calculator;
 
-import android.R.string;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -12,10 +11,13 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-	string operand1;
-	string operator;
-	string operand2;
+	String operand1;
+	String operation;
+	String operand2;
 	String displayValue;
+	double solutionDouble = 0.0;
+	String solutionString;
+	boolean operationFlag = false;
 	public String curRadioButton = "bin_button";
 	
 	//start of main code
@@ -125,6 +127,8 @@ public class MainActivity extends Activity {
 		oct_radio.setChecked(false);
 		dec_radio.setChecked(false);
 		hex_radio.setChecked(false);
+		//required assignment for leading zero at onCreate()
+		displayValue = "0";
 		
 	}
 
@@ -206,7 +210,7 @@ public class MainActivity extends Activity {
 	public void send_clear(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
 		displayValue = display.getText().toString();
-		displayValue += "clr";
+		displayValue = "0";
 		display.setText(displayValue);
 	}
 	
@@ -291,27 +295,51 @@ public class MainActivity extends Activity {
 	//fifth row of buttons
 	public void send_1(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "1";
+		if(displayValue == "0")
+			displayValue = "1";
+		else {
+			displayValue = display.getText().toString();
+			displayValue += "1";
+		}
 		display.setText(displayValue);
 	}
 	public void send_2(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "2";
+		if(displayValue == "0")
+			displayValue = "2";
+		else {
+			displayValue = display.getText().toString();
+			displayValue += "2";
+		}
 		display.setText(displayValue);
 	}
 	public void send_3(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "3";
+		if(displayValue == "0")
+			displayValue = "3";
+		else {
+			displayValue = display.getText().toString();
+			displayValue += "3";
+		}
 		display.setText(displayValue);
 	}
 	public void send_add(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "+";
-		display.setText(displayValue);
+		operand1 = display.getText().toString();
+		/*
+		if(operationFlag){
+			if(operation == "+")
+				
+			else if(operation == "-")
+				//do something
+			else if(operation == "*")
+				//do something
+			else if(operation == "/")
+				//do something
+		}
+		*/
+		operation = "+";
+		displayValue = "0";
 	}
 	
 	//sixth row of buttons
@@ -335,9 +363,17 @@ public class MainActivity extends Activity {
 	}
 	public void send_equal(View view) {
 		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "=";
-		display.setText(displayValue);
+		operand2 = display.getText().toString();
+		if(operation == "+")
+			solutionDouble = Double.parseDouble(operand1) + Double.parseDouble(operand2);
+		else if(operation == "-")
+			solutionDouble = Double.parseDouble(operand1) - Double.parseDouble(operand2);
+		else if(operation == "*")
+			solutionDouble = Double.parseDouble(operand1) * Double.parseDouble(operand2);
+		else if(operation == "/")
+			solutionDouble = Double.parseDouble(operand1) / Double.parseDouble(operand2);
+		solutionString = String.valueOf(solutionDouble);
+		display.setText(solutionString);
 	}
 
 }
