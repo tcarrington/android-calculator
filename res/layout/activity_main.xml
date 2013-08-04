@@ -10,7 +10,7 @@
         android:id = "@+id/display"
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
-        android:text = "@string/display"
+        android:text = "@string/initial_display"
         android:textSize="32sp" />
     
     <!-- Start of radio group -->
@@ -60,7 +60,8 @@
         android:layout_below = "@id/radiogroup"
         style="?android:attr/borderlessButtonStyle"
         android:text = "@string/d_button"
-        android:textSize="32sp" /> 
+        android:textSize="32sp" 
+        android:onClick="send_d" /> 
     <Button
         android:id = "@+id/e_button"
         android:layout_width = "wrap_content"
@@ -69,7 +70,8 @@
         android:layout_toRightOf = "@id/d_button"
         style="?android:attr/borderlessButtonStyle"
         android:text="@string/e_button"
-        android:textSize="32sp" />
+        android:textSize="32sp" 
+        android:onClick="send_e" />
     <Button
         android:id = "@+id/f_button"
         android:layout_width = "wrap_content"
@@ -78,7 +80,8 @@
         android:layout_toRightOf = "@id/e_button"
         style="?android:attr/borderlessButtonStyle"
         android:text="@string/f_button"
-        android:textSize="32sp" />
+        android:textSize="32sp" 
+        android:onClick="send_f" />
     <Button
         android:id = "@+id/clear_button"
         android:layout_width = "wrap_content"
@@ -87,7 +90,8 @@
         android:layout_toRightOf = "@id/f_button"
  		style="?android:attr/borderlessButtonStyle"
         android:text = "@string/clear_button"
-        android:textSize="32sp" />
+        android:textSize="32sp" 
+        android:onClick="send_clear" />
     <!-- End of first row -->
     
     <!-- Start of second row -->
@@ -212,7 +216,8 @@
         android:layout_below = "@id/button_4"
         style="?android:attr/borderlessButtonStyle"
         android:text = "@string/button_1"
-        android:textSize="32sp" /> 
+        android:textSize="32sp" 
+        android:onClick="send_1" /> 
     <Button
         android:id = "@+id/button_2"
         android:layout_width = "wrap_content"
@@ -221,7 +226,8 @@
         android:layout_toRightOf = "@id/button_1"
         style="?android:attr/borderlessButtonStyle"
         android:text="@string/button_2"
-        android:textSize="32sp" />
+        android:textSize="32sp" 
+        android:onClick="send_2" />
     <Button
         android:id = "@+id/button_3"
         android:layout_width = "wrap_content"
@@ -230,7 +236,8 @@
         android:layout_toRightOf = "@id/button_2"
         style="?android:attr/borderlessButtonStyle"
         android:text="@string/button_3"
-        android:textSize="32sp" />
+        android:textSize="32sp" 
+        android:onClick="send_3" />
     <Button
         android:id = "@+id/add_button"
         android:layout_width = "wrap_content"
@@ -239,7 +246,8 @@
         android:layout_toRightOf = "@id/button_3"
         style="?android:attr/borderlessButtonStyle"
         android:text = "@string/add_button"
-        android:textSize="32sp" />
+        android:textSize="32sp" 
+        android:onClick="send_add" />
     <!-- End of 5th row -->
     
     <!-- Start of 6th row -->

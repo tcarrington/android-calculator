@@ -87,12 +87,12 @@ public final class R {
         public static final int d_button=0x7f060007;
         public static final int dec_radio=0x7f060005;
         public static final int decimal_button=0x7f06001c;
-        public static final int display=0x7f060002;
         public static final int div_button=0x7f06000e;
         public static final int e_button=0x7f060008;
         public static final int equal_button=0x7f06001e;
         public static final int f_button=0x7f060009;
         public static final int hex_radio=0x7f060006;
+        public static final int initial_display=0x7f060002;
         public static final int mult_button=0x7f060012;
         public static final int oct_radio=0x7f060004;
         public static final int plusminus_button=0x7f06001d;

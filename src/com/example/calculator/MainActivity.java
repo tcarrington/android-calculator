@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
 	string operand1;
 	string operator;
 	string operand2;
-	string displayValue;
+	String displayValue;
 	public String curRadioButton = "bin_button";
 	
 	//start of main code
@@ -182,6 +182,31 @@ public class MainActivity extends Activity {
 	    			add_button.setHeight((height/9)-32);
 	        	break;
 	    }
+	}
+	
+	public void send_1(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "1";
+		display.setText(displayValue);
+	}
+	public void send_2(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "2";
+		display.setText(displayValue);
+	}
+	public void send_3(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "3";
+		display.setText(displayValue);
+	}
+	public void send_add(View view) {
+		TextView display = (TextView) findViewById(R.id.display);
+		displayValue = display.getText().toString();
+		displayValue += "+";
+		display.setText(displayValue);
 	}
 
 }
