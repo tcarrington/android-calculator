@@ -57,7 +57,6 @@ public class MainActivity extends Activity {
 		Button button_3 = (Button) findViewById(R.id.button_3);
 		Button add_button = (Button) findViewById(R.id.add_button);
 		Button button_0 = (Button) findViewById(R.id.button_0);
-		Button decimal_button = (Button) findViewById(R.id.decimal_button);
 		Button plusminus_button = (Button) findViewById(R.id.plusminus_button);
 		Button equal_button = (Button) findViewById(R.id.equal_button);
 		//width formatting
@@ -88,9 +87,8 @@ public class MainActivity extends Activity {
 		add_button.setWidth((width/4)-16);
 		mult_button.setWidth((width/4)-16);
 		button_0.setWidth((width/4)-16);
-		decimal_button.setWidth((width/4)-16);
 		plusminus_button.setWidth((width/4)-16);
-		equal_button.setWidth((width/4)-16);
+		equal_button.setWidth(((width*2)/4)-16);
 		//height formatting
 		display.setHeight(((height*2)/9)-16);
 		bin_radio.setHeight((height/9)-16);
@@ -119,7 +117,6 @@ public class MainActivity extends Activity {
 		add_button.setHeight((height/9)-16);
 		mult_button.setHeight((height/9)-16);
 		button_0.setHeight((height/9)-16);
-		decimal_button.setHeight((height/9)-16);
 		plusminus_button.setHeight((height/9)-16);
 		equal_button.setHeight((height/9)-16);
 		//set defaults for radio buttons
@@ -452,29 +449,6 @@ public class MainActivity extends Activity {
 		TextView display = (TextView) findViewById(R.id.display);
 		operand2 = display.getText().toString();
 		if(operation == "+") {
-			if(curRadioButton == "bin_button") {
-				//convert do decimal and back
-				int binValue1 = 0;
-				int binValue2 = 0;
-				int binSolution = 0;
-				for(int i = 0; i < operand1.length(); i ++) {
-					binValue1 += (int)Math.pow((Double.parseDouble(Character.toString(operand1.charAt(operand1.length()-1-i)))*2), i);
-				}
-				for(int i = 0; i < operand2.length(); i ++) {
-					binValue1 += (int)Math.pow((Double.parseDouble(Character.toString(operand2.charAt(operand2.length()-1-i)))*2), i);
-				}
-				binSolution = binValue1 + binValue2;
-				
-			}
-			else if(curRadioButton == "oct_button") {
-				
-			}
-			else if(curRadioButton == "dec_button") {
-				
-			}
-			else if(curRadioButton == "hex_button") {
-				
-			}
 			solutionDouble = Double.parseDouble(operand1) + Double.parseDouble(operand2);
 		}
 		else if(operation == "-") {
@@ -488,8 +462,42 @@ public class MainActivity extends Activity {
 		}
 		solutionString = String.valueOf(solutionDouble);
 		display.setText(solutionString);
+		operand1 = solutionString;
 		displayValue = "0";
 	}
 	
 
 }
+
+
+
+
+
+/*
+if(curRadioButton == "bin_button") {
+	//convert do decimal and back
+	int binValue1 = 0;
+	int binValue2 = 0;
+	int binSolution = 0;
+	for(int i = 0; i < operand1.length(); i ++) {
+		binValue1 += (int)Math.pow((Double.parseDouble(Character.toString(operand1.charAt(operand1.length()-1-i)))*2), i);
+	}
+	for(int i = 0; i < operand2.length(); i ++) {
+		binValue1 += (int)Math.pow((Double.parseDouble(Character.toString(operand2.charAt(operand2.length()-1-i)))*2), i);
+	}
+	binSolution = binValue1 + binValue2;
+	
+	for(int i = 0; i < 16; i++){
+		
+	}
+	
+}
+else if(curRadioButton == "oct_button") {
+	
+}
+else if(curRadioButton == "dec_button") {
+	
+}
+else if(curRadioButton == "hex_button") {
+	
+}*/

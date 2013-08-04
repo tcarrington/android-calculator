@@ -25,7 +25,7 @@ public final class R {
     }
     public static final class id {
         public static final int a_button=0x7f09000a;
-        public static final int action_settings=0x7f09001e;
+        public static final int action_settings=0x7f09001d;
         public static final int add_button=0x7f090019;
         public static final int b_button=0x7f09000b;
         public static final int bin_radio=0x7f090002;
@@ -43,16 +43,15 @@ public final class R {
         public static final int clear_button=0x7f090009;
         public static final int d_button=0x7f090006;
         public static final int dec_radio=0x7f090004;
-        public static final int decimal_button=0x7f09001b;
         public static final int display=0x7f090000;
         public static final int div_button=0x7f09000d;
         public static final int e_button=0x7f090007;
-        public static final int equal_button=0x7f09001d;
+        public static final int equal_button=0x7f09001c;
         public static final int f_button=0x7f090008;
         public static final int hex_radio=0x7f090005;
         public static final int mult_button=0x7f090011;
         public static final int oct_radio=0x7f090003;
-        public static final int plusminus_button=0x7f09001c;
+        public static final int plusminus_button=0x7f09001b;
         public static final int radiogroup=0x7f090001;
         public static final int sub_button=0x7f090015;
     }
@@ -86,16 +85,15 @@ public final class R {
         public static final int clear_button=0x7f06000a;
         public static final int d_button=0x7f060007;
         public static final int dec_radio=0x7f060005;
-        public static final int decimal_button=0x7f06001c;
         public static final int div_button=0x7f06000e;
         public static final int e_button=0x7f060008;
-        public static final int equal_button=0x7f06001e;
+        public static final int equal_button=0x7f06001d;
         public static final int f_button=0x7f060009;
         public static final int hex_radio=0x7f060006;
         public static final int initial_display=0x7f060002;
         public static final int mult_button=0x7f060012;
         public static final int oct_radio=0x7f060004;
-        public static final int plusminus_button=0x7f06001d;
+        public static final int plusminus_button=0x7f06001c;
         public static final int sub_button=0x7f060016;
     }
     public static final class style {

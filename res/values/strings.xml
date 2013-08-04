@@ -29,7 +29,6 @@
 	<string name="button_3">3</string>
 	<string name= "add_button">+</string>
 	<string name="button_0">0</string>
-    <string name="decimal_button">.</string>
 	<string name="plusminus_button">+/-</string>
 	<string name="equal_button">=</string>
 
