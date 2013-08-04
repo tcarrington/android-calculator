@@ -1,15 +1,24 @@
 package com.example.calculator;
 
+import android.R.string;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Menu;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
+	string operand1;
+	string operator;
+	string operand2;
+	string displayValue;
+	public String curRadioButton = "bin_button";
+	
+	//start of main code
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -117,8 +126,6 @@ public class MainActivity extends Activity {
 		dec_radio.setChecked(false);
 		hex_radio.setChecked(false);
 		
-		
-
 	}
 
 	@Override
@@ -126,6 +133,55 @@ public class MainActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+	
+
+	public void onRadioButtonClicked(View view) {
+	    // Is the button now checked?
+	    boolean checked = ((RadioButton) view).isChecked();
+		DisplayMetrics metrics = new DisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(metrics);
+		int height = metrics.heightPixels;
+		Button button_one = (Button) findViewById(R.id.button_1);
+		Button button_two = (Button) findViewById(R.id.button_2);
+		Button button_three = (Button) findViewById(R.id.button_3);
+		Button add_button = (Button) findViewById(R.id.add_button);
+		
+	    // Check which radio button was clicked
+	    switch(view.getId()) {
+	        case R.id.bin_radio:
+	            if (checked)
+	                // TODO: add logic for binary calculations and conversions
+	            	button_one.setHeight((height/9)-32);
+	    			button_two.setHeight((height/9)-16);
+	    			button_three.setHeight((height/9)-16);
+	    			add_button.setHeight((height/9)-16);
+	            break;
+	        case R.id.oct_radio:
+	            if (checked)
+	                // TODO: add logic for octal calculations and conversions
+	            	button_one.setHeight((height/9)-16);
+	    			button_two.setHeight((height/9)-32);
+	    			button_three.setHeight((height/9)-16);
+	    			add_button.setHeight((height/9)-16);
+	            break;
+	        case R.id.dec_radio:
+	        	if (checked)
+	        		// TODO: add logic for decimal calculations and conversions
+		    		button_one.setHeight((height/9)-16);
+		    		button_two.setHeight((height/9)-16);
+	    			button_three.setHeight((height/9)-32);
+	    			add_button.setHeight((height/9)-16);
+	        	break;
+	        case R.id.hex_radio:
+	        	if(checked)
+	        		// TODO: add logic for hexadecimal calculations and conversions
+		    		button_one.setHeight((height/9)-16);
+		    		button_two.setHeight((height/9)-16);
+		    		button_three.setHeight((height/9)-16);
+	    			add_button.setHeight((height/9)-32);
+	        	break;
+	    }
 	}
 
 }
