@@ -5,10 +5,10 @@
     <string name="action_settings">Settings</string>
     <string name="display_main">0</string>
     <string name="display_secondary"> </string>
-    <string name="bin_radio">bin</string>
-    <string name="oct_radio">oct</string>
-    <string name="dec_radio">dec</string>
-    <string name="hex_radio">hex</string>
+    <string name="bin_select">bin</string>
+    <string name="oct_select">oct</string>
+    <string name="dec_select">dec</string>
+    <string name="hex_select">hex</string>
     <string name="d_button">D</string>
     <string name="e_button">E</string>
 	<string name="f_button">F</string>

@@ -22,54 +22,57 @@
         android:text = "@string/display_main"
         android:gravity = "right"
         android:textSize="32sp" />
-    
 
-    
-    <!-- Start of radio group -->
-    <RadioGroup 
-        android:id="@+id/radiogroup"
-        android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
-        android:layout_below = "@id/display_main" 
-        android:orientation="horizontal" >
 
-	    <RadioButton
-	        android:id = "@+id/bin_radio"
-	        android:layout_width = "wrap_content"
-	        android:layout_height = "wrap_content"
-	        android:text = "@string/bin_radio"
-	        android:textSize="20sp" 
-	        android:onClick="onRadioButtonClicked"/>
-	    <RadioButton
-	        android:id = "@+id/oct_radio"
-	        android:layout_width = "wrap_content"
-	        android:layout_height = "wrap_content"
-	        android:text = "@string/oct_radio"
-	        android:textSize="20sp" 
-	        android:onClick="onRadioButtonClicked"/>    
-	    <RadioButton
-	        android:id = "@+id/dec_radio"
-	        android:layout_width = "wrap_content"
-	        android:layout_height = "wrap_content"
-	        android:text = "@string/dec_radio"
-	        android:textSize="20sp" 
-	        android:onClick="onRadioButtonClicked"/>
-	    <RadioButton
-	        android:id = "@+id/hex_radio"
-	        android:layout_width = "wrap_content"
-	        android:layout_height = "wrap_content"
-	        android:text = "@string/hex_radio"
-	        android:textSize="20sp" 
-	        android:onClick="onRadioButtonClicked"/>
-    </RadioGroup>
-    <!-- End of radio group -->
+    <!-- beginning of base select buttons -->
+    <Button
+	    android:id = "@+id/bin_select"
+	    android:layout_width = "wrap_content"
+	    android:layout_height = "wrap_content"
+	    android:background = "@drawable/button_background"
+	    android:text = "@string/bin_select"
+	    style="?android:attr/borderlessButtonStyle"
+	    android:layout_below = "@id/display_main"
+        android:textSize="20sp" 
+        android:onClick="bin_select" />
+	<Button
+	    android:id = "@+id/oct_select"
+	    android:layout_width = "wrap_content"
+	    android:layout_height = "wrap_content"
+	    android:text = "@string/oct_select"
+	    style="?android:attr/borderlessButtonStyle"
+	    android:layout_below = "@id/display_main"
+	    android:layout_toRightOf = "@id/bin_select"
+        android:textSize="20sp" 
+        android:onClick="oct_select" />    
+	<Button
+        android:id = "@+id/dec_select"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text = "@string/dec_select"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_below = "@id/display_main"
+        android:layout_toRightOf = "@id/oct_select"
+        android:textSize="20sp" 
+        android:onClick="dec_select" />
+	<Button
+        android:id = "@+id/hex_select"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text = "@string/hex_select"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_below = "@id/display_main"
+        android:layout_toRightOf = "@id/dec_select"
+        android:textSize="20sp" 
+        android:onClick="hex_select" />
+    <!-- end of base select buttons -->
     
     <!-- Start of first row -->
     <Button
         android:id = "@+id/d_button"
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
-        android:layout_below = "@id/radiogroup"
+        android:layout_below = "@id/bin_select"
         style="?android:attr/borderlessButtonStyle"
         android:text = "@string/d_button"
         android:textSize="32sp" 
@@ -78,7 +81,7 @@
         android:id = "@+id/e_button"
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
-        android:layout_below = "@id/radiogroup"
+        android:layout_below = "@id/oct_select"
         android:layout_toRightOf = "@id/d_button"
         style="?android:attr/borderlessButtonStyle"
         android:text="@string/e_button"
@@ -88,7 +91,7 @@
         android:id = "@+id/f_button"
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
-        android:layout_below = "@id/radiogroup"
+        android:layout_below = "@id/dec_select"
         android:layout_toRightOf = "@id/e_button"
         style="?android:attr/borderlessButtonStyle"
         android:text="@string/f_button"
@@ -98,7 +101,7 @@
         android:id = "@+id/clear_button"
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
-        android:layout_below = "@id/radiogroup"
+        android:layout_below = "@id/hex_select"
         android:layout_toRightOf = "@id/f_button"
  		style="?android:attr/borderlessButtonStyle"
         android:text = "@string/clear_button"
