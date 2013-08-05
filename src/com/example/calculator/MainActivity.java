@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
 	String operation;
 	String operand2;
 	String displayValue;
-	double solutionDouble = 0.0;
+	int solutionInt = 0;
 	String solutionString;
 	boolean operationFlag = false;
 	String curRadioButton = "bin_button";
@@ -31,7 +31,8 @@ public class MainActivity extends Activity {
 		
 		int width = metrics.widthPixels;
 		int height = metrics.heightPixels;
-		TextView display = (TextView) findViewById(R.id.display);
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		RadioButton bin_radio = (RadioButton) findViewById(R.id.bin_radio);
 		RadioButton oct_radio = (RadioButton) findViewById(R.id.oct_radio);
 		RadioButton dec_radio = (RadioButton) findViewById(R.id.dec_radio);
@@ -61,7 +62,8 @@ public class MainActivity extends Activity {
 		Button equal_button = (Button) findViewById(R.id.equal_button);
 		Button mod_button = (Button) findViewById(R.id.mod_button);
 		//width formatting
-		display.setWidth(width-16);
+		display_secondary.setWidth(width-16);
+		display_main.setWidth(width-16);
 		bin_radio.setWidth((width/4)-16);
 		oct_radio.setWidth((width/4)-16);
 		dec_radio.setWidth((width/4)-16);
@@ -92,7 +94,8 @@ public class MainActivity extends Activity {
 		equal_button.setWidth((width/4)-16);
 		mod_button.setWidth((width/4)-16);
 		//height formatting
-		display.setHeight(((height*2)/9)-16);
+		display_secondary.setHeight(((height)/9)-16);
+		display_main.setHeight(((height)/9)-16);
 		bin_radio.setHeight((height/9)-16);
 		oct_radio.setHeight((height/9)-16);
 		dec_radio.setHeight((height/9)-16);
@@ -249,230 +252,229 @@ public class MainActivity extends Activity {
 	
 	//first row of buttons
 	public void send_d(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
+		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(displayValue == "0")
 			displayValue = "D";
 		else {
-			displayValue = display.getText().toString();
+			displayValue = display_main.getText().toString();
 			displayValue += "D";
 		}
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	public void send_e(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
+		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(displayValue == "0")
 			displayValue = "E";
 		else {
-			displayValue = display.getText().toString();
+			displayValue = display_main.getText().toString();
 			displayValue += "E";
 		}
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	public void send_f(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
+		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(displayValue == "0")
 			displayValue = "F";
 		else {
-			displayValue = display.getText().toString();
+			displayValue = display_main.getText().toString();
 			displayValue += "F";
 		}
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	public void send_clear(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		displayValue = display_main.getText().toString();
+		// TODO: fix to only adjust required values
 		displayValue = "0";
 		operand1 = "0";
 		operand2 = "0";
-		solutionDouble = 0.0;
+		solutionInt = 0;
 		solutionString = "0";
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	
 	//second row of buttons
 	public void send_a(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		displayValue = display_main.getText().toString();
 		displayValue += "A";
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	public void send_b(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		displayValue = display_main.getText().toString();
 		displayValue += "B";
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	public void send_c(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		displayValue = display_main.getText().toString();
 		displayValue += "C";
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	public void send_div(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
-		operand1 = display.getText().toString();
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		operand1 = display_main.getText().toString();
 		operation = "/";
 		displayValue = "0";
 	}
 	
 	//third row of buttons
 	public void send_7(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
+		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(displayValue == "0")
 			displayValue = "7";
 		else {
-			displayValue = display.getText().toString();
+			displayValue = display_main.getText().toString();
 			displayValue += "7";
 		}
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	public void send_8(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
+		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(displayValue == "0")
 			displayValue = "8";
 		else {
-			displayValue = display.getText().toString();
+			displayValue = display_main.getText().toString();
 			displayValue += "8";
 		}
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	public void send_9(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
+		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(displayValue == "0")
 			displayValue = "9";
 		else {
-			displayValue = display.getText().toString();
+			displayValue = display_main.getText().toString();
 			displayValue += "9";
 		}
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	public void send_mult(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
-		operand1 = display.getText().toString();
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		operand1 = display_main.getText().toString();
 		operation = "*";
 		displayValue = "0";
 	}
 	
 	//fourth row of buttons
 	public void send_4(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
+		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(displayValue == "0")
 			displayValue = "4";
 		else {
-			displayValue = display.getText().toString();
+			displayValue = display_main.getText().toString();
 			displayValue += "4";
 		}
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	public void send_5(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
+		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(displayValue == "0")
 			displayValue = "5";
 		else {
-			displayValue = display.getText().toString();
+			displayValue = display_main.getText().toString();
 			displayValue += "5";
 		}
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	public void send_6(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
+		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(displayValue == "0")
 			displayValue = "6";
 		else {
-			displayValue = display.getText().toString();
+			displayValue = display_main.getText().toString();
 			displayValue += "6";
 		}
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	public void send_sub(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
-		operand1 = display.getText().toString();
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		operand1 = display_main.getText().toString();
 		operation = "-";
 		displayValue = "0";
 	}
 	
 	//fifth row of buttons
 	public void send_1(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
+		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(displayValue == "0")
 			displayValue = "1";
 		else {
-			displayValue = display.getText().toString();
+			displayValue = display_main.getText().toString();
 			displayValue += "1";
 		}
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	public void send_2(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
+		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(displayValue == "0")
 			displayValue = "2";
 		else {
-			displayValue = display.getText().toString();
+			displayValue = display_main.getText().toString();
 			displayValue += "2";
 		}
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	public void send_3(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
+		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(displayValue == "0")
 			displayValue = "3";
 		else {
-			displayValue = display.getText().toString();
+			displayValue = display_main.getText().toString();
 			displayValue += "3";
 		}
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	public void send_add(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
-		operand1 = display.getText().toString();
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		operand1 = display_main.getText().toString();
 		operation = "+";
 		displayValue = "0";
 	}
 	
 	//sixth row of buttons
 	public void send_0(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		displayValue = display_main.getText().toString();
 		displayValue += "0";
-		display.setText(displayValue);
-	}
-	public void send_decimal(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += ".";
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	public void send_plusminus(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		displayValue = display_main.getText().toString();
 		displayValue += "+/-";
-		display.setText(displayValue);
+		display_main.setText(displayValue);
 	}
 	public void send_equal(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
-		operand2 = display.getText().toString();
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		operand2 = display_main.getText().toString();
 		if(operation == "+") {
-			solutionDouble = Double.parseDouble(operand1) + Double.parseDouble(operand2);
+			solutionInt = Integer.parseInt(operand1) + Integer.parseInt(operand2);
 		}
 		else if(operation == "-") {
-			solutionDouble = Double.parseDouble(operand1) - Double.parseDouble(operand2);
+			solutionInt = Integer.parseInt(operand1) - Integer.parseInt(operand2);
 		}
 		else if(operation == "*") {
-			solutionDouble = Double.parseDouble(operand1) * Double.parseDouble(operand2);
+			solutionInt = Integer.parseInt(operand1) * Integer.parseInt(operand2);
 		}
 		else if(operation == "/") {
-			solutionDouble = Double.parseDouble(operand1) / Double.parseDouble(operand2);
+			solutionInt = Integer.parseInt(operand1) / Integer.parseInt(operand2);
 		}
-		solutionString = String.valueOf(solutionDouble);
-		display.setText(solutionString);
+		else if(operation == "%") {
+			solutionInt = Integer.parseInt(operand1) % Integer.parseInt(operand2);
+		}
+		solutionString = String.valueOf(solutionInt);
+		display_main.setText(solutionString);
 		operand1 = solutionString;
 		displayValue = "0";
 	}
+	
 	public void send_mod(View view) {
-		TextView display = (TextView) findViewById(R.id.display);
-		displayValue = display.getText().toString();
-		displayValue += "%";
-		display.setText(displayValue);
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		operand1 = display_main.getText().toString();
+		operation = "%";
+		displayValue = "0";
 	}
 	
 

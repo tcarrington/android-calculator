@@ -7,19 +7,30 @@
     android:paddingRight="16dp"  >
 
     <TextView
-        android:id = "@+id/display"
+        android:id = "@+id/display_secondary"
         android:layout_width = "fill_parent"
         android:layout_height = "wrap_content"
-        android:text = "@string/initial_display"
+        android:text = "@string/display_secondary"
         android:gravity = "right"
         android:textSize="32sp" />
+    
+    <TextView
+        android:id = "@+id/display_main"
+        android:layout_width = "fill_parent"
+        android:layout_height = "wrap_content"
+        android:layout_below = "@id/display_secondary"
+        android:text = "@string/display_main"
+        android:gravity = "right"
+        android:textSize="32sp" />
+    
+
     
     <!-- Start of radio group -->
     <RadioGroup 
         android:id="@+id/radiogroup"
         android:layout_width="wrap_content"
     	android:layout_height="wrap_content"
-        android:layout_below = "@id/display" 
+        android:layout_below = "@id/display_main" 
         android:orientation="horizontal" >
 
 	    <RadioButton
