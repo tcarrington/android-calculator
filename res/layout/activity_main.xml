@@ -7,22 +7,45 @@
     android:paddingRight="16dp"  >
 
     <TextView
+        android:id = "@+id/display_operation"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text = "@string/display_operation"
+        android:layout_alignParentRight="true"
+        android:gravity = "center"
+        android:textSize="20sp" />
+    <TextView
         android:id = "@+id/display_secondary"
-        android:layout_width = "fill_parent"
+        android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
         android:text = "@string/display_secondary"
-        android:gravity = "right"
+        android:layout_toLeftOf = "@id/display_operation"
+        android:gravity="right"
         android:textSize="32sp" />
+
+    <!-- beginning of main display and delete button -->
+        <Button
+       	android:id = "@+id/delete_button"
+	    android:layout_width = "wrap_content"
+	    android:layout_height = "wrap_content"
+	    android:text = "@string/delete_button"
+	    style="?android:attr/borderlessButtonStyle"
+	    android:layout_below = "@id/display_operation" 
+	    android:layout_alignParentRight="true"
+        android:onClick="send_delete" />
     
     <TextView
         android:id = "@+id/display_main"
         android:layout_width = "fill_parent"
         android:layout_height = "wrap_content"
-        android:layout_below = "@id/display_secondary"
+        android:layout_below = "@id/display_operation"
         android:text = "@string/display_main"
+        android:layout_toLeftOf = "@id/delete_button"
         android:gravity = "right"
         android:textSize="32sp" />
 
+
+    <!-- beginning of main display and delete button -->
 
     <!-- beginning of base select buttons -->
     <Button

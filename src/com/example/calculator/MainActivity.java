@@ -34,6 +34,8 @@ public class MainActivity extends Activity {
 		int height = metrics.heightPixels;
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+		TextView display_operation = (TextView) findViewById(R.id.display_operation);
+		TextView delete_button = (TextView) findViewById(R.id.delete_button);
 		Button bin_select = (Button) findViewById(R.id.bin_select);
 		Button oct_select = (Button) findViewById(R.id.oct_select);
 		Button dec_select = (Button) findViewById(R.id.dec_select);
@@ -63,8 +65,10 @@ public class MainActivity extends Activity {
 		Button equal_button = (Button) findViewById(R.id.equal_button);
 		Button mod_button = (Button) findViewById(R.id.mod_button);
 		//width formatting
-		display_secondary.setWidth(width-16);
-		display_main.setWidth(width-16);
+		display_operation.setWidth((width/10)-16);
+		display_secondary.setWidth(((width*9)/10)-16);
+		display_main.setWidth(((width*9)/10)-16);
+		delete_button.setWidth((width/10)-16);
 		bin_select.setWidth((width/4)-16);
 		oct_select.setWidth((width/4)-16);
 		dec_select.setWidth((width/4)-16);
@@ -95,8 +99,10 @@ public class MainActivity extends Activity {
 		equal_button.setWidth((width/4)-16);
 		mod_button.setWidth((width/4)-16);
 		//height formatting
-		display_secondary.setHeight(((height)/9)-16);
-		display_main.setHeight(((height)/9)-16);
+		display_operation.setHeight((height/9)-16);
+		display_secondary.setHeight((height/9)-16);
+		display_main.setHeight((height/9)-16);
+		delete_button.setHeight((height/9)-16);
 		bin_select.setHeight((height/9)-16);
 		oct_select.setHeight((height/9)-16);
 		dec_select.setHeight((height/9)-16);
@@ -505,9 +511,11 @@ public class MainActivity extends Activity {
 	}
 	public void send_add(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		operand1 = display_main.getText().toString();
 		operation = "+";
 		displayValue = "0";
+		display_operation.setText("+");
 	}
 	
 	//sixth row of buttons

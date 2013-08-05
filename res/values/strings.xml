@@ -4,7 +4,9 @@
     <string name="app_name">Calculator</string>
     <string name="action_settings">Settings</string>
     <string name="display_main">0</string>
-    <string name="display_secondary"> </string>
+    <string name="display_secondary"></string>
+    <string name="display_operation"></string>
+    <string name="delete_button">del</string>
     <string name="bin_select">bin</string>
     <string name="oct_select">oct</string>
     <string name="dec_select">dec</string>
