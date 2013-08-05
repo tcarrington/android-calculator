@@ -11,9 +11,10 @@
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
         android:text = "@string/display_operation"
+        android:textColor = "#33B5E5"
         android:layout_alignParentRight="true"
         android:gravity = "center"
-        android:textSize="20sp" />
+        android:textSize="32sp" />
     <TextView
         android:id = "@+id/display_secondary"
         android:layout_width = "wrap_content"
@@ -32,7 +33,8 @@
 	    style="?android:attr/borderlessButtonStyle"
 	    android:layout_below = "@id/display_operation" 
 	    android:layout_alignParentRight="true"
-        android:onClick="send_delete" />
+        android:onClick="send_delete"
+        android:textSize="20sp" />
     
     <TextView
         android:id = "@+id/display_main"

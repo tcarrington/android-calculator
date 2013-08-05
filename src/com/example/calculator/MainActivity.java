@@ -65,10 +65,10 @@ public class MainActivity extends Activity {
 		Button equal_button = (Button) findViewById(R.id.equal_button);
 		Button mod_button = (Button) findViewById(R.id.mod_button);
 		//width formatting
-		display_operation.setWidth((width/10)-16);
-		display_secondary.setWidth(((width*9)/10)-16);
-		display_main.setWidth(((width*9)/10)-16);
-		delete_button.setWidth((width/10)-16);
+		display_operation.setWidth((width/4)-16);
+		display_secondary.setWidth(((width*3)/4)-16);
+		display_main.setWidth(((width*3)/4)-16);
+		delete_button.setWidth((width/4)-16);
 		bin_select.setWidth((width/4)-16);
 		oct_select.setWidth((width/4)-16);
 		dec_select.setWidth((width/4)-16);
@@ -132,8 +132,23 @@ public class MainActivity extends Activity {
 		plusminus_button.setHeight((height/9)-16);
 		equal_button.setHeight((height/9)-16);
 		mod_button.setHeight((height/9)-16);
-		//set defaults for radio buttons
-
+		//set defaults for base select buttons
+    	f_button.setEnabled(false);
+    	e_button.setEnabled(false);
+    	d_button.setEnabled(false);
+    	c_button.setEnabled(false);
+    	b_button.setEnabled(false);
+    	a_button.setEnabled(false);
+    	button_9.setEnabled(false);
+    	button_8.setEnabled(false);
+    	button_7.setEnabled(false);
+    	button_6.setEnabled(false);
+    	button_5.setEnabled(false);
+    	button_4.setEnabled(false);
+    	button_3.setEnabled(false);
+    	button_2.setEnabled(false);
+    	button_1.setEnabled(true);
+    	button_0.setEnabled(true);
 		//required assignment for leading zero at onCreate()
 		displayValue = "0";
 
@@ -332,7 +347,9 @@ public class MainActivity extends Activity {
     	hex_select.setBackground(shape);
 	}
 	
-		
+	public void send_delete(View view) {
+		// TODO: work on delete logic
+	}
 	//first row of buttons
 	public void send_d(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -397,9 +414,11 @@ public class MainActivity extends Activity {
 	}
 	public void send_div(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		operand1 = display_main.getText().toString();
 		operation = "/";
 		displayValue = "0";
+		display_operation.setText("/");
 	}
 	
 	//third row of buttons
@@ -435,9 +454,11 @@ public class MainActivity extends Activity {
 	}
 	public void send_mult(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		operand1 = display_main.getText().toString();
 		operation = "*";
 		displayValue = "0";
+		display_operation.setText("*");
 	}
 	
 	//fourth row of buttons
@@ -473,9 +494,11 @@ public class MainActivity extends Activity {
 	}
 	public void send_sub(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		operand1 = display_main.getText().toString();
 		operation = "-";
 		displayValue = "0";
+		display_operation.setText("-");
 	}
 	
 	//fifth row of buttons
@@ -557,9 +580,11 @@ public class MainActivity extends Activity {
 	
 	public void send_mod(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		operand1 = display_main.getText().toString();
 		operation = "%";
 		displayValue = "0";
+		display_operation.setText("%");
 	}
 	
 
