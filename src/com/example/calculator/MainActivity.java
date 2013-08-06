@@ -15,11 +15,13 @@ public class MainActivity extends Activity {
 	String operand1;
 	String operation;
 	String operand2;
+	
 	String displayValue;
 	int solutionInt = 0;
 	String solutionString;
+	
 	boolean operationFlag = false;
-	String curRadioButton = "bin_button";
+	String currentBase = "bin";
 	
 	//start of main code
 	@Override
@@ -162,6 +164,9 @@ public class MainActivity extends Activity {
 	}
 	
 	public void bin_select(View view){
+		currentBase = "bin";
+		
+		//button locking
 		Button d_button = (Button) findViewById(R.id.d_button);
 		Button e_button = (Button) findViewById(R.id.e_button);
 		Button f_button = (Button) findViewById(R.id.f_button);
@@ -195,7 +200,7 @@ public class MainActivity extends Activity {
     	button_1.setEnabled(true);
     	button_0.setEnabled(true);
     	
-    	
+    	//base selector
     	Resources res = getResources();
     	Drawable shape = res.getDrawable(R.drawable.button_background);
 
@@ -207,8 +212,15 @@ public class MainActivity extends Activity {
     	oct_select.setBackground(null);
     	dec_select.setBackground(null);
     	hex_select.setBackground(null);
+    	
+    	//text_display conversion
+    	TextView display_main = (TextView) findViewById(R.id.display_main);
+    	display_main.setText(Integer.toBinaryString(Integer.parseInt(displayValue)));
 	}
 	public void oct_select(View view){
+		currentBase = "oct";
+		
+		//button locking
 		Button d_button = (Button) findViewById(R.id.d_button);
 		Button e_button = (Button) findViewById(R.id.e_button);
 		Button f_button = (Button) findViewById(R.id.f_button);
@@ -253,8 +265,15 @@ public class MainActivity extends Activity {
     	oct_select.setBackground(shape);
     	dec_select.setBackground(null);
     	hex_select.setBackground(null);
+    	
+    	//text_display conversion
+    	TextView display_main = (TextView) findViewById(R.id.display_main);
+    	display_main.setText(Integer.toOctalString(Integer.parseInt(displayValue)));
 	}
 	public void dec_select(View view){
+		currentBase = "dec";
+		
+		//button locking
 		Button d_button = (Button) findViewById(R.id.d_button);
 		Button e_button = (Button) findViewById(R.id.e_button);
 		Button f_button = (Button) findViewById(R.id.f_button);
@@ -299,8 +318,12 @@ public class MainActivity extends Activity {
     	oct_select.setBackground(null);
     	dec_select.setBackground(shape);
     	hex_select.setBackground(null);
+    	
 	}
 	public void hex_select(View view){
+		currentBase = "hex";
+		
+		//button locking
 		Button d_button = (Button) findViewById(R.id.d_button);
 		Button e_button = (Button) findViewById(R.id.e_button);
 		Button f_button = (Button) findViewById(R.id.f_button);
@@ -345,6 +368,10 @@ public class MainActivity extends Activity {
     	oct_select.setBackground(null);
     	dec_select.setBackground(null);
     	hex_select.setBackground(shape);
+    	
+    	//text_display conversion
+    	TextView display_main = (TextView) findViewById(R.id.display_main);
+    	display_main.setText(Integer.toHexString(Integer.parseInt(displayValue)));
 	}
 	
 	public void send_delete(View view) {
@@ -383,13 +410,15 @@ public class MainActivity extends Activity {
 	}
 	public void send_clear(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		displayValue = display_main.getText().toString();
 		// TODO: fix to only adjust required values
 		displayValue = "0";
 		operand1 = "0";
 		operand2 = "0";
-		solutionInt = 0;
+		//solutionInt = 0;
 		solutionString = "0";
+		display_operation.setText("");
 		display_main.setText(displayValue);
 	}
 	
@@ -590,35 +619,3 @@ public class MainActivity extends Activity {
 
 }
 
-
-
-
-
-/*
-if(curRadioButton == "bin_button") {
-	//convert do decimal and back
-	int binValue1 = 0;
-	int binValue2 = 0;
-	int binSolution = 0;
-	for(int i = 0; i < operand1.length(); i ++) {
-		binValue1 += (int)Math.pow((Double.parseDouble(Character.toString(operand1.charAt(operand1.length()-1-i)))*2), i);
-	}
-	for(int i = 0; i < operand2.length(); i ++) {
-		binValue1 += (int)Math.pow((Double.parseDouble(Character.toString(operand2.charAt(operand2.length()-1-i)))*2), i);
-	}
-	binSolution = binValue1 + binValue2;
-	
-	for(int i = 0; i < 16; i++){
-		
-	}
-	
-}
-else if(curRadioButton == "oct_button") {
-	
-}
-else if(curRadioButton == "dec_button") {
-	
-}
-else if(curRadioButton == "hex_button") {
-	
-}*/
