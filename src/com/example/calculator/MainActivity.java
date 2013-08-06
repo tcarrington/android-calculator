@@ -19,7 +19,7 @@ public class MainActivity extends Activity {
 	String displayValue;
 	
 	boolean operationFlag = false;
-	int currentBase = 2;
+	int currentBase;
 	
 	//start of main code
 	@Override
@@ -151,6 +151,7 @@ public class MainActivity extends Activity {
     	button_0.setEnabled(true);
 		//required assignment for leading zero at onCreate()
 		displayValue = "0";
+		currentBase = 2;
 
 	}
 
@@ -162,7 +163,6 @@ public class MainActivity extends Activity {
 	}
 	
 	public void bin_select(View view){
-		currentBase = 2;
 		
 		//button locking
 		Button d_button = (Button) findViewById(R.id.d_button);
@@ -213,10 +213,14 @@ public class MainActivity extends Activity {
     	
     	//text_display conversion
     	TextView display_main = (TextView) findViewById(R.id.display_main);
-    	display_main.setText(Integer.toBinaryString(Integer.parseInt(displayValue)));
+    	displayValue = Integer.toBinaryString(Integer.parseInt(displayValue, currentBase));
+    	//display_main.setText(Integer.toBinaryString(Integer.parseInt(displayValue)));
+    	display_main.setText(displayValue);
+    	
+    	currentBase = 2;
 	}
 	public void oct_select(View view){
-		currentBase = 8;
+		
 		
 		//button locking
 		Button d_button = (Button) findViewById(R.id.d_button);
@@ -266,10 +270,14 @@ public class MainActivity extends Activity {
     	
     	//text_display conversion
     	TextView display_main = (TextView) findViewById(R.id.display_main);
-    	display_main.setText(Integer.toOctalString(Integer.parseInt(displayValue)));
+    	displayValue = Integer.toOctalString(Integer.parseInt(displayValue, currentBase));
+    	//display_main.setText(Integer.toOctalString(Integer.parseInt(displayValue)));
+    	display_main.setText(displayValue);
+    	
+    	currentBase = 8;
 	}
 	public void dec_select(View view){
-		currentBase = 10;
+		
 		
 		//button locking
 		Button d_button = (Button) findViewById(R.id.d_button);
@@ -317,9 +325,17 @@ public class MainActivity extends Activity {
     	dec_select.setBackground(shape);
     	hex_select.setBackground(null);
     	
+    	
+    	//text_display conversion
+    	TextView display_main = (TextView) findViewById(R.id.display_main);
+    	displayValue = Integer.toString(Integer.parseInt(displayValue, currentBase));
+    	//display_main.setText(Integer.toString(Integer.parseInt(displayValue)));
+    	display_main.setText(displayValue);
+    	
+    	currentBase = 10;
 	}
 	public void hex_select(View view){
-		currentBase = 16;
+		
 		
 		//button locking
 		Button d_button = (Button) findViewById(R.id.d_button);
@@ -369,7 +385,11 @@ public class MainActivity extends Activity {
     	
     	//text_display conversion
     	TextView display_main = (TextView) findViewById(R.id.display_main);
-    	display_main.setText(Integer.toHexString(Integer.parseInt(displayValue)));
+    	displayValue = Integer.toHexString(Integer.parseInt(displayValue, currentBase));
+    	//display_main.setText(Integer.toHexString(Integer.parseInt(displayValue)));
+    	display_main.setText(displayValue);
+    	
+    	currentBase = 16;
 	}
 	
 	public void send_delete(View view) {
@@ -421,20 +441,32 @@ public class MainActivity extends Activity {
 	//second row of buttons
 	public void send_a(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		displayValue = display_main.getText().toString();
-		displayValue += "A";
+		if(displayValue == "0")
+			displayValue = "A";
+		else {
+			displayValue = display_main.getText().toString();
+			displayValue += "A";
+		}
 		display_main.setText(displayValue);
 	}
 	public void send_b(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		displayValue = display_main.getText().toString();
-		displayValue += "B";
+		if(displayValue == "0")
+			displayValue = "B";
+		else {
+			displayValue = display_main.getText().toString();
+			displayValue += "B";
+		}
 		display_main.setText(displayValue);
 	}
 	public void send_c(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		displayValue = display_main.getText().toString();
-		displayValue += "C";
+		if(displayValue == "0")
+			displayValue = "C";
+		else {
+			displayValue = display_main.getText().toString();
+			displayValue += "C";
+		}
 		display_main.setText(displayValue);
 	}
 	public void send_div(View view) {
