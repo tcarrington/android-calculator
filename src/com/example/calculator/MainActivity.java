@@ -17,11 +17,9 @@ public class MainActivity extends Activity {
 	String operand2;
 	
 	String displayValue;
-	int solutionInt = 0;
-	String solutionString;
 	
 	boolean operationFlag = false;
-	String currentBase = "bin";
+	int currentBase = 2;
 	
 	//start of main code
 	@Override
@@ -164,7 +162,7 @@ public class MainActivity extends Activity {
 	}
 	
 	public void bin_select(View view){
-		currentBase = "bin";
+		currentBase = 2;
 		
 		//button locking
 		Button d_button = (Button) findViewById(R.id.d_button);
@@ -218,7 +216,7 @@ public class MainActivity extends Activity {
     	display_main.setText(Integer.toBinaryString(Integer.parseInt(displayValue)));
 	}
 	public void oct_select(View view){
-		currentBase = "oct";
+		currentBase = 8;
 		
 		//button locking
 		Button d_button = (Button) findViewById(R.id.d_button);
@@ -271,7 +269,7 @@ public class MainActivity extends Activity {
     	display_main.setText(Integer.toOctalString(Integer.parseInt(displayValue)));
 	}
 	public void dec_select(View view){
-		currentBase = "dec";
+		currentBase = 10;
 		
 		//button locking
 		Button d_button = (Button) findViewById(R.id.d_button);
@@ -321,7 +319,7 @@ public class MainActivity extends Activity {
     	
 	}
 	public void hex_select(View view){
-		currentBase = "hex";
+		currentBase = 16;
 		
 		//button locking
 		Button d_button = (Button) findViewById(R.id.d_button);
@@ -416,8 +414,6 @@ public class MainActivity extends Activity {
 		displayValue = "0";
 		operand1 = "0";
 		operand2 = "0";
-		//solutionInt = 0;
-		solutionString = "0";
 		display_operation.setText("");
 		display_main.setText(displayValue);
 	}
@@ -573,8 +569,12 @@ public class MainActivity extends Activity {
 	//sixth row of buttons
 	public void send_0(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		displayValue = display_main.getText().toString();
-		displayValue += "0";
+		if(displayValue == "0")
+			displayValue = "0";
+		else {
+			displayValue = display_main.getText().toString();
+			displayValue += "0";
+		};
 		display_main.setText(displayValue);
 	}
 	public void send_plusminus(View view) {
@@ -586,24 +586,44 @@ public class MainActivity extends Activity {
 	public void send_equal(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		operand2 = display_main.getText().toString();
+
+		int solutionInt = 0;
+		
 		if(operation == "+") {
-			solutionInt = Integer.parseInt(operand1) + Integer.parseInt(operand2);
+			switch (currentBase) {
+				case 2:
+					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toBinaryString(solutionInt);
+					break;
+				case 8:
+					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toOctalString(solutionInt);
+					break;
+				case 10:
+					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
+					break;
+				case 16:
+					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toHexString(solutionInt);
+					break;
+			}
 		}
 		else if(operation == "-") {
-			solutionInt = Integer.parseInt(operand1) - Integer.parseInt(operand2);
+			solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
 		}
 		else if(operation == "*") {
-			solutionInt = Integer.parseInt(operand1) * Integer.parseInt(operand2);
+			solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
 		}
 		else if(operation == "/") {
-			solutionInt = Integer.parseInt(operand1) / Integer.parseInt(operand2);
+			solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
 		}
 		else if(operation == "%") {
-			solutionInt = Integer.parseInt(operand1) % Integer.parseInt(operand2);
+			solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
 		}
-		solutionString = String.valueOf(solutionInt);
-		display_main.setText(solutionString);
-		operand1 = solutionString;
+
+		display_main.setText(displayValue);
+		operand1 = displayValue;
 		displayValue = "0";
 	}
 	
