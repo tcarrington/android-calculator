@@ -610,16 +610,84 @@ public class MainActivity extends Activity {
 			}
 		}
 		else if(operation == "-") {
-			solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
+			switch (currentBase) {
+				case 2:
+					solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toBinaryString(solutionInt);
+					break;
+				case 8:
+					solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toOctalString(solutionInt);
+					break;
+				case 10:
+					solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
+					break;
+				case 16:
+					solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toHexString(solutionInt);
+					break;
+			}
 		}
 		else if(operation == "*") {
-			solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
+			switch (currentBase) {
+				case 2:
+					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toBinaryString(solutionInt);
+					break;
+				case 8:
+					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toOctalString(solutionInt);
+					break;
+				case 10:
+					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
+					break;
+				case 16:
+					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toHexString(solutionInt);
+					break;
+			}
 		}
 		else if(operation == "/") {
-			solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+			switch (currentBase) {
+				case 2:
+					solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toBinaryString(solutionInt);
+					break;
+				case 8:
+					solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toOctalString(solutionInt);
+					break;
+				case 10:
+					solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
+					break;
+				case 16:
+					solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toHexString(solutionInt);
+					break;
+			}
 		}
 		else if(operation == "%") {
-			solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
+			switch (currentBase) {
+				case 2:
+					solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toBinaryString(solutionInt);
+					break;
+				case 8:
+					solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toOctalString(solutionInt);
+					break;
+				case 10:
+					solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
+					break;
+				case 16:
+					solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toHexString(solutionInt);
+					break;
+			}
 		}
 
 		display_main.setText(displayValue);
