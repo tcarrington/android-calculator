@@ -391,7 +391,7 @@ public class MainActivity extends Activity {
     	TextView display_main = (TextView) findViewById(R.id.display_main);
 	    	displayValue = Integer.toHexString(Integer.parseInt(displayValue, currentBase));
 	    	//display_main.setText(Integer.toHexString(Integer.parseInt(displayValue)));
-	    	display_main.setText(displayValue);
+	    	display_main.setText(displayValue.toUpperCase());
     	}
     	
     	currentBase = 16;
@@ -731,7 +731,7 @@ public class MainActivity extends Activity {
 			}
 		}
 
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase());
 		operand1 = displayValue;
 		displayValue = "0";
 	}
