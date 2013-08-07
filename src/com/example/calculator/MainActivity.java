@@ -212,10 +212,11 @@ public class MainActivity extends Activity {
     	hex_select.setBackground(null);
     	
     	//text_display conversion
-    	TextView display_main = (TextView) findViewById(R.id.display_main);
-    	displayValue = Integer.toBinaryString(Integer.parseInt(displayValue, currentBase));
-    	//display_main.setText(Integer.toBinaryString(Integer.parseInt(displayValue)));
-    	display_main.setText(displayValue);
+    	if(displayValue != "0") {
+	    	TextView display_main = (TextView) findViewById(R.id.display_main);
+	    	displayValue = Integer.toBinaryString(Integer.parseInt(displayValue, currentBase));
+	    	display_main.setText(displayValue);
+    	}
     	
     	currentBase = 2;
 	}
@@ -269,10 +270,11 @@ public class MainActivity extends Activity {
     	hex_select.setBackground(null);
     	
     	//text_display conversion
-    	TextView display_main = (TextView) findViewById(R.id.display_main);
-    	displayValue = Integer.toOctalString(Integer.parseInt(displayValue, currentBase));
-    	//display_main.setText(Integer.toOctalString(Integer.parseInt(displayValue)));
-    	display_main.setText(displayValue);
+    	if(displayValue != "0") {
+	    	TextView display_main = (TextView) findViewById(R.id.display_main);
+	    	displayValue = Integer.toOctalString(Integer.parseInt(displayValue, currentBase));
+	    	display_main.setText(displayValue);
+    	}
     	
     	currentBase = 8;
 	}
@@ -327,10 +329,11 @@ public class MainActivity extends Activity {
     	
     	
     	//text_display conversion
-    	TextView display_main = (TextView) findViewById(R.id.display_main);
-    	displayValue = Integer.toString(Integer.parseInt(displayValue, currentBase));
-    	//display_main.setText(Integer.toString(Integer.parseInt(displayValue)));
-    	display_main.setText(displayValue);
+    	if(displayValue != "0") {
+	    	TextView display_main = (TextView) findViewById(R.id.display_main);
+	    	displayValue = Integer.toString(Integer.parseInt(displayValue, currentBase));
+	    	display_main.setText(displayValue);
+    	}
     	
     	currentBase = 10;
 	}
@@ -384,10 +387,12 @@ public class MainActivity extends Activity {
     	hex_select.setBackground(shape);
     	
     	//text_display conversion
+    	if(displayValue != "0"){
     	TextView display_main = (TextView) findViewById(R.id.display_main);
-    	displayValue = Integer.toHexString(Integer.parseInt(displayValue, currentBase));
-    	//display_main.setText(Integer.toHexString(Integer.parseInt(displayValue)));
-    	display_main.setText(displayValue);
+	    	displayValue = Integer.toHexString(Integer.parseInt(displayValue, currentBase));
+	    	//display_main.setText(Integer.toHexString(Integer.parseInt(displayValue)));
+	    	display_main.setText(displayValue);
+    	}
     	
     	currentBase = 16;
 	}
