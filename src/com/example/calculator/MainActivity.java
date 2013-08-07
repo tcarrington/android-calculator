@@ -394,6 +394,10 @@ public class MainActivity extends Activity {
 	
 	public void send_delete(View view) {
 		// TODO: work on delete logic
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(displayValue.length() > 1)
+			displayValue = displayValue.substring(0, displayValue.length() - 1);
+		display_main.setText(displayValue);
 	}
 	//first row of buttons
 	public void send_d(View view) {
