@@ -409,6 +409,8 @@ public class MainActivity extends Activity {
 	//first row of buttons
 	public void send_d(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag)
+			displayValue = "0";
 		if(displayValue == "0")
 			displayValue = "D";
 		else {
@@ -419,6 +421,8 @@ public class MainActivity extends Activity {
 	}
 	public void send_e(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag)
+			displayValue = "0";
 		if(displayValue == "0")
 			displayValue = "E";
 		else {
@@ -429,6 +433,8 @@ public class MainActivity extends Activity {
 	}
 	public void send_f(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag)
+			displayValue = "0";
 		if(displayValue == "0")
 			displayValue = "F";
 		else {
@@ -452,6 +458,8 @@ public class MainActivity extends Activity {
 	//second row of buttons
 	public void send_a(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag)
+			displayValue = "0";
 		if(displayValue == "0")
 			displayValue = "A";
 		else {
@@ -462,6 +470,8 @@ public class MainActivity extends Activity {
 	}
 	public void send_b(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag)
+			displayValue = "0";
 		if(displayValue == "0")
 			displayValue = "B";
 		else {
@@ -472,6 +482,8 @@ public class MainActivity extends Activity {
 	}
 	public void send_c(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag)
+			displayValue = "0";
 		if(displayValue == "0")
 			displayValue = "C";
 		else {
@@ -492,6 +504,8 @@ public class MainActivity extends Activity {
 	//third row of buttons
 	public void send_7(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag)
+			displayValue = "0";
 		if(displayValue == "0")
 			displayValue = "7";
 		else {
@@ -502,6 +516,8 @@ public class MainActivity extends Activity {
 	}
 	public void send_8(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag)
+			displayValue = "0";
 		if(displayValue == "0")
 			displayValue = "8";
 		else {
@@ -512,6 +528,8 @@ public class MainActivity extends Activity {
 	}
 	public void send_9(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag)
+			displayValue = "0";
 		if(displayValue == "0")
 			displayValue = "9";
 		else {
@@ -532,6 +550,8 @@ public class MainActivity extends Activity {
 	//fourth row of buttons
 	public void send_4(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag)
+			displayValue = "0";
 		if(displayValue == "0")
 			displayValue = "4";
 		else {
@@ -542,6 +562,8 @@ public class MainActivity extends Activity {
 	}
 	public void send_5(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag)
+			displayValue = "0";
 		if(displayValue == "0")
 			displayValue = "5";
 		else {
@@ -552,6 +574,8 @@ public class MainActivity extends Activity {
 	}
 	public void send_6(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag)
+			displayValue = "0";
 		if(displayValue == "0")
 			displayValue = "6";
 		else {
