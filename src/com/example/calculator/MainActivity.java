@@ -1,5 +1,7 @@
 package com.example.calculator;
 
+import java.util.Locale;
+
 import android.app.Activity;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
@@ -15,9 +17,9 @@ public class MainActivity extends Activity {
 	String operand1;
 	String operation;
 	String operand2;
-	
 	String displayValue;
 	
+	boolean focusFlag = false;
 	boolean operationFlag = false;
 	int currentBase;
 	
@@ -391,7 +393,7 @@ public class MainActivity extends Activity {
     	TextView display_main = (TextView) findViewById(R.id.display_main);
 	    	displayValue = Integer.toHexString(Integer.parseInt(displayValue, currentBase));
 	    	//display_main.setText(Integer.toHexString(Integer.parseInt(displayValue)));
-	    	display_main.setText(displayValue.toUpperCase());
+	    	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
     	}
     	
     	currentBase = 16;
@@ -570,6 +572,8 @@ public class MainActivity extends Activity {
 	//fifth row of buttons
 	public void send_1(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag)
+			displayValue = "0";
 		if(displayValue == "0")
 			displayValue = "1";
 		else {
@@ -580,6 +584,8 @@ public class MainActivity extends Activity {
 	}
 	public void send_2(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag)
+			displayValue = "0";
 		if(displayValue == "0")
 			displayValue = "2";
 		else {
@@ -590,6 +596,8 @@ public class MainActivity extends Activity {
 	}
 	public void send_3(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag)
+			displayValue = "0";
 		if(displayValue == "0")
 			displayValue = "3";
 		else {
@@ -605,6 +613,51 @@ public class MainActivity extends Activity {
 		operation = "+";
 		displayValue = "0";
 		display_operation.setText("+");
+		/*
+		int solutionInt = 0;
+		// TODO: work in progress allow adding of numbers in series w/o 'equal'
+		if(operation == "+") {
+			switch (currentBase) {
+				case 2:
+					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toBinaryString(solutionInt);
+					break;
+				case 8:
+					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toOctalString(solutionInt);
+					break;
+				case 10:
+					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
+					break;
+				case 16:
+					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toHexString(solutionInt);
+					break;
+			}
+		}
+		*/
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 	
 	//sixth row of buttons
@@ -620,10 +673,38 @@ public class MainActivity extends Activity {
 	}
 	public void send_plusminus(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		int holdNegative;
+		
+		switch (currentBase) {
+		case 2:
+			
+			holdNegative = Integer.parseInt(operand1, currentBase);
+			displayValue = Integer.toBinaryString(holdNegative);
+			break;
+		case 8:
+			holdNegative = Integer.parseInt(operand1, currentBase);
+			displayValue = Integer.toOctalString(holdNegative);
+			break;
+		case 10:
+			holdNegative = Integer.parseInt(operand1, currentBase);
+			displayValue = Integer.toString(holdNegative);
+			break;
+		case 16:
+			holdNegative = Integer.parseInt(operand1, currentBase);
+			displayValue = Integer.toHexString(holdNegative);
+			break;
+	}
+		
+		
+		
+		
+		
 		displayValue = display_main.getText().toString();
 		displayValue += "+/-";
 		display_main.setText(displayValue);
 	}
+	
+	//equal button & logic
 	public void send_equal(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		operand2 = display_main.getText().toString();
@@ -731,9 +812,10 @@ public class MainActivity extends Activity {
 			}
 		}
 
-		display_main.setText(displayValue.toUpperCase());
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 		operand1 = displayValue;
-		displayValue = "0";
+		//displayValue = "0";
+		focusFlag = true;
 	}
 	
 	public void send_mod(View view) {
