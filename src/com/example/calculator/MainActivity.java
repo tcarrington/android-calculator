@@ -3,6 +3,7 @@ package com.example.calculator;
 import java.util.Locale;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -151,6 +152,8 @@ public class MainActivity extends Activity {
     	button_2.setEnabled(false);
     	button_1.setEnabled(true);
     	button_0.setEnabled(true);
+    	plusminus_button.setEnabled(false);
+    	
 		//required assignment for leading zero at onCreate()
 		displayValue = "0";
 		currentBase = 2;
@@ -402,8 +405,12 @@ public class MainActivity extends Activity {
 	public void send_delete(View view) {
 		// TODO: work on delete logic
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(displayValue.length() > 1)
+		if(displayValue.length() > 0){
 			displayValue = displayValue.substring(0, displayValue.length() - 1);
+			if(displayValue.length() == 0){
+				displayValue = "0";
+			}
+		}
 		display_main.setText(displayValue);
 	}
 	//first row of buttons
@@ -448,6 +455,7 @@ public class MainActivity extends Activity {
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		displayValue = display_main.getText().toString();
 		// TODO: fix to only adjust required values
+		
 		displayValue = "0";
 		operand1 = "0";
 		operand2 = "0";
@@ -587,6 +595,7 @@ public class MainActivity extends Activity {
 	public void send_sub(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
+
 		operand1 = display_main.getText().toString();
 		operation = "-";
 		displayValue = "0";
@@ -838,7 +847,6 @@ public class MainActivity extends Activity {
 
 		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 		operand1 = displayValue;
-		//displayValue = "0";
 		focusFlag = true;
 	}
 	
