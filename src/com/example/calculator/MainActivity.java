@@ -459,6 +459,7 @@ public class MainActivity extends Activity {
 	public void send_clear(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		displayValue = display_main.getText().toString();
 		// TODO: fix to only adjust required values
 		focusFlag = false;
@@ -467,6 +468,8 @@ public class MainActivity extends Activity {
 		operand2 = "0";
 		display_operation.setText("");
 		display_main.setText(displayValue);
+		display_secondary.setText("");
+		
 	}
 	
 	//second row of buttons
@@ -515,10 +518,13 @@ public class MainActivity extends Activity {
 	public void send_div(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		operand1 = display_main.getText().toString();
+		display_secondary.setText(operand1);
 		operation = "/";
 		displayValue = "0";
 		display_operation.setText("/");
+		display_main.setText(displayValue);
 	}
 	
 	//third row of buttons
@@ -567,10 +573,13 @@ public class MainActivity extends Activity {
 	public void send_mult(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		operand1 = display_main.getText().toString();
+		display_secondary.setText(operand1);
 		operation = "*";
 		displayValue = "0";
 		display_operation.setText("*");
+		display_main.setText(displayValue);
 	}
 	
 	//fourth row of buttons
@@ -619,11 +628,13 @@ public class MainActivity extends Activity {
 	public void send_sub(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
-
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		operand1 = display_main.getText().toString();
+		display_secondary.setText(operand1);
 		operation = "-";
 		displayValue = "0";
 		display_operation.setText("-");
+		display_main.setText(displayValue);
 	}
 	
 	//fifth row of buttons
@@ -673,11 +684,13 @@ public class MainActivity extends Activity {
 	public void send_add(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		operand1 = display_main.getText().toString();
+		display_secondary.setText(operand1);
 		operation = "+";
 		displayValue = "0";
 		display_operation.setText("+");
-		int solutionInt = 0;
+		display_main.setText(displayValue);
 		// TODO: work in progress allow adding of numbers in series w/o 'equal'
 
 	}
@@ -720,11 +733,7 @@ public class MainActivity extends Activity {
 			displayValue = Integer.toHexString(holdNegative);
 			break;
 	}
-		
-		
-		
-		
-		
+
 		displayValue = display_main.getText().toString();
 		displayValue += "+/-";
 		display_main.setText(displayValue);
@@ -846,10 +855,13 @@ public class MainActivity extends Activity {
 	public void send_mod(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		operand1 = display_main.getText().toString();
+		display_secondary.setText(operand1);
 		operation = "%";
 		displayValue = "0";
 		display_operation.setText("%");
+		display_main.setText(displayValue);
 	}
 	
 
