@@ -416,8 +416,10 @@ public class MainActivity extends Activity {
 	//first row of buttons
 	public void send_d(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag)
+		if(focusFlag) {
 			displayValue = "0";
+			focusFlag = false;
+		}
 		if(displayValue == "0")
 			displayValue = "D";
 		else {
@@ -428,8 +430,10 @@ public class MainActivity extends Activity {
 	}
 	public void send_e(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag)
+		if(focusFlag) {
 			displayValue = "0";
+			focusFlag = false;
+		}
 		if(displayValue == "0")
 			displayValue = "E";
 		else {
@@ -440,8 +444,10 @@ public class MainActivity extends Activity {
 	}
 	public void send_f(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag)
+		if(focusFlag) {
 			displayValue = "0";
+			focusFlag = false;
+		}
 		if(displayValue == "0")
 			displayValue = "F";
 		else {
@@ -455,7 +461,7 @@ public class MainActivity extends Activity {
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		displayValue = display_main.getText().toString();
 		// TODO: fix to only adjust required values
-		
+		focusFlag = false;
 		displayValue = "0";
 		operand1 = "0";
 		operand2 = "0";
@@ -466,8 +472,10 @@ public class MainActivity extends Activity {
 	//second row of buttons
 	public void send_a(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag)
+		if(focusFlag) {
 			displayValue = "0";
+			focusFlag = false;
+		}
 		if(displayValue == "0")
 			displayValue = "A";
 		else {
@@ -478,8 +486,10 @@ public class MainActivity extends Activity {
 	}
 	public void send_b(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag)
+		if(focusFlag) {
 			displayValue = "0";
+			focusFlag = false;
+		}
 		if(displayValue == "0")
 			displayValue = "B";
 		else {
@@ -490,8 +500,10 @@ public class MainActivity extends Activity {
 	}
 	public void send_c(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag)
+		if(focusFlag) {
 			displayValue = "0";
+			focusFlag = false;
+		}
 		if(displayValue == "0")
 			displayValue = "C";
 		else {
@@ -512,8 +524,10 @@ public class MainActivity extends Activity {
 	//third row of buttons
 	public void send_7(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag)
+		if(focusFlag) {
 			displayValue = "0";
+			focusFlag = false;
+		}
 		if(displayValue == "0")
 			displayValue = "7";
 		else {
@@ -524,8 +538,10 @@ public class MainActivity extends Activity {
 	}
 	public void send_8(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag)
+		if(focusFlag) {
 			displayValue = "0";
+			focusFlag = false;
+		}
 		if(displayValue == "0")
 			displayValue = "8";
 		else {
@@ -536,8 +552,10 @@ public class MainActivity extends Activity {
 	}
 	public void send_9(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag)
+		if(focusFlag) {
 			displayValue = "0";
+			focusFlag = false;
+		}
 		if(displayValue == "0")
 			displayValue = "9";
 		else {
@@ -558,8 +576,10 @@ public class MainActivity extends Activity {
 	//fourth row of buttons
 	public void send_4(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag)
+		if(focusFlag) {
 			displayValue = "0";
+			focusFlag = false;
+		}
 		if(displayValue == "0")
 			displayValue = "4";
 		else {
@@ -570,8 +590,10 @@ public class MainActivity extends Activity {
 	}
 	public void send_5(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag)
+		if(focusFlag) {
 			displayValue = "0";
+			focusFlag = false;
+		}
 		if(displayValue == "0")
 			displayValue = "5";
 		else {
@@ -582,8 +604,10 @@ public class MainActivity extends Activity {
 	}
 	public void send_6(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag)
+		if(focusFlag) {
 			displayValue = "0";
+			focusFlag = false;
+		}
 		if(displayValue == "0")
 			displayValue = "6";
 		else {
@@ -605,8 +629,10 @@ public class MainActivity extends Activity {
 	//fifth row of buttons
 	public void send_1(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag)
+		if(focusFlag) {
 			displayValue = "0";
+			focusFlag = false;
+		}
 		if(displayValue == "0")
 			displayValue = "1";
 		else {
@@ -617,20 +643,25 @@ public class MainActivity extends Activity {
 	}
 	public void send_2(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag)
+		if(focusFlag) {
 			displayValue = "0";
+			focusFlag = false;
+		}
 		if(displayValue == "0")
 			displayValue = "2";
 		else {
 			displayValue = display_main.getText().toString();
 			displayValue += "2";
 		}
+		
 		display_main.setText(displayValue);
 	}
 	public void send_3(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag)
+		if(focusFlag) {
 			displayValue = "0";
+			focusFlag = false;
+		}
 		if(displayValue == "0")
 			displayValue = "3";
 		else {
@@ -646,62 +677,24 @@ public class MainActivity extends Activity {
 		operation = "+";
 		displayValue = "0";
 		display_operation.setText("+");
-		/*
 		int solutionInt = 0;
 		// TODO: work in progress allow adding of numbers in series w/o 'equal'
-		if(operation == "+") {
-			switch (currentBase) {
-				case 2:
-					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toBinaryString(solutionInt);
-					break;
-				case 8:
-					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toOctalString(solutionInt);
-					break;
-				case 10:
-					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toString(solutionInt);
-					break;
-				case 16:
-					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toHexString(solutionInt);
-					break;
-			}
-		}
-		*/
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 	}
 	
 	//sixth row of buttons
 	public void send_0(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag) {
+			displayValue = "0";
+			focusFlag = false;
+		}
 		if(displayValue == "0")
 			displayValue = "0";
 		else {
 			displayValue = display_main.getText().toString();
 			displayValue += "0";
-		};
+		}
 		display_main.setText(displayValue);
 	}
 	public void send_plusminus(View view) {
