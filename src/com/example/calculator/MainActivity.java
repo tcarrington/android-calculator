@@ -742,6 +742,8 @@ public class MainActivity extends Activity {
 	//equal button & logic
 	public void send_equal(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		operand2 = display_main.getText().toString();
 
 		int solutionInt = 0;
@@ -765,6 +767,7 @@ public class MainActivity extends Activity {
 					displayValue = Integer.toHexString(solutionInt);
 					break;
 			}
+			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 		}
 		else if(operation == "-") {
 			switch (currentBase) {
@@ -785,6 +788,7 @@ public class MainActivity extends Activity {
 					displayValue = Integer.toHexString(solutionInt);
 					break;
 			}
+			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 		}
 		else if(operation == "*") {
 			switch (currentBase) {
@@ -805,25 +809,34 @@ public class MainActivity extends Activity {
 					displayValue = Integer.toHexString(solutionInt);
 					break;
 			}
+			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 		}
 		else if(operation == "/") {
-			switch (currentBase) {
-				case 2:
-					solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toBinaryString(solutionInt);
-					break;
-				case 8:
-					solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toOctalString(solutionInt);
-					break;
-				case 10:
-					solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toString(solutionInt);
-					break;
-				case 16:
-					solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toHexString(solutionInt);
-					break;
+			if(operand2 == "0") {
+				display_secondary.setText("ERROR:");
+				display_main.setText("DIV BY ZERO");
+				display_operation.setText(null);
+			}
+			else {
+				switch (currentBase) {
+					case 2:
+						solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+						displayValue = Integer.toBinaryString(solutionInt);
+						break;
+					case 8:
+						solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+						displayValue = Integer.toOctalString(solutionInt);
+						break;
+					case 10:
+						solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+						displayValue = Integer.toString(solutionInt);
+						break;
+					case 16:
+						solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+						displayValue = Integer.toHexString(solutionInt);
+						break;
+				}
+				display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 			}
 		}
 		else if(operation == "%") {
@@ -845,9 +858,10 @@ public class MainActivity extends Activity {
 					displayValue = Integer.toHexString(solutionInt);
 					break;
 			}
+			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 		}
-
-		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
+		// TODO: need default cases for switch statements
+		
 		operand1 = displayValue;
 		focusFlag = true;
 	}
