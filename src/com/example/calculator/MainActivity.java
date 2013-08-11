@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
+	//global variables
 	String operand1;
 	String operation;
 	String operand2;
@@ -158,7 +159,6 @@ public class MainActivity extends Activity {
 		currentBase = 2;
 
 	}
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -166,6 +166,7 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
+	//base conversion
 	public void bin_select(View view){
 		
 		//button locking
@@ -401,187 +402,65 @@ public class MainActivity extends Activity {
     	currentBase = 16;
 	}
 	
-	public void send_delete(View view) {
-		// TODO: work on delete logic
-		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(displayValue.length() > 0){
-			displayValue = displayValue.substring(0, displayValue.length() - 1);
-			if(displayValue.length() == 0){
-				displayValue = "0";
-			}
-		}
-		display_main.setText(displayValue);
-	}
-	//first row of buttons
-	public void send_d(View view) {
+	//input buttons
+	public void send_0(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "D";
+			displayValue = "0";
 		else {
 			displayValue = display_main.getText().toString();
-			displayValue += "D";
+			displayValue += "0";
 		}
 		display_main.setText(displayValue);
 	}
-	public void send_e(View view) {
+	public void send_1(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "E";
+			displayValue = "1";
 		else {
 			displayValue = display_main.getText().toString();
-			displayValue += "E";
+			displayValue += "1";
 		}
 		display_main.setText(displayValue);
 	}
-	public void send_f(View view) {
+	public void send_2(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "F";
+			displayValue = "2";
 		else {
 			displayValue = display_main.getText().toString();
-			displayValue += "F";
+			displayValue += "2";
 		}
-		display_main.setText(displayValue);
-	}
-	public void send_clear(View view) {
-		TextView display_main = (TextView) findViewById(R.id.display_main);
-		TextView display_operation = (TextView) findViewById(R.id.display_operation);
-		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-		displayValue = display_main.getText().toString();
-		// TODO: fix to only adjust required values
-		focusFlag = false;
-		displayValue = "0";
-		operand1 = "0";
-		operand2 = "0";
-		display_operation.setText("");
-		display_main.setText(displayValue);
-		display_secondary.setText("");
 		
-	}
+		display_main.setText(displayValue);
+	}	
+	public void send_3(View view) {
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag) {
+			displayValue = "0";
+			focusFlag = false;
+		}
+		if(displayValue == "0")
+			displayValue = "3";
+		else {
+			displayValue = display_main.getText().toString();
+			displayValue += "3";
+		}
+		display_main.setText(displayValue);
+	}	
 	
-	//second row of buttons
-	public void send_a(View view) {
-		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag) {
-			displayValue = "0";
-			focusFlag = false;
-		}
-		if(displayValue == "0")
-			displayValue = "A";
-		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "A";
-		}
-		display_main.setText(displayValue);
-	}
-	public void send_b(View view) {
-		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag) {
-			displayValue = "0";
-			focusFlag = false;
-		}
-		if(displayValue == "0")
-			displayValue = "B";
-		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "B";
-		}
-		display_main.setText(displayValue);
-	}
-	public void send_c(View view) {
-		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag) {
-			displayValue = "0";
-			focusFlag = false;
-		}
-		if(displayValue == "0")
-			displayValue = "C";
-		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "C";
-		}
-		display_main.setText(displayValue);
-	}
-	public void send_div(View view) {
-		TextView display_main = (TextView) findViewById(R.id.display_main);
-		TextView display_operation = (TextView) findViewById(R.id.display_operation);
-		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-		operand1 = display_main.getText().toString();
-		display_secondary.setText(operand1);
-		operation = "/";
-		displayValue = "0";
-		display_operation.setText("/");
-		display_main.setText(displayValue);
-	}
-	
-	//third row of buttons
-	public void send_7(View view) {
-		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag) {
-			displayValue = "0";
-			focusFlag = false;
-		}
-		if(displayValue == "0")
-			displayValue = "7";
-		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "7";
-		}
-		display_main.setText(displayValue);
-	}
-	public void send_8(View view) {
-		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag) {
-			displayValue = "0";
-			focusFlag = false;
-		}
-		if(displayValue == "0")
-			displayValue = "8";
-		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "8";
-		}
-		display_main.setText(displayValue);
-	}
-	public void send_9(View view) {
-		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag) {
-			displayValue = "0";
-			focusFlag = false;
-		}
-		if(displayValue == "0")
-			displayValue = "9";
-		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "9";
-		}
-		display_main.setText(displayValue);
-	}
-	public void send_mult(View view) {
-		TextView display_main = (TextView) findViewById(R.id.display_main);
-		TextView display_operation = (TextView) findViewById(R.id.display_operation);
-		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-		operand1 = display_main.getText().toString();
-		display_secondary.setText(operand1);
-		operation = "*";
-		displayValue = "0";
-		display_operation.setText("*");
-		display_main.setText(displayValue);
-	}
-	
-	//fourth row of buttons
 	public void send_4(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(focusFlag) {
@@ -624,90 +503,162 @@ public class MainActivity extends Activity {
 		}
 		display_main.setText(displayValue);
 	}
-	public void send_sub(View view) {
-		TextView display_main = (TextView) findViewById(R.id.display_main);
-		TextView display_operation = (TextView) findViewById(R.id.display_operation);
-		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-		operand1 = display_main.getText().toString();
-		display_secondary.setText(operand1);
-		operation = "-";
-		displayValue = "0";
-		display_operation.setText("-");
-		display_main.setText(displayValue);
-	}
-	
-	//fifth row of buttons
-	public void send_1(View view) {
-		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag) {
-			displayValue = "0";
-			focusFlag = false;
-		}
-		if(displayValue == "0")
-			displayValue = "1";
-		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "1";
-		}
-		display_main.setText(displayValue);
-	}
-	public void send_2(View view) {
-		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag) {
-			displayValue = "0";
-			focusFlag = false;
-		}
-		if(displayValue == "0")
-			displayValue = "2";
-		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "2";
-		}
-		
-		display_main.setText(displayValue);
-	}
-	public void send_3(View view) {
-		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag) {
-			displayValue = "0";
-			focusFlag = false;
-		}
-		if(displayValue == "0")
-			displayValue = "3";
-		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "3";
-		}
-		display_main.setText(displayValue);
-	}
-	public void send_add(View view) {
-		TextView display_main = (TextView) findViewById(R.id.display_main);
-		TextView display_operation = (TextView) findViewById(R.id.display_operation);
-		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-		operand1 = display_main.getText().toString();
-		display_secondary.setText(operand1);
-		operation = "+";
-		displayValue = "0";
-		display_operation.setText("+");
-		display_main.setText(displayValue);
-		// TODO: work in progress allow adding of numbers in series w/o 'equal'
 
-	}
-	
-	//sixth row of buttons
-	public void send_0(View view) {
+	public void send_7(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "0";
+			displayValue = "7";
 		else {
 			displayValue = display_main.getText().toString();
-			displayValue += "0";
+			displayValue += "7";
 		}
 		display_main.setText(displayValue);
+	}
+	public void send_8(View view) {
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag) {
+			displayValue = "0";
+			focusFlag = false;
+		}
+		if(displayValue == "0")
+			displayValue = "8";
+		else {
+			displayValue = display_main.getText().toString();
+			displayValue += "8";
+		}
+		display_main.setText(displayValue);
+	}
+	public void send_9(View view) {
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag) {
+			displayValue = "0";
+			focusFlag = false;
+		}
+		if(displayValue == "0")
+			displayValue = "9";
+		else {
+			displayValue = display_main.getText().toString();
+			displayValue += "9";
+		}
+		display_main.setText(displayValue);
+	}	
+
+	public void send_a(View view) {
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag) {
+			displayValue = "0";
+			focusFlag = false;
+		}
+		if(displayValue == "0")
+			displayValue = "A";
+		else {
+			displayValue = display_main.getText().toString();
+			displayValue += "A";
+		}
+		display_main.setText(displayValue);
+	}
+	public void send_b(View view) {
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag) {
+			displayValue = "0";
+			focusFlag = false;
+		}
+		if(displayValue == "0")
+			displayValue = "B";
+		else {
+			displayValue = display_main.getText().toString();
+			displayValue += "B";
+		}
+		display_main.setText(displayValue);
+	}
+	public void send_c(View view) {
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag) {
+			displayValue = "0";
+			focusFlag = false;
+		}
+		if(displayValue == "0")
+			displayValue = "C";
+		else {
+			displayValue = display_main.getText().toString();
+			displayValue += "C";
+		}
+		display_main.setText(displayValue);
+	}
+	
+	public void send_d(View view) {
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag) {
+			displayValue = "0";
+			focusFlag = false;
+		}
+		if(displayValue == "0")
+			displayValue = "D";
+		else {
+			displayValue = display_main.getText().toString();
+			displayValue += "D";
+		}
+		display_main.setText(displayValue);
+	}
+	public void send_e(View view) {
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag) {
+			displayValue = "0";
+			focusFlag = false;
+		}
+		if(displayValue == "0")
+			displayValue = "E";
+		else {
+			displayValue = display_main.getText().toString();
+			displayValue += "E";
+		}
+		display_main.setText(displayValue);
+	}
+	public void send_f(View view) {
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(focusFlag) {
+			displayValue = "0";
+			focusFlag = false;
+		}
+		if(displayValue == "0")
+			displayValue = "F";
+		else {
+			displayValue = display_main.getText().toString();
+			displayValue += "F";
+		}
+		display_main.setText(displayValue);
+	}
+
+	//control buttons
+	public void send_delete(View view) {
+		// TODO: work on delete logic
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		if(displayValue.length() > 0){
+			displayValue = displayValue.substring(0, displayValue.length() - 1);
+			if(displayValue.length() == 0){
+				displayValue = "0";
+			}
+		}
+		display_main.setText(displayValue);
+	}
+	public void send_clear(View view) {
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_operation = (TextView) findViewById(R.id.display_operation);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+		displayValue = display_main.getText().toString();
+		// TODO: fix to only adjust required values
+		focusFlag = false;
+		displayValue = "0";
+		operand1 = "0";
+		operand2 = "0";
+		display_operation.setText("");
+		display_main.setText(displayValue);
+		display_secondary.setText("");
+		
 	}
 	public void send_plusminus(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -737,8 +688,6 @@ public class MainActivity extends Activity {
 		displayValue += "+/-";
 		display_main.setText(displayValue);
 	}
-	
-	//equal button & logic
 	public void send_equal(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
@@ -876,6 +825,53 @@ public class MainActivity extends Activity {
 		focusFlag = true;
 	}
 	
+	//operations
+	public void send_add(View view) {
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_operation = (TextView) findViewById(R.id.display_operation);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+		operand1 = display_main.getText().toString();
+		display_secondary.setText(operand1);
+		operation = "+";
+		displayValue = "0";
+		display_operation.setText("+");
+		display_main.setText(displayValue);
+		// TODO: work in progress allow adding of numbers in series w/o 'equal'
+
+	}
+	public void send_sub(View view) {
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_operation = (TextView) findViewById(R.id.display_operation);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+		operand1 = display_main.getText().toString();
+		display_secondary.setText(operand1);
+		operation = "-";
+		displayValue = "0";
+		display_operation.setText("-");
+		display_main.setText(displayValue);
+	}
+	public void send_mult(View view) {
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_operation = (TextView) findViewById(R.id.display_operation);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+		operand1 = display_main.getText().toString();
+		display_secondary.setText(operand1);
+		operation = "*";
+		displayValue = "0";
+		display_operation.setText("*");
+		display_main.setText(displayValue);
+	}
+	public void send_div(View view) {
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_operation = (TextView) findViewById(R.id.display_operation);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+		operand1 = display_main.getText().toString();
+		display_secondary.setText(operand1);
+		operation = "/";
+		displayValue = "0";
+		display_operation.setText("/");
+		display_main.setText(displayValue);
+	}
 	public void send_mod(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
@@ -888,6 +884,5 @@ public class MainActivity extends Activity {
 		display_main.setText(displayValue);
 	}
 	
-
 }
 
