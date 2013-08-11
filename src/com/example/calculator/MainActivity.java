@@ -155,6 +155,7 @@ public class MainActivity extends Activity {
     	plusminus_button.setEnabled(false);
     	
 		//required assignment for leading zero at onCreate()
+    	operand1 = "0";
 		displayValue = "0";
 		currentBase = 2;
 
@@ -222,6 +223,12 @@ public class MainActivity extends Activity {
 	    	displayValue = Long.toBinaryString(Long.parseLong(displayValue, currentBase));
 	    	display_main.setText(displayValue);
     	}
+    	if((operand1 != "0") && (operationFlag)) {
+	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+	    	operand1 = Long.toBinaryString(Long.parseLong(operand1, currentBase));
+	    	display_secondary.setText(operand1);
+    	}
+    	
     	
     	currentBase = 2;
 	}
@@ -277,8 +284,13 @@ public class MainActivity extends Activity {
     	//text_display conversion
     	if(displayValue != "0") {
 	    	TextView display_main = (TextView) findViewById(R.id.display_main);
-	    	displayValue = Integer.toOctalString(Integer.parseInt(displayValue, currentBase));
+	    	displayValue = Long.toOctalString(Long.parseLong(displayValue, currentBase));
 	    	display_main.setText(displayValue);
+    	}
+    	if((operand1 != "0") && (operationFlag)) {
+	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+	    	operand1 = Long.toOctalString(Long.parseLong(operand1, currentBase));
+	    	display_secondary.setText(operand1);
     	}
     	
     	currentBase = 8;
@@ -336,8 +348,14 @@ public class MainActivity extends Activity {
     	//text_display conversion
     	if(displayValue != "0") {
 	    	TextView display_main = (TextView) findViewById(R.id.display_main);
-	    	displayValue = Integer.toString(Integer.parseInt(displayValue, currentBase));
+	    	displayValue = Long.toString(Long.parseLong(displayValue, currentBase));
 	    	display_main.setText(displayValue);
+    	}
+    	
+    	if((operand1 != "0") && (operationFlag)) {
+	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+	    	operand1 = Long.toString(Long.parseLong(operand1, currentBase));
+	    	display_secondary.setText(operand1);
     	}
     	
     	currentBase = 10;
@@ -394,9 +412,13 @@ public class MainActivity extends Activity {
     	//text_display conversion
     	if(displayValue != "0"){
     	TextView display_main = (TextView) findViewById(R.id.display_main);
-	    	displayValue = Integer.toHexString(Integer.parseInt(displayValue, currentBase));
-	    	//display_main.setText(Integer.toHexString(Integer.parseInt(displayValue)));
+	    	displayValue = Long.toHexString(Long.parseLong(displayValue, currentBase));
 	    	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
+    	}
+    	if((operand1 != "0") && (operationFlag)) {
+	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+	    	operand1 = Long.toHexString(Long.parseLong(operand1, currentBase));
+	    	display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
     	}
     	
     	currentBase = 16;
