@@ -22,7 +22,7 @@
         android:text = "@string/display_secondary"
         android:layout_toLeftOf = "@id/display_operation"
         android:gravity="right"
-        android:textSize="32sp" />
+        android:textSize="20sp" />
 
     <!-- beginning of main display and delete button -->
         <Button
@@ -44,7 +44,7 @@
         android:text = "@string/display_main"
         android:layout_toLeftOf = "@id/delete_button"
         android:gravity = "right"
-        android:textSize="32sp" />
+        android:textSize="20sp" />
 
 
     <!-- beginning of main display and delete button -->
