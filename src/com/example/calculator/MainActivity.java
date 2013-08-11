@@ -3,7 +3,6 @@ package com.example.calculator;
 import java.util.Locale;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -768,6 +767,8 @@ public class MainActivity extends Activity {
 					break;
 			}
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
+			display_secondary.setText("");
+			display_operation.setText("");
 		}
 		else if(operation == "-") {
 			switch (currentBase) {
@@ -789,6 +790,8 @@ public class MainActivity extends Activity {
 					break;
 			}
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
+			display_secondary.setText("");
+			display_operation.setText("");
 		}
 		else if(operation == "*") {
 			switch (currentBase) {
@@ -810,6 +813,8 @@ public class MainActivity extends Activity {
 					break;
 			}
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
+			display_secondary.setText("");
+			display_operation.setText("");
 		}
 		else if(operation == "/") {
 			if(operand2 == "0") {
@@ -837,6 +842,8 @@ public class MainActivity extends Activity {
 						break;
 				}
 				display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
+				display_secondary.setText("");
+				display_operation.setText("");
 			}
 		}
 		else if(operation == "%") {
@@ -859,8 +866,11 @@ public class MainActivity extends Activity {
 					break;
 			}
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
+			display_secondary.setText("");
+			display_operation.setText("");
 		}
 		// TODO: need default cases for switch statements
+
 		
 		operand1 = displayValue;
 		focusFlag = true;
