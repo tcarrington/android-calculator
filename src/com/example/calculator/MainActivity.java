@@ -4,6 +4,7 @@ import java.util.Locale;
 
 import android.app.Activity;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -30,6 +31,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		//calculate metrics
 		DisplayMetrics metrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
 		
@@ -153,6 +155,11 @@ public class MainActivity extends Activity {
     	button_1.setEnabled(true);
     	button_0.setEnabled(true);
     	plusminus_button.setEnabled(false);
+    	bin_select.setTextColor(Color.parseColor("#33B5E5"));
+    	oct_select.setTextColor(Color.parseColor("#FFFFFF"));
+    	dec_select.setTextColor(Color.parseColor("#FFFFFF"));
+    	hex_select.setTextColor(Color.parseColor("#FFFFFF"));
+    	
     	
 		//required assignment for leading zero at onCreate()
     	operand1 = "0";
@@ -203,19 +210,15 @@ public class MainActivity extends Activity {
     	button_2.setEnabled(false);
     	button_1.setEnabled(true);
     	button_0.setEnabled(true);
-    	
-    	//base selector
-    	Resources res = getResources();
-    	Drawable shape = res.getDrawable(R.drawable.button_background);
 
     	Button bin_select = (Button) findViewById(R.id.bin_select);
     	Button oct_select = (Button) findViewById(R.id.oct_select);
     	Button dec_select = (Button) findViewById(R.id.dec_select);
     	Button hex_select = (Button) findViewById(R.id.hex_select);
-    	bin_select.setBackground(shape);
-    	oct_select.setBackground(null);
-    	dec_select.setBackground(null);
-    	hex_select.setBackground(null);
+    	bin_select.setTextColor(Color.parseColor("#33B5E5"));
+    	oct_select.setTextColor(Color.parseColor("#FFFFFF"));
+    	dec_select.setTextColor(Color.parseColor("#FFFFFF"));
+    	hex_select.setTextColor(Color.parseColor("#FFFFFF"));
     	
     	//text_display conversion
     	if(displayValue != "0") {
@@ -223,7 +226,7 @@ public class MainActivity extends Activity {
 	    	displayValue = Long.toBinaryString(Long.parseLong(displayValue, currentBase));
 	    	display_main.setText(displayValue);
     	}
-    	if((operand1 != "0") && (operationFlag)) {
+    	if((operand1 != "0") && (!focusFlag)) {
 	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 	    	operand1 = Long.toBinaryString(Long.parseLong(operand1, currentBase));
 	    	display_secondary.setText(operand1);
@@ -268,18 +271,15 @@ public class MainActivity extends Activity {
     	button_2.setEnabled(true);
     	button_1.setEnabled(true);
     	button_0.setEnabled(true);
-    	
-    	Resources res = getResources();
-    	Drawable shape = res.getDrawable(R.drawable.button_background);
 
     	Button bin_select = (Button) findViewById(R.id.bin_select);
     	Button oct_select = (Button) findViewById(R.id.oct_select);
     	Button dec_select = (Button) findViewById(R.id.dec_select);
     	Button hex_select = (Button) findViewById(R.id.hex_select);
-    	bin_select.setBackground(null);
-    	oct_select.setBackground(shape);
-    	dec_select.setBackground(null);
-    	hex_select.setBackground(null);
+    	bin_select.setTextColor(Color.parseColor("#FFFFFF"));
+    	oct_select.setTextColor(Color.parseColor("#33B5E5"));
+    	dec_select.setTextColor(Color.parseColor("#FFFFFF"));
+    	hex_select.setTextColor(Color.parseColor("#FFFFFF"));
     	
     	//text_display conversion
     	if(displayValue != "0") {
@@ -287,7 +287,7 @@ public class MainActivity extends Activity {
 	    	displayValue = Long.toOctalString(Long.parseLong(displayValue, currentBase));
 	    	display_main.setText(displayValue);
     	}
-    	if((operand1 != "0") && (operationFlag)) {
+    	if((operand1 != "0") && (!focusFlag)) {
 	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 	    	operand1 = Long.toOctalString(Long.parseLong(operand1, currentBase));
 	    	display_secondary.setText(operand1);
@@ -331,18 +331,15 @@ public class MainActivity extends Activity {
     	button_2.setEnabled(true);
     	button_1.setEnabled(true);
     	button_0.setEnabled(true);
-    	
-    	Resources res = getResources();
-    	Drawable shape = res.getDrawable(R.drawable.button_background);
 
     	Button bin_select = (Button) findViewById(R.id.bin_select);
     	Button oct_select = (Button) findViewById(R.id.oct_select);
     	Button dec_select = (Button) findViewById(R.id.dec_select);
     	Button hex_select = (Button) findViewById(R.id.hex_select);
-    	bin_select.setBackground(null);
-    	oct_select.setBackground(null);
-    	dec_select.setBackground(shape);
-    	hex_select.setBackground(null);
+    	bin_select.setTextColor(Color.parseColor("#FFFFFF"));
+    	oct_select.setTextColor(Color.parseColor("#FFFFFF"));
+    	dec_select.setTextColor(Color.parseColor("#33B5E5"));
+    	hex_select.setTextColor(Color.parseColor("#FFFFFF"));
     	
     	
     	//text_display conversion
@@ -352,7 +349,7 @@ public class MainActivity extends Activity {
 	    	display_main.setText(displayValue);
     	}
     	
-    	if((operand1 != "0") && (operationFlag)) {
+    	if((operand1 != "0") && (!focusFlag)) {
 	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 	    	operand1 = Long.toString(Long.parseLong(operand1, currentBase));
 	    	display_secondary.setText(operand1);
@@ -396,18 +393,15 @@ public class MainActivity extends Activity {
     	button_2.setEnabled(true);
     	button_1.setEnabled(true);
     	button_0.setEnabled(true);
-    	
-    	Resources res = getResources();
-    	Drawable shape = res.getDrawable(R.drawable.button_background);
 
     	Button bin_select = (Button) findViewById(R.id.bin_select);
     	Button oct_select = (Button) findViewById(R.id.oct_select);
     	Button dec_select = (Button) findViewById(R.id.dec_select);
     	Button hex_select = (Button) findViewById(R.id.hex_select);
-    	bin_select.setBackground(null);
-    	oct_select.setBackground(null);
-    	dec_select.setBackground(null);
-    	hex_select.setBackground(shape);
+    	bin_select.setTextColor(Color.parseColor("#FFFFFF"));
+    	oct_select.setTextColor(Color.parseColor("#FFFFFF"));
+    	dec_select.setTextColor(Color.parseColor("#FFFFFF"));
+    	hex_select.setTextColor(Color.parseColor("#33B5E5"));
     	
     	//text_display conversion
     	if(displayValue != "0"){
@@ -415,7 +409,7 @@ public class MainActivity extends Activity {
 	    	displayValue = Long.toHexString(Long.parseLong(displayValue, currentBase));
 	    	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
     	}
-    	if((operand1 != "0") && (operationFlag)) {
+    	if((operand1 != "0") && (!focusFlag)) {
 	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 	    	operand1 = Long.toHexString(Long.parseLong(operand1, currentBase));
 	    	display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
@@ -916,6 +910,5 @@ public class MainActivity extends Activity {
 		display_operation.setText("%");
 		display_main.setText(displayValue);
 	}
-	
 }
 

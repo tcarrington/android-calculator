@@ -7,10 +7,10 @@
     <string name="display_secondary"></string>
     <string name="display_operation"></string>
     <string name="delete_button">del</string>
-    <string name="bin_select">bin</string>
-    <string name="oct_select">oct</string>
-    <string name="dec_select">dec</string>
-    <string name="hex_select">hex</string>
+    <string name="bin_select">BIN</string>
+    <string name="oct_select">OCT</string>
+    <string name="dec_select">DEC</string>
+    <string name="hex_select">HEX</string>
     <string name="d_button">D</string>
     <string name="e_button">E</string>
     <string name="f_button">F</string>
