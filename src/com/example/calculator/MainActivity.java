@@ -856,14 +856,27 @@ public class MainActivity extends Activity {
 	public void send_add(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
-		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);		
+		
+		// TODO: add logic for serial operations
+		/*
+		if(operand1 is set)
+			set operand2
+		else
+			set operand1
+		if(operand1 is set && operand2 is set)
+			do appropriate calculation
+			set opearnd2 = operand1
+		
+		add correct main & secondary display code
+		*/
+		
 		operand1 = display_main.getText().toString();
 		display_secondary.setText(operand1);
 		operation = "+";
 		displayValue = "0";
 		display_operation.setText("+");
 		display_main.setText(displayValue);
-		// TODO: work in progress allow adding of numbers in series w/o 'equal'
 
 	}
 	public void send_sub(View view) {

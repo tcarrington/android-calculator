@@ -45,8 +45,6 @@
         android:layout_toLeftOf = "@id/delete_button"
         android:gravity = "right"
         android:textSize="20sp" />
-
-
     <!-- beginning of main display and delete button -->
 
     <!-- beginning of base select buttons -->
