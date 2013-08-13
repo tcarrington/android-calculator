@@ -3,9 +3,7 @@ package com.example.calculator;
 import java.util.Locale;
 
 import android.app.Activity;
-import android.content.res.Resources;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Menu;
@@ -857,22 +855,44 @@ public class MainActivity extends Activity {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);		
-		
+		long solutionInt = 0;
 		// TODO: add logic for serial operations
-		/*
-		if(operand1 is set)
-			set operand2
-		else
-			set operand1
-		if(operand1 is set && operand2 is set)
-			do appropriate calculation
-			set opearnd2 = operand1
-		
-		add correct main & secondary display code
-		*/
-		
-		operand1 = display_main.getText().toString();
+		if(operand1 != "0") {
+			operand2 = display_main.getText().toString();
+		}
+		else {
+			operand1 = display_main.getText().toString();
+		}
 		display_secondary.setText(operand1);
+		if((operand1 != "0") && (operand2 != "0")) {
+			switch (currentBase) {
+				case 2:
+					solutionInt = Long.parseLong(operand1, currentBase) + Long.parseLong(operand2, currentBase);
+					displayValue = Long.toBinaryString(solutionInt);
+					break;
+				case 8:
+					solutionInt = Long.parseLong(operand1, currentBase) + Long.parseLong(operand2, currentBase);
+					displayValue = Long.toOctalString(solutionInt);
+					break;
+				case 10:
+					solutionInt = Long.parseLong(operand1, currentBase) + Long.parseLong(operand2, currentBase);
+					displayValue = Long.toString(solutionInt);
+					break;
+				case 16:
+					solutionInt = Long.parseLong(operand1, currentBase) + Long.parseLong(operand2, currentBase);
+					displayValue = Long.toHexString(solutionInt);
+					break;
+				default:
+					displayValue = "error default";
+					break;
+			}
+			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
+			operand1 = operand2;
+			operand2 = "0";
+		}
+		
+		//operand1 = display_main.getText().toString();
+		//display_secondary.setText(operand1);
 		operation = "+";
 		displayValue = "0";
 		display_operation.setText("+");
