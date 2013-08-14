@@ -12,7 +12,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
-
+	
+	// TODO: fix UI to better define col/row
+	
 	//global variables
 	String operand1;
 	String operation;
@@ -173,6 +175,7 @@ public class MainActivity extends Activity {
 	}
 	
 	//base conversion
+	// TODO: fix rare issue with binary numbers getting stuck
 	public void bin_select(View view){
 		
 		//button locking
@@ -851,6 +854,7 @@ public class MainActivity extends Activity {
 	}
 	
 	//operations
+	// TODO: add serial operations
 	public void send_add(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
