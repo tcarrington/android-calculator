@@ -909,45 +909,193 @@ public class MainActivity extends Activity {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-		operand1 = display_main.getText().toString();
-		display_secondary.setText(operand1);
+		long solutionInt = 0;
 		operation = "-";
-		displayValue = "0";
-		display_operation.setText("-");
-		display_main.setText(displayValue);
+		// TODO: add logic for serial operations
+		if(operand1 != "0") {
+			operand2 = display_main.getText().toString();
+		}
+		else {
+			operand1 = display_main.getText().toString();
+		}
+		display_secondary.setText(operand1);
+		if((operand1 != "0") && (operand2 != "0")) {
+			switch (currentBase) {
+				case 2:
+					solutionInt = Long.parseLong(operand1, currentBase) - Long.parseLong(operand2, currentBase);
+					displayValue = Long.toBinaryString(solutionInt);
+					break;
+				case 8:
+					solutionInt = Long.parseLong(operand1, currentBase) - Long.parseLong(operand2, currentBase);
+					displayValue = Long.toOctalString(solutionInt);
+					break;
+				case 10:
+					solutionInt = Long.parseLong(operand1, currentBase) - Long.parseLong(operand2, currentBase);
+					displayValue = Long.toString(solutionInt);
+					break;
+				case 16:
+					solutionInt = Long.parseLong(operand1, currentBase) - Long.parseLong(operand2, currentBase);
+					displayValue = Long.toHexString(solutionInt);
+					break;
+				default:
+					displayValue = "error default";
+					break;
+			}
+			display_secondary.setText(displayValue);
+			operand1 = displayValue;
+			operand2 = "0";
+			displayValue = "0";
+			display_main.setText(displayValue);
+			display_operation.setText(operation);
+		}
+		else {
+			displayValue = "0";
+			display_operation.setText(operation);
+		}
 	}
 	public void send_mult(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-		operand1 = display_main.getText().toString();
-		display_secondary.setText(operand1);
+		long solutionInt = 0;
 		operation = "*";
-		displayValue = "0";
-		display_operation.setText("*");
-		display_main.setText(displayValue);
+		// TODO: add logic for serial operations
+		if(operand1 != "0") {
+			operand2 = display_main.getText().toString();
+		}
+		else {
+			operand1 = display_main.getText().toString();
+		}
+		display_secondary.setText(operand1);
+		if((operand1 != "0") && (operand2 != "0")) {
+			switch (currentBase) {
+				case 2:
+					solutionInt = Long.parseLong(operand1, currentBase) * Long.parseLong(operand2, currentBase);
+					displayValue = Long.toBinaryString(solutionInt);
+					break;
+				case 8:
+					solutionInt = Long.parseLong(operand1, currentBase) * Long.parseLong(operand2, currentBase);
+					displayValue = Long.toOctalString(solutionInt);
+					break;
+				case 10:
+					solutionInt = Long.parseLong(operand1, currentBase) * Long.parseLong(operand2, currentBase);
+					displayValue = Long.toString(solutionInt);
+					break;
+				case 16:
+					solutionInt = Long.parseLong(operand1, currentBase) * Long.parseLong(operand2, currentBase);
+					displayValue = Long.toHexString(solutionInt);
+					break;
+				default:
+					displayValue = "error default";
+					break;
+			}
+			display_secondary.setText(displayValue);
+			operand1 = displayValue;
+			operand2 = "0";
+			displayValue = "0";
+			display_main.setText(displayValue);
+			display_operation.setText(operation);
+		}
+		else {
+			displayValue = "0";
+			display_operation.setText(operation);
+		}
 	}
 	public void send_div(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-		operand1 = display_main.getText().toString();
-		display_secondary.setText(operand1);
+		long solutionInt = 0;
 		operation = "/";
-		displayValue = "0";
-		display_operation.setText("/");
-		display_main.setText(displayValue);
+		// TODO: add logic for serial operations
+		if(operand1 != "0") {
+			operand2 = display_main.getText().toString();
+		}
+		else {
+			operand1 = display_main.getText().toString();
+		}
+		display_secondary.setText(operand1);
+		if((operand1 != "0") && (operand2 != "0")) {
+			switch (currentBase) {
+				case 2:
+					solutionInt = Long.parseLong(operand1, currentBase) / Long.parseLong(operand2, currentBase);
+					displayValue = Long.toBinaryString(solutionInt);
+					break;
+				case 8:
+					solutionInt = Long.parseLong(operand1, currentBase) / Long.parseLong(operand2, currentBase);
+					displayValue = Long.toOctalString(solutionInt);
+					break;
+				case 10:
+					solutionInt = Long.parseLong(operand1, currentBase) / Long.parseLong(operand2, currentBase);
+					displayValue = Long.toString(solutionInt);
+					break;
+				case 16:
+					solutionInt = Long.parseLong(operand1, currentBase) / Long.parseLong(operand2, currentBase);
+					displayValue = Long.toHexString(solutionInt);
+					break;
+				default:
+					displayValue = "error default";
+					break;
+			}
+			display_secondary.setText(displayValue);
+			operand1 = displayValue;
+			operand2 = "0";
+			displayValue = "0";
+			display_main.setText(displayValue);
+			display_operation.setText(operation);
+		}
+		else {
+			displayValue = "0";
+			display_operation.setText(operation);
+		}
 	}
 	public void send_mod(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-		operand1 = display_main.getText().toString();
-		display_secondary.setText(operand1);
+		long solutionInt = 0;
 		operation = "%";
-		displayValue = "0";
-		display_operation.setText("%");
-		display_main.setText(displayValue);
+		// TODO: add logic for serial operations
+		if(operand1 != "0") {
+			operand2 = display_main.getText().toString();
+		}
+		else {
+			operand1 = display_main.getText().toString();
+		}
+		display_secondary.setText(operand1);
+		if((operand1 != "0") && (operand2 != "0")) {
+			switch (currentBase) {
+				case 2:
+					solutionInt = Long.parseLong(operand1, currentBase) % Long.parseLong(operand2, currentBase);
+					displayValue = Long.toBinaryString(solutionInt);
+					break;
+				case 8:
+					solutionInt = Long.parseLong(operand1, currentBase) % Long.parseLong(operand2, currentBase);
+					displayValue = Long.toOctalString(solutionInt);
+					break;
+				case 10:
+					solutionInt = Long.parseLong(operand1, currentBase) % Long.parseLong(operand2, currentBase);
+					displayValue = Long.toString(solutionInt);
+					break;
+				case 16:
+					solutionInt = Long.parseLong(operand1, currentBase) % Long.parseLong(operand2, currentBase);
+					displayValue = Long.toHexString(solutionInt);
+					break;
+				default:
+					displayValue = "error default";
+					break;
+			}
+			display_secondary.setText(displayValue);
+			operand1 = displayValue;
+			operand2 = "0";
+			displayValue = "0";
+			display_main.setText(displayValue);
+			display_operation.setText(operation);
+		}
+		else {
+			displayValue = "0";
+			display_operation.setText(operation);
+		}
 	}
 }
 
