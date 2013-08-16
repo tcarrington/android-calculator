@@ -861,6 +861,7 @@ public class MainActivity extends Activity {
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);		
 		long solutionInt = 0;
+		operation = "+";
 		// TODO: add logic for serial operations
 		if(operand1 != "0") {
 			operand2 = display_main.getText().toString();
@@ -869,7 +870,7 @@ public class MainActivity extends Activity {
 			operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1);
-		if((operand1 != "0") && (operand2 != "0") && operationFlag) {
+		if((operand1 != "0") && (operand2 != "0")) {
 			switch (currentBase) {
 				case 2:
 					solutionInt = Long.parseLong(operand1, currentBase) + Long.parseLong(operand2, currentBase);
@@ -891,18 +892,17 @@ public class MainActivity extends Activity {
 					displayValue = "error default";
 					break;
 			}
-			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
-			operand1 = operand2;
+			display_secondary.setText(displayValue);
+			operand1 = displayValue;
 			operand2 = "0";
+			displayValue = "0";
+			display_main.setText(displayValue);
+			display_operation.setText(operation);
 		}
-		
-		//operand1 = display_main.getText().toString();
-		//display_secondary.setText(operand1);
-		operation = "+";
-		operationFlag = true;
-		displayValue = "0";
-		display_operation.setText("+");
-		display_main.setText(displayValue);
+		else {
+			displayValue = "0";
+			display_operation.setText(operation);
+		}
 
 	}
 	public void send_sub(View view) {
