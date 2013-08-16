@@ -163,6 +163,7 @@ public class MainActivity extends Activity {
     	
 		//required assignment for leading zero at onCreate()
     	operand1 = "0";
+    	operand2 = "0";
 		displayValue = "0";
 		currentBase = 2;
 
@@ -868,7 +869,7 @@ public class MainActivity extends Activity {
 			operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1);
-		if((operand1 != "0") && (operand2 != "0")) {
+		if((operand1 != "0") && (operand2 != "0") && operationFlag) {
 			switch (currentBase) {
 				case 2:
 					solutionInt = Long.parseLong(operand1, currentBase) + Long.parseLong(operand2, currentBase);
@@ -898,6 +899,7 @@ public class MainActivity extends Activity {
 		//operand1 = display_main.getText().toString();
 		//display_secondary.setText(operand1);
 		operation = "+";
+		operationFlag = true;
 		displayValue = "0";
 		display_operation.setText("+");
 		display_main.setText(displayValue);
