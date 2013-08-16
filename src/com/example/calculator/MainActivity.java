@@ -851,6 +851,7 @@ public class MainActivity extends Activity {
 
 		
 		operand1 = displayValue;
+		operand2 = "0";
 		focusFlag = true;
 	}
 	
