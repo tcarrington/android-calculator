@@ -905,7 +905,7 @@ public class MainActivity extends Activity {
 		}
 		else {
 			displayValue = "0";
-			display_main.setText(displayValue);
+			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 			display_operation.setText(operation);
 		}
 
@@ -955,7 +955,7 @@ public class MainActivity extends Activity {
 		}
 		else {
 			displayValue = "0";
-			display_main.setText(displayValue);
+			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 			display_operation.setText(operation);
 		}
 	}
@@ -1004,7 +1004,7 @@ public class MainActivity extends Activity {
 		}
 		else {
 			displayValue = "0";
-			display_main.setText(displayValue);
+			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 			display_operation.setText(operation);
 		}
 	}
@@ -1053,7 +1053,7 @@ public class MainActivity extends Activity {
 		}
 		else {
 			displayValue = "0";
-			display_main.setText(displayValue);
+			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 			display_operation.setText(operation);
 		}
 	}
@@ -1097,7 +1097,7 @@ public class MainActivity extends Activity {
 			operand1 = displayValue;
 			operand2 = "0";
 			displayValue = "0";
-			display_main.setText(displayValue);
+			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 			display_operation.setText(operation);
 		}
 		else {
