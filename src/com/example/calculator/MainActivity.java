@@ -231,6 +231,7 @@ public class MainActivity extends Activity {
     	if((operand1 != "0") && (!focusFlag)) {
 	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 	    	operand1 = Long.toBinaryString(Long.parseLong(operand1, currentBase));
+	    	operand2 = Long.toOctalString(Long.parseLong(operand2, currentBase));
 	    	display_secondary.setText(operand1);
     	}
     	
@@ -292,6 +293,7 @@ public class MainActivity extends Activity {
     	if((operand1 != "0") && (!focusFlag)) {
 	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 	    	operand1 = Long.toOctalString(Long.parseLong(operand1, currentBase));
+	    	operand2 = Long.toOctalString(Long.parseLong(operand2, currentBase));
 	    	display_secondary.setText(operand1);
     	}
     	
@@ -354,6 +356,7 @@ public class MainActivity extends Activity {
     	if((operand1 != "0") && (!focusFlag)) {
 	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 	    	operand1 = Long.toString(Long.parseLong(operand1, currentBase));
+	    	operand2 = Long.toString(Long.parseLong(operand2, currentBase));
 	    	display_secondary.setText(operand1);
     	}
     	
@@ -414,6 +417,7 @@ public class MainActivity extends Activity {
     	if((operand1 != "0") && (!focusFlag)) {
 	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 	    	operand1 = Long.toHexString(Long.parseLong(operand1, currentBase));
+	    	operand2 = Long.toHexString(Long.parseLong(operand2, currentBase));
 	    	display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
     	}
     	
@@ -859,7 +863,7 @@ public class MainActivity extends Activity {
 	}
 	
 	//operations
-	// TODO: add serial operations
+	// TODO: issue with switch between bases after a full ('=') calculation
 	public void send_add(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
@@ -907,6 +911,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 			display_operation.setText(operation);
+			focusFlag = false;
 		}
 
 	}
@@ -957,6 +962,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 			display_operation.setText(operation);
+			focusFlag = false;
 		}
 	}
 	public void send_mult(View view) {
@@ -1007,6 +1013,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 			display_operation.setText(operation);
+			focusFlag = false;
 		}
 	}
 	public void send_div(View view) {
@@ -1056,6 +1063,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 			display_operation.setText(operation);
+			focusFlag = false;
 		}
 	}
 	public void send_mod(View view) {
@@ -1105,6 +1113,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			display_main.setText(displayValue);
 			display_operation.setText(operation);
+			focusFlag = false;
 		}
 	}
 }
