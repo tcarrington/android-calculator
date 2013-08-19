@@ -226,6 +226,7 @@ public class MainActivity extends Activity {
     	if(displayValue != "0") {
 	    	TextView display_main = (TextView) findViewById(R.id.display_main);
 	    	displayValue = Long.toBinaryString(Long.parseLong(displayValue, currentBase));
+	    	operand1 = Long.toBinaryString(Long.parseLong(operand1, currentBase));
 	    	display_main.setText(displayValue);
     	}
     	if((operand1 != "0") && (!focusFlag)) {
@@ -288,6 +289,7 @@ public class MainActivity extends Activity {
     	if(displayValue != "0") {
 	    	TextView display_main = (TextView) findViewById(R.id.display_main);
 	    	displayValue = Long.toOctalString(Long.parseLong(displayValue, currentBase));
+	    	operand1 = Long.toOctalString(Long.parseLong(operand1, currentBase));
 	    	display_main.setText(displayValue);
     	}
     	if((operand1 != "0") && (!focusFlag)) {
@@ -350,6 +352,7 @@ public class MainActivity extends Activity {
     	if(displayValue != "0") {
 	    	TextView display_main = (TextView) findViewById(R.id.display_main);
 	    	displayValue = Long.toString(Long.parseLong(displayValue, currentBase));
+	    	operand1 = Long.toString(Long.parseLong(operand1, currentBase));
 	    	display_main.setText(displayValue);
     	}
     	
@@ -412,6 +415,7 @@ public class MainActivity extends Activity {
     	if(displayValue != "0"){
     	TextView display_main = (TextView) findViewById(R.id.display_main);
 	    	displayValue = Long.toHexString(Long.parseLong(displayValue, currentBase));
+	    	operand1 = Long.toHexString(Long.parseLong(operand1, currentBase));
 	    	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
     	}
     	if((operand1 != "0") && (!focusFlag)) {
