@@ -854,7 +854,7 @@ public class MainActivity extends Activity {
 		operand2 = "0";
 		
 		//possibly could break equals operation
-		displayValue = "0";
+		//displayValue = "0";
 		focusFlag = true;
 	}
 	
@@ -874,7 +874,7 @@ public class MainActivity extends Activity {
 			operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1);
-		if((operand1 != "0") && (operand2 != "0")) {
+		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
 			switch (currentBase) {
 				case 2:
 					solutionInt = Long.parseLong(operand1, currentBase) + Long.parseLong(operand2, currentBase);
@@ -924,7 +924,7 @@ public class MainActivity extends Activity {
 			operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1);
-		if((operand1 != "0") && (operand2 != "0")) {
+		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
 			switch (currentBase) {
 				case 2:
 					solutionInt = Long.parseLong(operand1, currentBase) - Long.parseLong(operand2, currentBase);
@@ -967,13 +967,14 @@ public class MainActivity extends Activity {
 		operation = "*";
 		// TODO: add logic for serial operations
 		if(operand1 != "0") {
-			operand2 = display_main.getText().toString();
+			//operand2 = display_main.getText().toString();
+			operand2 = displayValue;
 		}
 		else {
 			operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1);
-		if((operand1 != "0") && (operand2 != "0")) {
+		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
 			switch (currentBase) {
 				case 2:
 					solutionInt = Long.parseLong(operand1, currentBase) * Long.parseLong(operand2, currentBase);
@@ -1022,7 +1023,7 @@ public class MainActivity extends Activity {
 			operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1);
-		if((operand1 != "0") && (operand2 != "0")) {
+		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
 			switch (currentBase) {
 				case 2:
 					solutionInt = Long.parseLong(operand1, currentBase) / Long.parseLong(operand2, currentBase);
@@ -1071,7 +1072,7 @@ public class MainActivity extends Activity {
 			operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1);
-		if((operand1 != "0") && (operand2 != "0")) {
+		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
 			switch (currentBase) {
 				case 2:
 					solutionInt = Long.parseLong(operand1, currentBase) % Long.parseLong(operand2, currentBase);
