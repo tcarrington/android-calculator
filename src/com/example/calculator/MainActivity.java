@@ -11,10 +11,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+
 public class MainActivity extends Activity {
 	
 	// TODO: fix UI to better define col/row
-	
+	int INT_MAX = 2147483647;
+	int INT_MIN = -2147483648;
 	//global variables
 	String operand1;
 	String operation;
@@ -24,6 +26,7 @@ public class MainActivity extends Activity {
 	boolean focusFlag = false;
 	boolean operationFlag = false;
 	int currentBase;
+	
 	
 	//start of main code
 	@Override
@@ -567,8 +570,41 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "9";
 		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "9";
+			switch(currentBase) {
+				case 2:
+					if((Long.valueOf(displayValue + "9", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "9", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "9";
+					}
+					break;
+				case 8:
+					if((Long.valueOf(displayValue + "9", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "9", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "9";
+					}
+					break;
+				case 10:
+					if((Long.valueOf(displayValue + "9", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "9", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "9";
+					}
+					break;
+				case 16:
+					if((Long.valueOf(displayValue + "9", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "9", currentBase).intValue() <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "9";
+					}
+					break;
+				default:
+					displayValue += "";
+					break;
+			}
+			//displayValue = display_main.getText().toString();
+			//displayValue += "9";
 		}
 		display_main.setText(displayValue);
 	}	
@@ -826,20 +862,9 @@ public class MainActivity extends Activity {
 		Button hex_select = (Button) findViewById(R.id.hex_select);
 
 		operand2 = display_main.getText().toString();
-
 		long solutionInt = 0;
-		if(currentBase == 2) {
-			
-		}
-		else if(currentBase == 8) {
-			
-		}
-		else if(currentBase == 10) {
-			
-		}
-		else if(currentBase == 16) {
-			
-		}
+
+		
 		if(operation == "+") {
 			switch (currentBase) {
 				case 2:
