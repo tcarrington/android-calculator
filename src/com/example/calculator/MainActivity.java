@@ -675,6 +675,84 @@ public class MainActivity extends Activity {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+		//button unlocking
+		Button d_button = (Button) findViewById(R.id.d_button);
+		Button e_button = (Button) findViewById(R.id.e_button);
+		Button f_button = (Button) findViewById(R.id.f_button);
+		Button a_button = (Button) findViewById(R.id.a_button);
+		Button b_button = (Button) findViewById(R.id.b_button);
+		Button c_button = (Button) findViewById(R.id.c_button);
+		Button button_7 = (Button) findViewById(R.id.button_7);
+		Button button_8 = (Button) findViewById(R.id.button_8);
+		Button button_9 = (Button) findViewById(R.id.button_9);
+		Button button_4 = (Button) findViewById(R.id.button_4);
+		Button button_5 = (Button) findViewById(R.id.button_5);
+		Button button_6 = (Button) findViewById(R.id.button_6);
+		Button button_1 = (Button) findViewById(R.id.button_1);
+		Button button_2 = (Button) findViewById(R.id.button_2);
+		Button button_3 = (Button) findViewById(R.id.button_3);
+		Button button_0 = (Button) findViewById(R.id.button_0);
+		Button plusminus_button = (Button) findViewById(R.id.plusminus_button);
+		Button equal_button = (Button) findViewById(R.id.equal_button);
+		Button mod_button = (Button) findViewById(R.id.mod_button);
+		Button div_button = (Button) findViewById(R.id.div_button);
+		Button mult_button = (Button) findViewById(R.id.mult_button);
+		Button sub_button = (Button) findViewById(R.id.sub_button);
+		Button add_button = (Button) findViewById(R.id.add_button);
+		Button bin_select = (Button) findViewById(R.id.bin_select);
+		Button oct_select = (Button) findViewById(R.id.oct_select);
+		Button dec_select = (Button) findViewById(R.id.dec_select);
+		Button hex_select = (Button) findViewById(R.id.hex_select);
+		plusminus_button.setEnabled(false);
+    	add_button.setEnabled(true);
+    	sub_button.setEnabled(true);
+    	mult_button.setEnabled(true);
+    	div_button.setEnabled(true);
+    	mod_button.setEnabled(true);
+    	equal_button.setEnabled(true);
+    	bin_select.setEnabled(true);
+    	oct_select.setEnabled(true);
+    	dec_select.setEnabled(true);
+    	hex_select.setEnabled(true);
+    	button_1.setEnabled(true);
+    	button_0.setEnabled(true);
+    	
+    	switch(currentBase) {
+    		case 8: 
+    	    	button_7.setEnabled(true);
+    	    	button_6.setEnabled(true);
+    	    	button_5.setEnabled(true);
+    	    	button_4.setEnabled(true);
+    	    	button_3.setEnabled(true);
+    	    	button_2.setEnabled(true);
+    	    	break;
+    		case 10:
+    	    	button_9.setEnabled(true);
+    	    	button_8.setEnabled(true);
+    	    	button_7.setEnabled(true);
+    	    	button_6.setEnabled(true);
+    	    	button_5.setEnabled(true);
+    	    	button_4.setEnabled(true);
+    	    	button_3.setEnabled(true);
+    	    	button_2.setEnabled(true);
+    	    	break;
+    		case 16:
+    			f_button.setEnabled(true);
+    	    	e_button.setEnabled(true);
+    	    	d_button.setEnabled(true);
+    	    	c_button.setEnabled(true);
+    	    	b_button.setEnabled(true);
+    	    	a_button.setEnabled(true);
+    	    	button_9.setEnabled(true);
+    	    	button_8.setEnabled(true);
+    	    	button_7.setEnabled(true);
+    	    	button_6.setEnabled(true);
+    	    	button_5.setEnabled(true);
+    	    	button_4.setEnabled(true);
+    	    	button_3.setEnabled(true);
+    	    	button_2.setEnabled(true);	
+    	}
+
 		displayValue = display_main.getText().toString();
 		// TODO: fix to only adjust required values
 		focusFlag = false;
@@ -718,6 +796,35 @@ public class MainActivity extends Activity {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
+		//button locking
+		Button d_button = (Button) findViewById(R.id.d_button);
+		Button e_button = (Button) findViewById(R.id.e_button);
+		Button f_button = (Button) findViewById(R.id.f_button);
+		Button a_button = (Button) findViewById(R.id.a_button);
+		Button b_button = (Button) findViewById(R.id.b_button);
+		Button c_button = (Button) findViewById(R.id.c_button);
+		Button button_7 = (Button) findViewById(R.id.button_7);
+		Button button_8 = (Button) findViewById(R.id.button_8);
+		Button button_9 = (Button) findViewById(R.id.button_9);
+		Button button_4 = (Button) findViewById(R.id.button_4);
+		Button button_5 = (Button) findViewById(R.id.button_5);
+		Button button_6 = (Button) findViewById(R.id.button_6);
+		Button button_1 = (Button) findViewById(R.id.button_1);
+		Button button_2 = (Button) findViewById(R.id.button_2);
+		Button button_3 = (Button) findViewById(R.id.button_3);
+		Button button_0 = (Button) findViewById(R.id.button_0);
+		Button plusminus_button = (Button) findViewById(R.id.plusminus_button);
+		Button equal_button = (Button) findViewById(R.id.equal_button);
+		Button mod_button = (Button) findViewById(R.id.mod_button);
+		Button div_button = (Button) findViewById(R.id.div_button);
+		Button mult_button = (Button) findViewById(R.id.mult_button);
+		Button sub_button = (Button) findViewById(R.id.sub_button);
+		Button add_button = (Button) findViewById(R.id.add_button);
+		Button bin_select = (Button) findViewById(R.id.bin_select);
+		Button oct_select = (Button) findViewById(R.id.oct_select);
+		Button dec_select = (Button) findViewById(R.id.dec_select);
+		Button hex_select = (Button) findViewById(R.id.hex_select);
+
 		operand2 = display_main.getText().toString();
 
 		long solutionInt = 0;
@@ -807,6 +914,34 @@ public class MainActivity extends Activity {
 				display_secondary.setText("ERROR:");
 				display_main.setText("DIV BY ZERO");
 				display_operation.setText(null);
+		    	f_button.setEnabled(false);
+		    	e_button.setEnabled(false);
+		    	d_button.setEnabled(false);
+		    	c_button.setEnabled(false);
+		    	b_button.setEnabled(false);
+		    	a_button.setEnabled(false);
+		    	button_9.setEnabled(false);
+		    	button_8.setEnabled(false);
+		    	button_7.setEnabled(false);
+		    	button_6.setEnabled(false);
+		    	button_5.setEnabled(false);
+		    	button_4.setEnabled(false);
+		    	button_3.setEnabled(false);
+		    	button_2.setEnabled(false);
+		    	button_1.setEnabled(false);
+		    	button_0.setEnabled(false);
+		    	plusminus_button.setEnabled(false);
+		    	add_button.setEnabled(false);
+		    	sub_button.setEnabled(false);
+		    	mult_button.setEnabled(false);
+		    	div_button.setEnabled(false);
+		    	mod_button.setEnabled(false);
+		    	equal_button.setEnabled(false);
+		    	bin_select.setEnabled(false);
+		    	oct_select.setEnabled(false);
+		    	dec_select.setEnabled(false);
+		    	hex_select.setEnabled(false);
+		    	
 			}
 			else {
 				switch (currentBase) {
