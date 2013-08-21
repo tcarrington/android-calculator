@@ -1,3 +1,16 @@
+/********************************************************************************
+*******************************PROJECT INFORMATION*******************************
+
+Project:		Programming Calculator
+Author: 		Taylor Carrington
+Created: 		August 3, 2013
+Repository: 	https://github.com/tcarrington/android-calculator
+Description:	Programming Calculator - Do calculations in binary, octal, decimal, hexadecimal.
+Notes:			This is my first Java and Android project.  Lots of mistakes but learning lots! : )
+Goal:			Post on Google Play!
+
+********************************************************************************/
+
 package com.example.calculator;
 
 import java.util.Locale;
@@ -1421,6 +1434,8 @@ public class MainActivity extends Activity {
 			operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1);
+		//logic on how to do calculations in different bases and convert
+		//Long.valueOf(displayValue, currentBase).somethingInt
 		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
 			switch (currentBase) {
 				case 2:
