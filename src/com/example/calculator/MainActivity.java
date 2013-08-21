@@ -469,10 +469,33 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "2";
 		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "2";
+			switch(currentBase) {
+				case 8:
+					if((Long.valueOf(displayValue + "2", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "2", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "2";
+					}
+					break;
+				case 10:
+					if((Long.valueOf(displayValue + "2", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "2", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "2";
+					}
+					break;
+				case 16:
+					if((Long.valueOf(displayValue + "2", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "2", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "2";
+					}
+					break;
+				default:
+					displayValue += "";
+					break;
+			}
 		}
-		
 		display_main.setText(displayValue);
 	}	
 	public void send_3(View view) {
@@ -484,8 +507,32 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "3";
 		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "3";
+			switch(currentBase) {
+				case 8:
+					if((Long.valueOf(displayValue + "3", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "3", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "3";
+					}
+					break;
+				case 10:
+					if((Long.valueOf(displayValue + "3", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "3", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "3";
+					}
+					break;
+				case 16:
+					if((Long.valueOf(displayValue + "3", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "3", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "3";
+					}
+					break;
+				default:
+					displayValue += "";
+					break;
+			}
 		}
 		display_main.setText(displayValue);
 	}	
@@ -499,8 +546,32 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "4";
 		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "4";
+			switch(currentBase) {
+				case 8:
+					if((Long.valueOf(displayValue + "4", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "4", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "4";
+					}
+					break;
+				case 10:
+					if((Long.valueOf(displayValue + "4", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "4", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "4";
+					}
+					break;
+				case 16:
+					if((Long.valueOf(displayValue + "4", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "4", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "4";
+					}
+					break;
+				default:
+					displayValue += "";
+					break;
+			}
 		}
 		display_main.setText(displayValue);
 	}
@@ -513,8 +584,32 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "5";
 		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "5";
+			switch(currentBase) {
+				case 8:
+					if((Long.valueOf(displayValue + "5", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "5", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "5";
+					}
+					break;
+				case 10:
+					if((Long.valueOf(displayValue + "5", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "5", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "5";
+					}
+					break;
+				case 16:
+					if((Long.valueOf(displayValue + "5", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "5", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "5";
+					}
+					break;
+				default:
+					displayValue += "";
+					break;
+			}
 		}
 		display_main.setText(displayValue);
 	}
@@ -527,8 +622,32 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "6";
 		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "6";
+			switch(currentBase) {
+				case 8:
+					if((Long.valueOf(displayValue + "6", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "6", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "6";
+					}
+					break;
+				case 10:
+					if((Long.valueOf(displayValue + "6", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "6", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "6";
+					}
+					break;
+				case 16:
+					if((Long.valueOf(displayValue + "6", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "6", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "6";
+					}
+					break;
+				default:
+					displayValue += "";
+					break;
+			}
 		}
 		display_main.setText(displayValue);
 	}
@@ -542,8 +661,32 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "7";
 		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "7";
+			switch(currentBase) {
+				case 8:
+					if((Long.valueOf(displayValue + "7", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "7", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "7";
+					}
+					break;
+				case 10:
+					if((Long.valueOf(displayValue + "7", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "7", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "7";
+					}
+					break;
+				case 16:
+					if((Long.valueOf(displayValue + "7", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "7", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "7";
+					}
+					break;
+				default:
+					displayValue += "";
+					break;
+			}
 		}
 		display_main.setText(displayValue);
 	}
