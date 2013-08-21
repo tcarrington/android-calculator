@@ -593,7 +593,7 @@ public class MainActivity extends Activity {
 					}
 					break;
 				case 16:
-					if((Long.valueOf(displayValue + "9", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "9", currentBase).intValue() <= INT_MAX))
+					if((Long.valueOf(displayValue + "9", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "9", currentBase) <= INT_MAX))
 					{
 						displayValue = display_main.getText().toString();
 						displayValue += "9";
@@ -618,8 +618,18 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "A";
 		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "A";
+			switch(currentBase) {
+				case 16:
+					if((Long.valueOf(displayValue + "A", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "A", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "A";
+					}
+					break;
+				default:
+					displayValue += "";
+					break;
+			}
 		}
 		display_main.setText(displayValue);
 	}
@@ -632,8 +642,18 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "B";
 		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "B";
+			switch(currentBase) {
+				case 16:
+					if((Long.valueOf(displayValue + "B", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "B", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "B";
+					}
+					break;
+				default:
+					displayValue += "";
+					break;
+			}
 		}
 		display_main.setText(displayValue);
 	}
@@ -646,8 +666,18 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "C";
 		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "C";
+			switch(currentBase) {
+				case 16:
+					if((Long.valueOf(displayValue + "C", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "C", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "C";
+					}
+					break;
+				default:
+					displayValue += "";
+					break;
+			}
 		}
 		display_main.setText(displayValue);
 	}
@@ -661,8 +691,18 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "D";
 		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "D";
+			switch(currentBase) {
+				case 16:
+					if((Long.valueOf(displayValue + "D", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "D", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "D";
+					}
+					break;
+				default:
+					displayValue += "";
+					break;
+			}
 		}
 		display_main.setText(displayValue);
 	}
@@ -675,8 +715,18 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "E";
 		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "E";
+			switch(currentBase) {
+				case 16:
+					if((Long.valueOf(displayValue + "E", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "E", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "E";
+					}
+					break;
+				default:
+					displayValue += "";
+					break;
+			}
 		}
 		display_main.setText(displayValue);
 	}
@@ -689,8 +739,18 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "F";
 		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "F";
+			switch(currentBase) {
+				case 16:
+					if((Long.valueOf(displayValue + "F", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "F", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "F";
+					}
+					break;
+				default:
+					displayValue += "";
+					break;
+			}
 		}
 		display_main.setText(displayValue);
 	}
