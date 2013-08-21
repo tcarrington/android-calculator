@@ -230,15 +230,15 @@ public class MainActivity extends Activity {
     	//text_display conversion
     	if(displayValue != "0") {
 	    	TextView display_main = (TextView) findViewById(R.id.display_main);
-	    	displayValue = Long.toString(Long.parseLong(displayValue, currentBase));
-	    	operand1 = Long.toString(Long.parseLong(operand1, currentBase));
+	    	displayValue = Long.toBinaryString(Long.parseLong(displayValue, currentBase));
+	    	operand1 = Long.toBinaryString(Long.parseLong(operand1, currentBase));
 	    	display_main.setText(displayValue);
     	}
     	if((operand1 != "0") && (!focusFlag)) {
 	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 	    	//needs to be commented out or will receive double conversion from previous statement
 	    	//operand1 = Long.toString(Long.parseLong(operand1, currentBase));
-	    	operand2 = Long.toString(Long.parseLong(operand2, currentBase));
+	    	operand2 = Long.toBinaryString(Long.parseLong(operand2, currentBase));
 	    	display_secondary.setText(operand1);
     	}
     	
