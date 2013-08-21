@@ -556,8 +556,25 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "8";
 		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "8";
+			switch(currentBase) {
+				case 10:
+					if((Long.valueOf(displayValue + "8", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "8", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "8";
+					}
+					break;
+				case 16:
+					if((Long.valueOf(displayValue + "8", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "8", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "8";
+					}
+					break;
+				default:
+					displayValue += "";
+					break;
+			}
 		}
 		display_main.setText(displayValue);
 	}
@@ -571,20 +588,6 @@ public class MainActivity extends Activity {
 			displayValue = "9";
 		else {
 			switch(currentBase) {
-				case 2:
-					if((Long.valueOf(displayValue + "9", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "9", currentBase) <= INT_MAX))
-					{
-						displayValue = display_main.getText().toString();
-						displayValue += "9";
-					}
-					break;
-				case 8:
-					if((Long.valueOf(displayValue + "9", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "9", currentBase) <= INT_MAX))
-					{
-						displayValue = display_main.getText().toString();
-						displayValue += "9";
-					}
-					break;
 				case 10:
 					if((Long.valueOf(displayValue + "9", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "9", currentBase) <= INT_MAX))
 					{
@@ -603,8 +606,6 @@ public class MainActivity extends Activity {
 					displayValue += "";
 					break;
 			}
-			//displayValue = display_main.getText().toString();
-			//displayValue += "9";
 		}
 		display_main.setText(displayValue);
 	}	
