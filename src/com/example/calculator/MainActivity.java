@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -225,20 +226,21 @@ public class MainActivity extends Activity {
     	dec_select.setTextColor(Color.parseColor("#FFFFFF"));
     	hex_select.setTextColor(Color.parseColor("#FFFFFF"));
     	
+    	
     	//text_display conversion
     	if(displayValue != "0") {
 	    	TextView display_main = (TextView) findViewById(R.id.display_main);
-	    	displayValue = Long.toBinaryString(Long.parseLong(displayValue, currentBase));
-	    	operand1 = Long.toBinaryString(Long.parseLong(operand1, currentBase));
+	    	displayValue = Long.toString(Long.parseLong(displayValue, currentBase));
+	    	operand1 = Long.toString(Long.parseLong(operand1, currentBase));
 	    	display_main.setText(displayValue);
     	}
     	if((operand1 != "0") && (!focusFlag)) {
 	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-	    	operand1 = Long.toBinaryString(Long.parseLong(operand1, currentBase));
-	    	operand2 = Long.toOctalString(Long.parseLong(operand2, currentBase));
+	    	//needs to be commented out or will receive double conversion from previous statement
+	    	//operand1 = Long.toString(Long.parseLong(operand1, currentBase));
+	    	operand2 = Long.toString(Long.parseLong(operand2, currentBase));
 	    	display_secondary.setText(operand1);
     	}
-    	
     	
     	currentBase = 2;
 	}
@@ -288,7 +290,9 @@ public class MainActivity extends Activity {
     	dec_select.setTextColor(Color.parseColor("#FFFFFF"));
     	hex_select.setTextColor(Color.parseColor("#FFFFFF"));
     	
+    	
     	//text_display conversion
+
     	if(displayValue != "0") {
 	    	TextView display_main = (TextView) findViewById(R.id.display_main);
 	    	displayValue = Long.toOctalString(Long.parseLong(displayValue, currentBase));
@@ -297,11 +301,12 @@ public class MainActivity extends Activity {
     	}
     	if((operand1 != "0") && (!focusFlag)) {
 	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-	    	operand1 = Long.toOctalString(Long.parseLong(operand1, currentBase));
+	    	//needs to be commented out or will receive double conversion from previous statement
+	    	//operand1 = Long.toOctalString(Long.parseLong(operand1, currentBase));
 	    	operand2 = Long.toOctalString(Long.parseLong(operand2, currentBase));
 	    	display_secondary.setText(operand1);
     	}
-    	
+
     	currentBase = 8;
 	}
 	public void dec_select(View view){
@@ -350,21 +355,23 @@ public class MainActivity extends Activity {
     	dec_select.setTextColor(Color.parseColor("#33B5E5"));
     	hex_select.setTextColor(Color.parseColor("#FFFFFF"));
     	
-    	
     	//text_display conversion
+
     	if(displayValue != "0") {
 	    	TextView display_main = (TextView) findViewById(R.id.display_main);
 	    	displayValue = Long.toString(Long.parseLong(displayValue, currentBase));
 	    	operand1 = Long.toString(Long.parseLong(operand1, currentBase));
 	    	display_main.setText(displayValue);
     	}
-    	
     	if((operand1 != "0") && (!focusFlag)) {
 	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-	    	operand1 = Long.toString(Long.parseLong(operand1, currentBase));
+	    	//needs to be commented out or will receive double conversion from previous statement
+	    	//operand1 = Long.toString(Long.parseLong(operand1, currentBase));
 	    	operand2 = Long.toString(Long.parseLong(operand2, currentBase));
 	    	display_secondary.setText(operand1);
     	}
+    	
+
     	
     	currentBase = 10;
 	}
@@ -414,19 +421,23 @@ public class MainActivity extends Activity {
     	dec_select.setTextColor(Color.parseColor("#FFFFFF"));
     	hex_select.setTextColor(Color.parseColor("#33B5E5"));
     	
+    	
     	//text_display conversion
+
     	if(displayValue != "0"){
-    	TextView display_main = (TextView) findViewById(R.id.display_main);
+    		TextView display_main = (TextView) findViewById(R.id.display_main);
 	    	displayValue = Long.toHexString(Long.parseLong(displayValue, currentBase));
 	    	operand1 = Long.toHexString(Long.parseLong(operand1, currentBase));
 	    	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
     	}
     	if((operand1 != "0") && (!focusFlag)) {
 	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-	    	operand1 = Long.toHexString(Long.parseLong(operand1, currentBase));
+	    	//needs to be commented out or will receive double conversion from previous statement
+	    	//operand1 = Long.toHexString(Long.parseLong(operand1, currentBase));
 	    	operand2 = Long.toHexString(Long.parseLong(operand2, currentBase));
 	    	display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
     	}
+
     	
     	currentBase = 16;
 	}
@@ -441,8 +452,39 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "0";
 		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "0";
+			switch(currentBase) {
+				case 2:
+					if((Long.valueOf(displayValue + "0", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "0", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "0";
+					}
+					break;
+				case 8:
+					if((Long.valueOf(displayValue + "0", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "0", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "0";
+					}
+					break;
+				case 10:
+					if((Long.valueOf(displayValue + "0", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "0", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "0";
+					}
+					break;
+				case 16:
+					if((Long.valueOf(displayValue + "0", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "0", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "0";
+					}
+					break;
+				default:
+					displayValue += "";
+					break;
+			}
 		}
 		display_main.setText(displayValue);
 	}
@@ -455,8 +497,39 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "1";
 		else {
-			displayValue = display_main.getText().toString();
-			displayValue += "1";
+			switch(currentBase) {
+				case 2:
+					if((Long.valueOf(displayValue + "1", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "1", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "1";
+					}
+					break;
+				case 8:
+					if((Long.valueOf(displayValue + "1", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "1", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "1";
+					}
+					break;
+				case 10:
+					if((Long.valueOf(displayValue + "1", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "1", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "1";
+					}
+					break;
+				case 16:
+					if((Long.valueOf(displayValue + "1", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "1", currentBase) <= INT_MAX))
+					{
+						displayValue = display_main.getText().toString();
+						displayValue += "1";
+					}
+					break;
+				default:
+					displayValue += "";
+					break;
+			}
 		}
 		display_main.setText(displayValue);
 	}
@@ -1352,11 +1425,11 @@ public class MainActivity extends Activity {
 			switch (currentBase) {
 				case 2:
 					solutionInt = Long.parseLong(operand1, currentBase) * Long.parseLong(operand2, currentBase);
-					displayValue = Long.toBinaryString(solutionInt);
+					displayValue = Long.toString(solutionInt);
 					break;
 				case 8:
 					solutionInt = Long.parseLong(operand1, currentBase) * Long.parseLong(operand2, currentBase);
-					displayValue = Long.toOctalString(solutionInt);
+					displayValue = Long.toString(solutionInt);
 					break;
 				case 10:
 					solutionInt = Long.parseLong(operand1, currentBase) * Long.parseLong(operand2, currentBase);
@@ -1364,13 +1437,13 @@ public class MainActivity extends Activity {
 					break;
 				case 16:
 					solutionInt = Long.parseLong(operand1, currentBase) * Long.parseLong(operand2, currentBase);
-					displayValue = Long.toHexString(solutionInt);
+					displayValue = Long.toString(solutionInt);
 					break;
 				default:
 					displayValue = "error default";
 					break;
 			}
-			display_secondary.setText(displayValue.toUpperCase(Locale.ENGLISH));
+			display_secondary.setText(displayValue);//.toUpperCase(Locale.ENGLISH));
 			operand1 = displayValue;
 			operand2 = "0";
 			displayValue = "0";
