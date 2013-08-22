@@ -1155,26 +1155,26 @@ public class MainActivity extends Activity {
 		Button delete_button = (Button) findViewById(R.id.delete_button);
 
 		operand2 = display_main.getText().toString();
-		long solutionInt = 0;
+		int solutionInt = 0;
 
 		
 		if(operation == "+") {
 			switch (currentBase) {
 				case 2:
-					solutionInt = Long.parseLong(operand1, currentBase) + Long.parseLong(operand2, currentBase);
-					displayValue = Long.toBinaryString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toBinaryString(solutionInt);
 					break;
 				case 8:
-					solutionInt = Long.parseLong(operand1, currentBase) + Long.parseLong(operand2, currentBase);
-					displayValue = Long.toOctalString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toOctalString(solutionInt);
 					break;
 				case 10:
-					solutionInt = Long.parseLong(operand1, currentBase) + Long.parseLong(operand2, currentBase);
-					displayValue = Long.toString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 16:
-					solutionInt = Long.parseLong(operand1, currentBase) + Long.parseLong(operand2, currentBase);
-					displayValue = Long.toHexString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toHexString(solutionInt);
 					break;
 			}
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
@@ -1184,20 +1184,20 @@ public class MainActivity extends Activity {
 		else if(operation == "-") {
 			switch (currentBase) {
 				case 2:
-					solutionInt = Long.parseLong(operand1, currentBase) - Long.parseLong(operand2, currentBase);
-					displayValue = Long.toBinaryString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toBinaryString(solutionInt);
 					break;
 				case 8:
-					solutionInt = Long.parseLong(operand1, currentBase) - Long.parseLong(operand2, currentBase);
-					displayValue = Long.toOctalString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toOctalString(solutionInt);
 					break;
 				case 10:
-					solutionInt = Long.parseLong(operand1, currentBase) - Long.parseLong(operand2, currentBase);
-					displayValue = Long.toString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 16:
-					solutionInt = Long.parseLong(operand1, currentBase) - Long.parseLong(operand2, currentBase);
-					displayValue = Long.toHexString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toHexString(solutionInt);
 					break;
 			}
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
@@ -1207,20 +1207,20 @@ public class MainActivity extends Activity {
 		else if(operation == "*") {
 			switch (currentBase) {
 				case 2:
-					solutionInt = Long.parseLong(operand1, currentBase) * Long.parseLong(operand2, currentBase);
-					displayValue = Long.toBinaryString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toBinaryString(solutionInt);
 					break;
 				case 8:
-					solutionInt = Long.parseLong(operand1, currentBase) * Long.parseLong(operand2, currentBase);
-					displayValue = Long.toOctalString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toOctalString(solutionInt);
 					break;
 				case 10:
-					solutionInt = Long.parseLong(operand1, currentBase) * Long.parseLong(operand2, currentBase);
-					displayValue = Long.toString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 16:
-					solutionInt = Long.parseLong(operand1, currentBase) * Long.parseLong(operand2, currentBase);
-					displayValue = Long.toHexString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toHexString(solutionInt);
 					break;
 			}
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
@@ -1265,20 +1265,20 @@ public class MainActivity extends Activity {
 			else {
 				switch (currentBase) {
 					case 2:
-						solutionInt = Long.parseLong(operand1, currentBase) / Long.parseLong(operand2, currentBase);
-						displayValue = Long.toBinaryString(solutionInt);
+						solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+						displayValue = Integer.toBinaryString(solutionInt);
 						break;
 					case 8:
-						solutionInt = Long.parseLong(operand1, currentBase) / Long.parseLong(operand2, currentBase);
-						displayValue = Long.toOctalString(solutionInt);
+						solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+						displayValue = Integer.toOctalString(solutionInt);
 						break;
 					case 10:
-						solutionInt = Long.parseLong(operand1, currentBase) / Long.parseLong(operand2, currentBase);
-						displayValue = Long.toString(solutionInt);
+						solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+						displayValue = Integer.toString(solutionInt);
 						break;
 					case 16:
-						solutionInt = Long.parseLong(operand1, currentBase) / Long.parseLong(operand2, currentBase);
-						displayValue = Long.toHexString(solutionInt);
+						solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+						displayValue = Integer.toHexString(solutionInt);
 						break;
 				}
 				display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
@@ -1290,19 +1290,19 @@ public class MainActivity extends Activity {
 			switch (currentBase) {
 				case 2:
 					solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
-					displayValue = Long.toBinaryString(solutionInt);
+					displayValue = Integer.toBinaryString(solutionInt);
 					break;
 				case 8:
 					solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
-					displayValue = Long.toOctalString(solutionInt);
+					displayValue = Integer.toOctalString(solutionInt);
 					break;
 				case 10:
 					solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
-					displayValue = Long.toString(solutionInt);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 16:
 					solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
-					displayValue = Long.toHexString(solutionInt);
+					displayValue = Integer.toHexString(solutionInt);
 					break;
 			}
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
