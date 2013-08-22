@@ -1326,7 +1326,7 @@ public class MainActivity extends Activity {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);		
-		long solutionInt = 0;
+		int solutionInt = 0;
 		operation = "+";
 		// TODO: add logic for serial operations
 		if(operand1 != "0") {
@@ -1339,20 +1339,20 @@ public class MainActivity extends Activity {
 		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
 			switch (currentBase) {
 				case 2:
-					solutionInt = Long.parseLong(operand1, currentBase) + Long.parseLong(operand2, currentBase);
-					displayValue = Long.toBinaryString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 8:
-					solutionInt = Long.parseLong(operand1, currentBase) + Long.parseLong(operand2, currentBase);
-					displayValue = Long.toOctalString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 10:
-					solutionInt = Long.parseLong(operand1, currentBase) + Long.parseLong(operand2, currentBase);
-					displayValue = Long.toString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 16:
-					solutionInt = Long.parseLong(operand1, currentBase) + Long.parseLong(operand2, currentBase);
-					displayValue = Long.toHexString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				default:
 					displayValue = "error default";
@@ -1377,7 +1377,7 @@ public class MainActivity extends Activity {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-		long solutionInt = 0;
+		int solutionInt = 0;
 		operation = "-";
 		// TODO: add logic for serial operations
 		if(operand1 != "0") {
@@ -1390,20 +1390,20 @@ public class MainActivity extends Activity {
 		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
 			switch (currentBase) {
 				case 2:
-					solutionInt = Long.parseLong(operand1, currentBase) - Long.parseLong(operand2, currentBase);
-					displayValue = Long.toBinaryString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 8:
-					solutionInt = Long.parseLong(operand1, currentBase) - Long.parseLong(operand2, currentBase);
-					displayValue = Long.toOctalString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 10:
-					solutionInt = Long.parseLong(operand1, currentBase) - Long.parseLong(operand2, currentBase);
-					displayValue = Long.toString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 16:
-					solutionInt = Long.parseLong(operand1, currentBase) - Long.parseLong(operand2, currentBase);
-					displayValue = Long.toHexString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				default:
 					displayValue = "error default";
@@ -1427,7 +1427,7 @@ public class MainActivity extends Activity {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-		long solutionInt = 0;
+		int solutionInt = 0;
 		operation = "*";
 		// TODO: add logic for serial operations
 		if(operand1 != "0") {
@@ -1443,20 +1443,20 @@ public class MainActivity extends Activity {
 		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
 			switch (currentBase) {
 				case 2:
-					solutionInt = Long.parseLong(operand1, currentBase) * Long.parseLong(operand2, currentBase);
-					displayValue = Long.toString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 8:
-					solutionInt = Long.parseLong(operand1, currentBase) * Long.parseLong(operand2, currentBase);
-					displayValue = Long.toString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 10:
-					solutionInt = Long.parseLong(operand1, currentBase) * Long.parseLong(operand2, currentBase);
-					displayValue = Long.toString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 16:
-					solutionInt = Long.parseLong(operand1, currentBase) * Long.parseLong(operand2, currentBase);
-					displayValue = Long.toString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				default:
 					displayValue = "error default";
@@ -1480,7 +1480,7 @@ public class MainActivity extends Activity {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-		long solutionInt = 0;
+		int solutionInt = 0;
 		operation = "/";
 		// TODO: add logic for serial operations
 		if(operand1 != "0") {
@@ -1493,20 +1493,20 @@ public class MainActivity extends Activity {
 		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
 			switch (currentBase) {
 				case 2:
-					solutionInt = Long.parseLong(operand1, currentBase) / Long.parseLong(operand2, currentBase);
-					displayValue = Long.toBinaryString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 8:
-					solutionInt = Long.parseLong(operand1, currentBase) / Long.parseLong(operand2, currentBase);
-					displayValue = Long.toOctalString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 10:
-					solutionInt = Long.parseLong(operand1, currentBase) / Long.parseLong(operand2, currentBase);
-					displayValue = Long.toString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 16:
-					solutionInt = Long.parseLong(operand1, currentBase) / Long.parseLong(operand2, currentBase);
-					displayValue = Long.toHexString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				default:
 					displayValue = "error default";
@@ -1530,7 +1530,7 @@ public class MainActivity extends Activity {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-		long solutionInt = 0;
+		int solutionInt = 0;
 		operation = "%";
 		// TODO: add logic for serial operations
 		if(operand1 != "0") {
@@ -1543,20 +1543,20 @@ public class MainActivity extends Activity {
 		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
 			switch (currentBase) {
 				case 2:
-					solutionInt = Long.parseLong(operand1, currentBase) % Long.parseLong(operand2, currentBase);
-					displayValue = Long.toBinaryString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 8:
-					solutionInt = Long.parseLong(operand1, currentBase) % Long.parseLong(operand2, currentBase);
-					displayValue = Long.toOctalString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 10:
-					solutionInt = Long.parseLong(operand1, currentBase) % Long.parseLong(operand2, currentBase);
-					displayValue = Long.toString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				case 16:
-					solutionInt = Long.parseLong(operand1, currentBase) % Long.parseLong(operand2, currentBase);
-					displayValue = Long.toHexString(solutionInt);
+					solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
+					displayValue = Integer.toString(solutionInt);
 					break;
 				default:
 					displayValue = "error default";
