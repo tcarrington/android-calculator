@@ -19,7 +19,6 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -1170,7 +1169,8 @@ public class MainActivity extends Activity {
 					break;
 				case 10:
 					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toString(solutionInt);
+					//displayValue = Integer.toString(solutionInt);
+					displayValue = Short.toString(Integer.valueOf(Integer.toString(solutionInt), currentBase).shortValue());
 					break;
 				case 16:
 					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
@@ -1193,7 +1193,8 @@ public class MainActivity extends Activity {
 					break;
 				case 10:
 					solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toString(solutionInt);
+					//displayValue = Integer.toString(solutionInt);
+					displayValue = Short.toString(Integer.valueOf(Integer.toString(solutionInt), currentBase).shortValue());
 					break;
 				case 16:
 					solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
@@ -1216,7 +1217,8 @@ public class MainActivity extends Activity {
 					break;
 				case 10:
 					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toString(solutionInt);
+					//displayValue = Integer.toString(solutionInt);
+					displayValue = Short.toString(Integer.valueOf(Integer.toString(solutionInt), currentBase).shortValue());
 					break;
 				case 16:
 					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
@@ -1274,7 +1276,8 @@ public class MainActivity extends Activity {
 						break;
 					case 10:
 						solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
-						displayValue = Integer.toString(solutionInt);
+						//displayValue = Integer.toString(solutionInt);
+						displayValue = Short.toString(Integer.valueOf(Integer.toString(solutionInt), currentBase).shortValue());
 						break;
 					case 16:
 						solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
@@ -1298,7 +1301,8 @@ public class MainActivity extends Activity {
 					break;
 				case 10:
 					solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toString(solutionInt);
+					//displayValue = Integer.toString(solutionInt);
+					displayValue = Short.toString(Integer.valueOf(Integer.toString(solutionInt), currentBase).shortValue());
 					break;
 				case 16:
 					solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
