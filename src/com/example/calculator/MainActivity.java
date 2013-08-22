@@ -1029,6 +1029,7 @@ public class MainActivity extends Activity {
 		Button oct_select = (Button) findViewById(R.id.oct_select);
 		Button dec_select = (Button) findViewById(R.id.dec_select);
 		Button hex_select = (Button) findViewById(R.id.hex_select);
+		Button delete_button = (Button) findViewById(R.id.delete_button);
 		plusminus_button.setEnabled(false);
     	add_button.setEnabled(true);
     	sub_button.setEnabled(true);
@@ -1042,6 +1043,7 @@ public class MainActivity extends Activity {
     	hex_select.setEnabled(true);
     	button_1.setEnabled(true);
     	button_0.setEnabled(true);
+    	delete_button.setEnabled(true);
     	
     	switch(currentBase) {
     		case 8: 
@@ -1150,6 +1152,7 @@ public class MainActivity extends Activity {
 		Button oct_select = (Button) findViewById(R.id.oct_select);
 		Button dec_select = (Button) findViewById(R.id.dec_select);
 		Button hex_select = (Button) findViewById(R.id.hex_select);
+		Button delete_button = (Button) findViewById(R.id.delete_button);
 
 		operand2 = display_main.getText().toString();
 		long solutionInt = 0;
@@ -1256,6 +1259,7 @@ public class MainActivity extends Activity {
 		    	oct_select.setEnabled(false);
 		    	dec_select.setEnabled(false);
 		    	hex_select.setEnabled(false);
+		    	delete_button.setEnabled(false);
 		    	
 			}
 			else {
