@@ -170,7 +170,7 @@ public class MainActivity extends Activity {
     	button_2.setEnabled(false);
     	button_1.setEnabled(true);
     	button_0.setEnabled(true);
-    	plusminus_button.setEnabled(false);
+    	plusminus_button.setEnabled(true);
     	bin_select.setTextColor(Color.parseColor("#33B5E5"));
     	oct_select.setTextColor(Color.parseColor("#FFFFFF"));
     	dec_select.setTextColor(Color.parseColor("#FFFFFF"));
@@ -1029,7 +1029,7 @@ public class MainActivity extends Activity {
 		Button dec_select = (Button) findViewById(R.id.dec_select);
 		Button hex_select = (Button) findViewById(R.id.hex_select);
 		Button delete_button = (Button) findViewById(R.id.delete_button);
-		plusminus_button.setEnabled(false);
+		plusminus_button.setEnabled(true);
     	add_button.setEnabled(true);
     	sub_button.setEnabled(true);
     	mult_button.setEnabled(true);
@@ -1094,29 +1094,25 @@ public class MainActivity extends Activity {
 	public void send_plusminus(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		int holdNegative;
-		
 		switch (currentBase) {
-		case 2:
-			
-			holdNegative = Integer.parseInt(operand1, currentBase);
-			displayValue = Integer.toBinaryString(holdNegative);
-			break;
-		case 8:
-			holdNegative = Integer.parseInt(operand1, currentBase);
-			displayValue = Integer.toOctalString(holdNegative);
-			break;
-		case 10:
-			holdNegative = Integer.parseInt(operand1, currentBase);
-			displayValue = Integer.toString(holdNegative);
-			break;
-		case 16:
-			holdNegative = Integer.parseInt(operand1, currentBase);
-			displayValue = Integer.toHexString(holdNegative);
-			break;
-	}
+			case 2:
+				holdNegative = ~Integer.valueOf(displayValue, currentBase) + 1;
+				displayValue = Integer.toBinaryString(holdNegative);
+				break;
+			case 8:
+				holdNegative = ~Integer.valueOf(displayValue, currentBase) + 1;
+				displayValue = Integer.toOctalString(holdNegative);
+				break;
+			case 10:
+				holdNegative = ~Integer.valueOf(displayValue, currentBase) + 1;
+				displayValue = Integer.toString(holdNegative);
+				break;
+			case 16:
+				holdNegative = ~Integer.valueOf(displayValue, currentBase) + 1;
+				displayValue = Integer.toHexString(holdNegative);
+				break;
+		}
 
-		displayValue = display_main.getText().toString();
-		displayValue += "+/-";
 		display_main.setText(displayValue);
 	}
 	public void send_equal(View view) {
