@@ -1462,7 +1462,7 @@ public class MainActivity extends Activity {
 					displayValue = "error default";
 					break;
 			}
-			display_secondary.setText(displayValue);//.toUpperCase(Locale.ENGLISH));
+			display_secondary.setText(displayValue.toUpperCase(Locale.ENGLISH));
 			operand1 = displayValue;
 			operand2 = "0";
 			displayValue = "0";
