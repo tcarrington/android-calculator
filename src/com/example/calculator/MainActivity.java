@@ -1113,7 +1113,7 @@ public class MainActivity extends Activity {
 				break;
 		}
 
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 	}
 	public void send_equal(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
