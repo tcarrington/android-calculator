@@ -5,7 +5,7 @@ Project:		Programming Calculator
 Author: 		Taylor Carrington
 Created: 		August 3, 2013
 Repository: 	https://github.com/tcarrington/android-calculator
-Description:	Programming Calculator - Do calculations in binary, octal, decimal, hexadecimal.
+Description:	Programming Calculator - Do calculations and convert numbers in binary, octal, decimal, hexadecimal.
 Notes:			This is my first Java and Android project.  Lots of mistakes but learning lots! : )
 Goal:			Post on Google Play!
 
@@ -1577,3 +1577,22 @@ public class MainActivity extends Activity {
 	}
 }
 
+/****************************************************************
+PROBLEMS & BUGS:
+
+1) bases do not convert if base conversion is done after an equals + operation
+	- type equation ie: 9 * 9 =
+	- insert operation ie: *
+	- switch between bases: NO CONVERSION
+2) does not allow max integer inputs
+	- hit 'F' until string full
+	- notice can only input 7 'F's (not full integer)
+3) hex values do not get capitalized after equals + operation
+	- switch to hex
+	- type in equation ie: F * F =
+	- insert operation ie: *
+	- notice the secondary display shows lower case hex values
+4) integers are not signed
+5) high values calculations throw exceptions some times when doing equations sequentially
+
+****************************************************************/
