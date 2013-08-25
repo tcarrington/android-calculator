@@ -1422,7 +1422,7 @@ public class MainActivity extends Activity {
 		int solutionInt = 0;
 		operation = "*";
 		if(operand1 != "0") {
-			operand2 = displayValue;
+			operand2 = display_main.getText().toString();;
 		}
 		else {
 			operand1 = display_main.getText().toString();
