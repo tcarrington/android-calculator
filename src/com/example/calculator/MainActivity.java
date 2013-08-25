@@ -1147,7 +1147,6 @@ public class MainActivity extends Activity {
 		operand2 = display_main.getText().toString();
 		int solutionInt = 0;
 
-		
 		if(operation == "+") {
 			switch (currentBase) {
 				case 2:
@@ -1160,7 +1159,6 @@ public class MainActivity extends Activity {
 					break;
 				case 10:
 					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
-					//displayValue = Integer.toString(solutionInt);
 					displayValue = Short.toString(Integer.valueOf(Integer.toString(solutionInt), currentBase).shortValue());
 					break;
 				case 16:
@@ -1184,7 +1182,6 @@ public class MainActivity extends Activity {
 					break;
 				case 10:
 					solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
-					//displayValue = Integer.toString(solutionInt);
 					displayValue = Short.toString(Integer.valueOf(Integer.toString(solutionInt), currentBase).shortValue());
 					break;
 				case 16:
@@ -1208,7 +1205,6 @@ public class MainActivity extends Activity {
 					break;
 				case 10:
 					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
-					//displayValue = Integer.toString(solutionInt);
 					displayValue = Short.toString(Integer.valueOf(Integer.toString(solutionInt), currentBase).shortValue());
 					break;
 				case 16:
@@ -1267,7 +1263,6 @@ public class MainActivity extends Activity {
 						break;
 					case 10:
 						solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
-						//displayValue = Integer.toString(solutionInt);
 						displayValue = Short.toString(Integer.valueOf(Integer.toString(solutionInt), currentBase).shortValue());
 						break;
 					case 16:
@@ -1292,7 +1287,6 @@ public class MainActivity extends Activity {
 					break;
 				case 10:
 					solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
-					//displayValue = Integer.toString(solutionInt);
 					displayValue = Short.toString(Integer.valueOf(Integer.toString(solutionInt), currentBase).shortValue());
 					break;
 				case 16:
@@ -1304,14 +1298,11 @@ public class MainActivity extends Activity {
 			display_secondary.setText("");
 			display_operation.setText("");
 		}
-		// TODO: need default cases for switch statements
 
 		
 		operand1 = displayValue;
 		operand2 = "0";
-		
-		//possibly could break equals operation
-		//displayValue = "0";
+
 		focusFlag = true;
 	}
 	
@@ -1341,7 +1332,7 @@ public class MainActivity extends Activity {
 					break;
 				case 10:
 					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toString(solutionInt);
+					displayValue = Short.toString(Integer.valueOf(Integer.toString(solutionInt), currentBase).shortValue());
 					break;
 				case 16:
 					solutionInt = Integer.parseInt(operand1, currentBase) + Integer.parseInt(operand2, currentBase);
@@ -1391,7 +1382,7 @@ public class MainActivity extends Activity {
 					break;
 				case 10:
 					solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toString(solutionInt);
+					displayValue = Short.toString(Integer.valueOf(Integer.toString(solutionInt), currentBase).shortValue());
 					break;
 				case 16:
 					solutionInt = Integer.parseInt(operand1, currentBase) - Integer.parseInt(operand2, currentBase);
@@ -1440,7 +1431,7 @@ public class MainActivity extends Activity {
 					break;
 				case 10:
 					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toString(solutionInt);
+					displayValue = Short.toString(Integer.valueOf(Integer.toString(solutionInt), currentBase).shortValue());
 					break;
 				case 16:
 					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
@@ -1489,7 +1480,7 @@ public class MainActivity extends Activity {
 					break;
 				case 10:
 					solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toString(solutionInt);
+					displayValue = Short.toString(Integer.valueOf(Integer.toString(solutionInt), currentBase).shortValue());
 					break;
 				case 16:
 					solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
@@ -1538,7 +1529,7 @@ public class MainActivity extends Activity {
 					break;
 				case 10:
 					solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toString(solutionInt);
+					displayValue = Short.toString(Integer.valueOf(Integer.toString(solutionInt), currentBase).shortValue());
 					break;
 				case 16:
 					solutionInt = Integer.parseInt(operand1, currentBase) % Integer.parseInt(operand2, currentBase);
