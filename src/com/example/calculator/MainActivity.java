@@ -26,8 +26,7 @@ import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
-	
-	// TODO: fix UI to better define col/row
+
 	int INT_MAX = 2147483647;
 	int INT_MIN = -2147483648;
 	//global variables
@@ -192,7 +191,6 @@ public class MainActivity extends Activity {
 	}
 	
 	//base conversion
-	// TODO: fix rare issue with binary numbers getting stuck
 	public void bin_select(View view){
 		
 		//button locking
@@ -985,7 +983,6 @@ public class MainActivity extends Activity {
 
 	//control buttons
 	public void send_delete(View view) {
-		// TODO: work on delete logic
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		if(displayValue.length() > 0){
 			displayValue = displayValue.substring(0, displayValue.length() - 1);
@@ -1080,7 +1077,6 @@ public class MainActivity extends Activity {
     	}
 
 		displayValue = display_main.getText().toString();
-		// TODO: fix to only adjust required values
 		focusFlag = false;
 		displayValue = "0";
 		operand1 = "0";
@@ -1320,14 +1316,12 @@ public class MainActivity extends Activity {
 	}
 	
 	//operations
-	// TODO: issue with switch between bases after a full ('=') calculation
 	public void send_add(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_operation = (TextView) findViewById(R.id.display_operation);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);		
 		int solutionInt = 0;
 		operation = "+";
-		// TODO: add logic for serial operations
 		if(operand1 != "0") {
 			operand2 = display_main.getText().toString();
 		}
@@ -1378,7 +1372,6 @@ public class MainActivity extends Activity {
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		int solutionInt = 0;
 		operation = "-";
-		// TODO: add logic for serial operations
 		if(operand1 != "0") {
 			operand2 = display_main.getText().toString();
 		}
@@ -1428,17 +1421,13 @@ public class MainActivity extends Activity {
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		int solutionInt = 0;
 		operation = "*";
-		// TODO: add logic for serial operations
 		if(operand1 != "0") {
-			//operand2 = display_main.getText().toString();
 			operand2 = displayValue;
 		}
 		else {
 			operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1);
-		//logic on how to do calculations in different bases and convert
-		//Long.valueOf(displayValue, currentBase).somethingInt
 		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
 			switch (currentBase) {
 				case 2:
@@ -1481,7 +1470,6 @@ public class MainActivity extends Activity {
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		int solutionInt = 0;
 		operation = "/";
-		// TODO: add logic for serial operations
 		if(operand1 != "0") {
 			operand2 = display_main.getText().toString();
 		}
@@ -1531,7 +1519,6 @@ public class MainActivity extends Activity {
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		int solutionInt = 0;
 		operation = "%";
-		// TODO: add logic for serial operations
 		if(operand1 != "0") {
 			operand2 = display_main.getText().toString();
 		}
@@ -1576,6 +1563,7 @@ public class MainActivity extends Activity {
 		}
 	}
 }
+
 
 /****************************************************************
 PROBLEMS & BUGS:
