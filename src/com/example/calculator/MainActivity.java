@@ -1319,7 +1319,7 @@ public class MainActivity extends Activity {
 		else {
 			operand1 = display_main.getText().toString();
 		}
-		display_secondary.setText(operand1);
+		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
 			switch (currentBase) {
 				case 2:
@@ -1369,7 +1369,7 @@ public class MainActivity extends Activity {
 		else {
 			operand1 = display_main.getText().toString();
 		}
-		display_secondary.setText(operand1);
+		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
 			switch (currentBase) {
 				case 2:
@@ -1413,12 +1413,12 @@ public class MainActivity extends Activity {
 		int solutionInt = 0;
 		operation = "*";
 		if(operand1 != "0") {
-			operand2 = display_main.getText().toString();;
+			operand2 = display_main.getText().toString();
 		}
 		else {
 			operand1 = display_main.getText().toString();
 		}
-		display_secondary.setText(operand1);
+		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
 			switch (currentBase) {
 				case 2:
@@ -1467,7 +1467,7 @@ public class MainActivity extends Activity {
 		else {
 			operand1 = display_main.getText().toString();
 		}
-		display_secondary.setText(operand1);
+		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
 			switch (currentBase) {
 				case 2:
@@ -1516,7 +1516,7 @@ public class MainActivity extends Activity {
 		else {
 			operand1 = display_main.getText().toString();
 		}
-		display_secondary.setText(operand1);
+		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
 			switch (currentBase) {
 				case 2:
@@ -1571,7 +1571,7 @@ PROBLEMS & BUGS:
 	- type in equation ie: F * F =
 	- insert operation ie: *
 	- notice the secondary display shows lower case hex values
-4) integers are not signed
+4) integers are not signed ***FIXED?***
 5) high values calculations throw exceptions some times when doing equations sequentially
 
 ****************************************************************/
