@@ -1210,7 +1210,7 @@ public class MainActivity extends Activity {
 					break;
 				case 16:
 					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toHexString(Integer.valueOf(Long.toString(solutionInt)).intValue());
+					displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
 					break;
 			}
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
