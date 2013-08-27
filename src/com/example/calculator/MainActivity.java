@@ -1209,6 +1209,7 @@ public class MainActivity extends Activity {
 					displayValue = Integer.toString(Integer.valueOf(Long.toString(solutionInt)).intValue());
 					break;
 				case 16:
+					// try to use solutionInt as an integer
 					solutionInt = Integer.parseInt(operand1, currentBase) * Integer.parseInt(operand2, currentBase);
 					displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
 					break;
