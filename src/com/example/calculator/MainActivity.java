@@ -1270,7 +1270,8 @@ public class MainActivity extends Activity {
 					break;
 				case 16:
 					solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
-					displayValue = Integer.toHexString(Long.valueOf(Long.toString(solutionInt), currentBase).intValue());
+					//try to fix overflow issue
+					displayValue = Long.toHexString(solutionInt);
 					break;
 				}
 				display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
