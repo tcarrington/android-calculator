@@ -1269,7 +1269,7 @@ public class MainActivity extends Activity {
 					displayValue = Integer.toString(Integer.valueOf(Long.toString(solutionInt), currentBase).intValue());
 					break;
 				case 16:
-					solutionInt = Integer.parseInt(operand1, currentBase) / Integer.parseInt(operand2, currentBase);
+					solutionInt = ~Integer.parseInt(operand1, currentBase) / ~Integer.parseInt(operand2, currentBase);
 					//try to fix overflow issue
 					displayValue = Long.toHexString(solutionInt);
 					break;
