@@ -1567,9 +1567,11 @@ PROBLEMS & BUGS:
 	- type equation ie: 9 * 9 =
 	- insert operation ie: *
 	- switch between bases: NO CONVERSION
+	- *fix* add a flag for sequential calculations
 2) does not allow max integer inputs
 	- hit 'F' until string full
 	- notice can only input 7 'F's (not full integer)
+	- *fix* maybe use some bitwise operations?
 3 ***FIXED***) hex values do not get capitalized after equals + operation
 	- switch to hex
 	- type in equation ie: F * F =
