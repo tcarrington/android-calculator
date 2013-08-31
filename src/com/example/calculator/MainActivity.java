@@ -1580,4 +1580,6 @@ PROBLEMS & BUGS:
 4 ***FIXED***) integers are not signed 
 5) high values calculations throw exceptions some times when doing equations sequentially
 
+6 ***not required***) general UI improvements
+
 ****************************************************************/
