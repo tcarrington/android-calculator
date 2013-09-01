@@ -1581,3 +1581,13 @@ PROBLEMS & BUGS:
 6 ***not required***) general UI improvements
 
 ****************************************************************/
+
+//HOW STRINGS AND INTEGERS WORK!
+/*
+take 0xFFFFFFFF
+this number is represented in 32 bits (the length of an integer!), but actually represents the decimal number roughly 4 billion
+when converting to different bases or doing calculations this number is to large to fit into an integer
+an integer ranges from -2 billion to +2 billion
+therefore a conversion/cast to integer must be done at ALL base values that would represent a number larger than +/- 2 billion
+
+*/
