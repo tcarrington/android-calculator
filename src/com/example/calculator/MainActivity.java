@@ -372,15 +372,15 @@ public class MainActivity extends Activity {
 
     	if(displayValue != "0") {
 	    	TextView display_main = (TextView) findViewById(R.id.display_main);
-	    	displayValue = Integer.toString(Integer.parseInt(displayValue, currentBase));
-	    	operand1 = Integer.toString(Integer.parseInt(operand1, currentBase));
+	    	displayValue = Integer.toString(Long.valueOf(displayValue, currentBase).intValue());
+	    	operand1 = Integer.toString(Long.valueOf(operand1, currentBase).intValue());
 	    	display_main.setText(displayValue);
     	}
     	if((operand1 != "0") && (!focusFlag)) {
 	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 	    	//needs to be commented out or will receive double conversion from previous statement
 	    	//operand1 = Long.toString(Long.parseLong(operand1, currentBase));
-	    	operand2 = Integer.toString(Integer.parseInt(operand2, currentBase));
+	    	operand2 = Integer.toString(Long.valueOf(operand2, currentBase).intValue());
 	    	display_secondary.setText(operand1);
     	}
     	
