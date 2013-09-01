@@ -29,6 +29,9 @@ public class MainActivity extends Activity {
 
 	int INT_MAX = 2147483647;
 	int INT_MIN = -2147483648;
+	int MAX_HEX_LENGTH = 8;
+	int MAX_BIN_LENGTH = 32;
+	int MAX_OCT_LENGTH = 11;
 	//global variables
 	String operand1;
 	String operation;
@@ -919,9 +922,8 @@ public class MainActivity extends Activity {
 		else {
 			switch(currentBase) {
 				case 16:
-					if((Long.valueOf(displayValue + "D", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "D", currentBase) <= INT_MAX))
+					if((Long.valueOf(displayValue + "D", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "D", currentBase).intValue() <= INT_MAX))
 					{
-						displayValue = display_main.getText().toString();
 						displayValue += "D";
 					}
 					break;
@@ -943,9 +945,8 @@ public class MainActivity extends Activity {
 		else {
 			switch(currentBase) {
 				case 16:
-					if((Long.valueOf(displayValue + "E", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "E", currentBase) <= INT_MAX))
+					if((Long.valueOf(displayValue + "E", currentBase).intValue() >= INT_MIN) && (Integer.valueOf(displayValue + "E", currentBase).intValue() <= INT_MAX))
 					{
-						displayValue = display_main.getText().toString();
 						displayValue += "E";
 					}
 					break;
@@ -967,14 +968,10 @@ public class MainActivity extends Activity {
 		else {
 			switch(currentBase) {
 				case 16:
-					if((Long.valueOf(displayValue + "F", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "F", currentBase) <= INT_MAX))
+					if((Long.valueOf(displayValue + "F", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "F", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
 					{
-						displayValue = display_main.getText().toString();
 						displayValue += "F";
 					}
-					break;
-				default:
-					displayValue += "";
 					break;
 			}
 		}
@@ -1579,6 +1576,7 @@ PROBLEMS & BUGS:
 	- notice the secondary display shows lower case hex values
 4 ***FIXED***) integers are not signed 
 5) high values calculations throw exceptions some times when doing equations sequentially
+7) +/- does not work to flip back to positive
 
 6 ***not required***) general UI improvements
 
