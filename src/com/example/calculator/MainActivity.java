@@ -1582,6 +1582,8 @@ PROBLEMS & BUGS:
 
 ****************************************************************/
 
+//fix all hex calculations
+
 //HOW STRINGS AND INTEGERS WORK!
 /*
 take 0xFFFFFFFF
