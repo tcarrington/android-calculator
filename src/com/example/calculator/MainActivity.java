@@ -30,8 +30,9 @@ public class MainActivity extends Activity {
 	int INT_MAX = 2147483647;
 	int INT_MIN = -2147483648;
 	int MAX_HEX_LENGTH = 8;
-	int MAX_BIN_LENGTH = 32;
 	int MAX_OCT_LENGTH = 11;
+	int MAX_BIN_LENGTH = 32;
+	
 	//global variables
 	String operand1;
 	String operation;
@@ -475,9 +476,8 @@ public class MainActivity extends Activity {
 		else {
 			switch(currentBase) {
 				case 2:
-					if((Long.valueOf(displayValue + "0", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "0", currentBase) <= INT_MAX))
+					if((Long.valueOf(displayValue + "1", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "1", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_BIN_LENGTH))
 					{
-						displayValue = display_main.getText().toString();
 						displayValue += "0";
 					}
 					break;
@@ -519,9 +519,8 @@ public class MainActivity extends Activity {
 		else {
 			switch(currentBase) {
 				case 2:
-					if((Long.valueOf(displayValue + "1", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "1", currentBase) <= INT_MAX))
+					if((Long.valueOf(displayValue + "1", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "1", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_BIN_LENGTH))
 					{
-						displayValue = display_main.getText().toString();
 						displayValue += "1";
 					}
 					break;
@@ -822,14 +821,12 @@ public class MainActivity extends Activity {
 				case 10:
 					if((Long.valueOf(displayValue + "8", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "8", currentBase) <= INT_MAX))
 					{
-						displayValue = display_main.getText().toString();
 						displayValue += "9";
 					}
 					break;
 				case 16:
 					if((Long.valueOf(displayValue + "9", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "9", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
 					{
-						displayValue = display_main.getText().toString();
 						displayValue += "9";
 					}
 					break;
