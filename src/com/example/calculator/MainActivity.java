@@ -313,8 +313,8 @@ public class MainActivity extends Activity {
 	    	TextView display_main = (TextView) findViewById(R.id.display_main);
 	    	//displayValue = Integer.toOctalString(Integer.parseInt(displayValue, currentBase));
 	    	//operand1 = Integer.toOctalString(Integer.parseInt(operand1, currentBase));
-	    	displayValue = Integer.toString(Long.valueOf(displayValue, currentBase).intValue());
-	    	operand1 = Integer.toString(Long.valueOf(operand1, currentBase).intValue());
+	    	displayValue = Integer.toOctalString(Long.valueOf(displayValue, currentBase).intValue());
+	    	operand1 = Integer.toOctalString(Long.valueOf(operand1, currentBase).intValue());
 	    	display_main.setText(displayValue);
     	}
     	if((operand1 != "0") && (!focusFlag)) {
@@ -444,15 +444,18 @@ public class MainActivity extends Activity {
 
     	if(displayValue != "0"){
     		TextView display_main = (TextView) findViewById(R.id.display_main);
-	    	displayValue = Integer.toHexString(Integer.parseInt(displayValue, currentBase));
-	    	operand1 = Integer.toHexString(Integer.parseInt(operand1, currentBase));
+	    	//displayValue = Integer.toHexString(Integer.parseInt(displayValue, currentBase));
+	    	//operand1 = Integer.toHexString(Integer.parseInt(operand1, currentBase));
+	    	displayValue = Integer.toHexString(Long.valueOf(displayValue, currentBase).intValue());
+	    	operand1 = Integer.toHexString(Long.valueOf(operand1, currentBase).intValue());
 	    	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
     	}
     	if((operand1 != "0") && (!focusFlag)) {
 	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 	    	//needs to be commented out or will receive double conversion from previous statement
 	    	//operand1 = Long.toHexString(Long.parseLong(operand1, currentBase));
-	    	operand2 = Integer.toHexString(Integer.parseInt(operand2, currentBase));
+	    	operand2 = Integer.toHexString(Long.valueOf(operand2, currentBase).intValue());
+	    	//operand2 = Integer.toHexString(Integer.parseInt(operand2, currentBase));
 	    	display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
     	}
 
