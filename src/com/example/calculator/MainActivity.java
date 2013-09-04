@@ -1170,7 +1170,7 @@ public class MainActivity extends Activity {
 					break;
 				case 16:
 					solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
-					displayValue = Integer.toHexString(Long.valueOf(Long.toString(solutionInt), currentBase).intValue());
+					displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
 					break;
 			}
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
@@ -1193,7 +1193,7 @@ public class MainActivity extends Activity {
 					break;
 				case 16:
 					solutionInt = Long.valueOf(operand1, currentBase).intValue() - Long.valueOf(operand2, currentBase).intValue();
-					displayValue = Integer.toHexString(Integer.valueOf(Long.toString(solutionInt), currentBase).intValue());
+					displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
 					break;
 			}
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
@@ -1277,8 +1277,7 @@ public class MainActivity extends Activity {
 					break;
 				case 16:
 					solutionInt = Long.valueOf(operand1, currentBase).intValue() / Long.valueOf(operand2, currentBase).intValue();
-					//try to fix overflow issue
-					displayValue = Long.toHexString(solutionInt);
+					displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
 					break;
 				}
 				display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
@@ -1302,7 +1301,7 @@ public class MainActivity extends Activity {
 					break;
 				case 16:
 					solutionInt = Long.valueOf(operand1, currentBase).intValue() % Long.valueOf(operand2, currentBase).intValue();
-					displayValue = Integer.toHexString(Long.valueOf(Long.toString(solutionInt), currentBase).intValue());
+					displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
 					break;
 			}
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
