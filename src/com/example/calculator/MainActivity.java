@@ -858,9 +858,8 @@ public class MainActivity extends Activity {
 		else {
 			switch(currentBase) {
 				case 16:
-					if((Long.valueOf(displayValue + "A", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "A", currentBase) <= INT_MAX))
+					if((Long.valueOf(displayValue + "A", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "A", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
 					{
-						displayValue = display_main.getText().toString();
 						displayValue += "A";
 					}
 					break;
@@ -882,9 +881,8 @@ public class MainActivity extends Activity {
 		else {
 			switch(currentBase) {
 				case 16:
-					if((Long.valueOf(displayValue + "B", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "B", currentBase) <= INT_MAX))
+					if((Long.valueOf(displayValue + "B", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "B", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
 					{
-						displayValue = display_main.getText().toString();
 						displayValue += "B";
 					}
 					break;
@@ -906,9 +904,8 @@ public class MainActivity extends Activity {
 		else {
 			switch(currentBase) {
 				case 16:
-					if((Long.valueOf(displayValue + "C", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "C", currentBase) <= INT_MAX))
+					if((Long.valueOf(displayValue + "C", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "C", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
 					{
-						displayValue = display_main.getText().toString();
 						displayValue += "C";
 					}
 					break;
@@ -931,7 +928,7 @@ public class MainActivity extends Activity {
 		else {
 			switch(currentBase) {
 				case 16:
-					if((Long.valueOf(displayValue + "D", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "D", currentBase).intValue() <= INT_MAX))
+					if((Long.valueOf(displayValue + "D", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "D", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
 					{
 						displayValue += "D";
 					}
@@ -954,7 +951,7 @@ public class MainActivity extends Activity {
 		else {
 			switch(currentBase) {
 				case 16:
-					if((Long.valueOf(displayValue + "E", currentBase).intValue() >= INT_MIN) && (Integer.valueOf(displayValue + "E", currentBase).intValue() <= INT_MAX))
+					if((Long.valueOf(displayValue + "E", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "E", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
 					{
 						displayValue += "E";
 					}
@@ -1221,7 +1218,7 @@ public class MainActivity extends Activity {
 				case 16:
 					// try to use solutionInt as an integer
 					solutionInt = Long.valueOf(operand1, currentBase).intValue() * Long.valueOf(operand2, currentBase).intValue();
-					displayValue = Integer.toString(Long.valueOf(solutionInt).intValue());
+					displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
 					break;
 			}
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
