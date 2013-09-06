@@ -474,38 +474,6 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "0";
 		else {
-			/*switch(currentBase) {
-				case 2:
-					if((Long.valueOf(displayValue + "1", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "1", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_BIN_LENGTH))
-					{
-						displayValue += "0";
-					}
-					break;
-				case 8:
-					if((Long.valueOf(displayValue + "0", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "0", currentBase) <= INT_MAX))
-					{
-						displayValue += "0";
-					}
-					break;
-				case 10:
-					try {
-						if((Integer.valueOf(displayValue + "3", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "3", currentBase) <= INT_MAX))
-						{
-							displayValue += "0";
-						}
-					}
-					catch(Exception e) {}
-					break;
-				case 16:
-					if((Long.valueOf(displayValue + "0", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "0", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
-					{
-						displayValue += "0";
-					}
-					break;
-				default:
-					displayValue += "";
-					break;
-			}*/
 			try {
 				if((Integer.valueOf(displayValue + "0", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "0", currentBase) <= INT_MAX))
 				{
@@ -618,32 +586,6 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "3";
 		else {
-			/*switch(currentBase) {
-				case 8:
-					if((Long.valueOf(displayValue + "3", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "3", currentBase) <= INT_MAX))
-					{
-						displayValue += "3";
-					}
-					break;
-				case 10:
-					try {
-						if((Integer.valueOf(displayValue + "3", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "3", currentBase) <= INT_MAX))
-						{
-							displayValue += "3";
-						}
-					}
-					catch(Exception e) {}
-					break;
-				case 16:
-					if((Long.valueOf(displayValue + "3", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "3", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
-					{
-						displayValue += "3";
-					}
-					break;
-				default:
-					displayValue += "";
-					break;
-			}*/
 			try {
 				if((Integer.valueOf(displayValue + "3", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "3", currentBase) <= INT_MAX))
 				{
@@ -664,32 +606,13 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "4";
 		else {
-			switch(currentBase) {
-				case 8:
-					if((Long.valueOf(displayValue + "4", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "4", currentBase) <= INT_MAX))
-					{
-						displayValue += "4";
-					}
-					break;
-				case 10:
-					try {
-						if((Integer.valueOf(displayValue + "4", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "4", currentBase) <= INT_MAX))
-						{
-							displayValue += "4";
-						}
-					}
-					catch(Exception e) {}
-					break;
-				case 16:
-					if((Long.valueOf(displayValue + "4", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "4", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
-					{
-						displayValue += "4";
-					}
-					break;
-				default:
-					displayValue += "";
-					break;
+			try {
+				if((Integer.valueOf(displayValue + "4", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "4", currentBase) <= INT_MAX))
+				{
+					displayValue += "4";
+				}
 			}
+			catch(Exception e) {}
 		}
 		display_main.setText(displayValue);
 	}
@@ -702,32 +625,13 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "5";
 		else {
-			switch(currentBase) {
-				case 8:
-					if((Long.valueOf(displayValue + "5", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "5", currentBase) <= INT_MAX))
-					{
-						displayValue += "5";
-					}
-					break;
-				case 10:
-					try {
-						if((Integer.valueOf(displayValue + "5", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "5", currentBase) <= INT_MAX))
-						{
-							displayValue += "5";
-						}
-					}
-					catch(Exception e) {}
-					break;
-				case 16:
-					if((Long.valueOf(displayValue + "5", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "5", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
-					{
-						displayValue += "5";
-					}
-					break;
-				default:
-					displayValue += "";
-					break;
+			try {
+				if((Integer.valueOf(displayValue + "5", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "5", currentBase) <= INT_MAX))
+				{
+					displayValue += "5";
+				}
 			}
+			catch(Exception e) {}
 		}
 		display_main.setText(displayValue);
 	}
@@ -740,32 +644,13 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "6";
 		else {
-			switch(currentBase) {
-				case 8:
-					if((Long.valueOf(displayValue + "6", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "6", currentBase) <= INT_MAX))
-					{
-						displayValue += "6";
-					}
-					break;
-				case 10:
-					try {
-						if((Integer.valueOf(displayValue + "6", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "6", currentBase) <= INT_MAX))
-						{
-							displayValue += "6";
-						}
-					}
-					catch(Exception e) {}
-					break;
-				case 16:
-					if((Long.valueOf(displayValue + "6", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "6", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
-					{
-						displayValue += "6";
-					}
-					break;
-				default:
-					displayValue += "";
-					break;
+			try {
+				if((Integer.valueOf(displayValue + "6", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "6", currentBase) <= INT_MAX))
+				{
+					displayValue += "6";
+				}
 			}
+			catch(Exception e) {}
 		}
 		display_main.setText(displayValue);
 	}
@@ -779,32 +664,13 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "7";
 		else {
-			switch(currentBase) {
-				case 8:
-					if((Long.valueOf(displayValue + "7", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "7", currentBase) <= INT_MAX))
-					{
-						displayValue += "7";
-					}
-					break;
-				case 10:
-					try {
-						if((Integer.valueOf(displayValue + "7", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "7", currentBase) <= INT_MAX))
-						{
-							displayValue += "7";
-						}
-					}
-					catch(Exception e) {}
-					break;
-				case 16:
-					if((Long.valueOf(displayValue + "7", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "7", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
-					{
-						displayValue += "7";
-					}
-					break;
-				default:
-					displayValue += "";
-					break;
+			try {
+				if((Integer.valueOf(displayValue + "7", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "7", currentBase) <= INT_MAX))
+				{
+					displayValue += "7";
+				}
 			}
+			catch(Exception e) {}
 		}
 		display_main.setText(displayValue);
 	}
@@ -817,26 +683,13 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "8";
 		else {
-			switch(currentBase) {
-				case 10:
-					try {
-						if((Integer.valueOf(displayValue + "8", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "8", currentBase) <= INT_MAX))
-						{
-							displayValue += "8";
-						}
-					}
-					catch(Exception e) {}
-					break;
-				case 16:
-					if((Long.valueOf(displayValue + "8", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "8", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
-					{
-						displayValue += "8";
-					}
-					break;
-				default:
-					displayValue += "";
-					break;
+			try {
+				if((Integer.valueOf(displayValue + "8", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "8", currentBase) <= INT_MAX))
+				{
+					displayValue += "8";
+				}
 			}
+			catch(Exception e) {}
 		}
 		display_main.setText(displayValue);
 	}
@@ -849,26 +702,13 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "9";
 		else {
-			switch(currentBase) {
-				case 10:
-					try {
-						if((Integer.valueOf(displayValue + "9", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "9", currentBase) <= INT_MAX))
-						{
-							displayValue += "9";
-						}
-					}
-					catch(Exception e) {}
-					break;
-				case 16:
-					if((Long.valueOf(displayValue + "9", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "9", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
-					{
-						displayValue += "9";
-					}
-					break;
-				default:
-					displayValue += "";
-					break;
+			try {
+				if((Long.valueOf(displayValue + "9", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "9", currentBase).intValue() <= INT_MAX))
+				{
+					displayValue += "9";
+				}
 			}
+			catch(Exception e) {}
 		}
 		display_main.setText(displayValue);
 	}	
@@ -882,17 +722,13 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "A";
 		else {
-			switch(currentBase) {
-				case 16:
-					if((Long.valueOf(displayValue + "A", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "A", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
-					{
-						displayValue += "A";
-					}
-					break;
-				default:
-					displayValue += "";
-					break;
+			try {
+				if((Integer.valueOf(displayValue + "A", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "A", currentBase) <= INT_MAX))
+				{
+					displayValue += "A";
+				}
 			}
+			catch(Exception e) {}
 		}
 		display_main.setText(displayValue);
 	}
@@ -905,17 +741,13 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "B";
 		else {
-			switch(currentBase) {
-				case 16:
-					if((Long.valueOf(displayValue + "B", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "B", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
-					{
-						displayValue += "B";
-					}
-					break;
-				default:
-					displayValue += "";
-					break;
+			try {
+				if((Integer.valueOf(displayValue + "B", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "B", currentBase) <= INT_MAX))
+				{
+					displayValue += "B";
+				}
 			}
+			catch(Exception e) {}
 		}
 		display_main.setText(displayValue);
 	}
@@ -928,17 +760,13 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "C";
 		else {
-			switch(currentBase) {
-				case 16:
-					if((Long.valueOf(displayValue + "C", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "C", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
-					{
-						displayValue += "C";
-					}
-					break;
-				default:
-					displayValue += "";
-					break;
+			try {
+				if((Integer.valueOf(displayValue + "C", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "C", currentBase) <= INT_MAX))
+				{
+					displayValue += "C";
+				}
 			}
+			catch(Exception e) {}
 		}
 		display_main.setText(displayValue);
 	}
@@ -952,17 +780,13 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "D";
 		else {
-			switch(currentBase) {
-				case 16:
-					if((Long.valueOf(displayValue + "D", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "D", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
-					{
-						displayValue += "D";
-					}
-					break;
-				default:
-					displayValue += "";
-					break;
+			try {
+				if((Integer.valueOf(displayValue + "D", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "D", currentBase) <= INT_MAX))
+				{
+					displayValue += "D";
+				}
 			}
+			catch(Exception e) {}
 		}
 		display_main.setText(displayValue);
 	}
@@ -975,17 +799,13 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "E";
 		else {
-			switch(currentBase) {
-				case 16:
-					if((Long.valueOf(displayValue + "E", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "E", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
-					{
-						displayValue += "E";
-					}
-					break;
-				default:
-					displayValue += "";
-					break;
+			try {
+				if((Integer.valueOf(displayValue + "E", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "E", currentBase) <= INT_MAX))
+				{
+					displayValue += "E";
+				}
 			}
+			catch(Exception e) {}
 		}
 		display_main.setText(displayValue);
 	}
@@ -998,14 +818,13 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "F";
 		else {
-			switch(currentBase) {
-				case 16:
-					if((Long.valueOf(displayValue + "F", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "F", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
-					{
-						displayValue += "F";
-					}
-					break;
+			try {
+				if((Integer.valueOf(displayValue + "F", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "F", currentBase) <= INT_MAX))
+				{
+					displayValue += "F";
+				}
 			}
+			catch(Exception e) {}
 		}
 		display_main.setText(displayValue);
 	}
@@ -1575,17 +1394,4 @@ PROBLEMS & BUGS:
 3) base switch with single input number and no-op
 4) General UI improvements
 
-
-
 ****************************************************************/
-
-
-//HOW STRINGS AND INTEGERS WORK!
-/*
-take 0xFFFFFFFF
-this number is represented in 32 bits (the length of an integer!), but actually represents the decimal number roughly 4 billion
-when converting to different bases or doing calculations, this number is to large to fit into an integer
-an integer ranges from -2 billion to +2 billion
-therefore a conversion/cast to integer must be done at ALL base values that would represent a number larger than +/- 2 billion
-
-*/
