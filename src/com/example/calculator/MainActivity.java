@@ -488,10 +488,13 @@ public class MainActivity extends Activity {
 					}
 					break;
 				case 10:
-					if((Long.valueOf(displayValue + "0", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "0", currentBase) <= INT_MAX))
-					{
-						displayValue += "0";
+					try {
+						if((Integer.valueOf(displayValue + "3", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "3", currentBase) <= INT_MAX))
+						{
+							displayValue += "0";
+						}
 					}
+					catch(Exception e) {}
 					break;
 				case 16:
 					if((Long.valueOf(displayValue + "0", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "0", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
@@ -529,10 +532,13 @@ public class MainActivity extends Activity {
 					}
 					break;
 				case 10:
-					if((Long.valueOf(displayValue + "1", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "1", currentBase) <= INT_MAX))
-					{
-						displayValue += "1";
+					try {
+						if((Integer.valueOf(displayValue + "1", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "1", currentBase) <= INT_MAX))
+						{
+							displayValue += "1";
+						}
 					}
+					catch(Exception e) {}
 					break;
 				case 16:
 					if((Long.valueOf(displayValue + "1", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "1", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
@@ -564,10 +570,13 @@ public class MainActivity extends Activity {
 					}
 					break;
 				case 10:
-					if((Long.valueOf(displayValue + "2", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "2", currentBase) <= INT_MAX))
-					{
-						displayValue += "2";
+					try {
+						if((Integer.valueOf(displayValue + "2", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "2", currentBase) <= INT_MAX))
+						{
+							displayValue += "2";
+						}
 					}
+					catch(Exception e) {}
 					break;
 				case 16:
 					if((Long.valueOf(displayValue + "2", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "2", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
@@ -599,10 +608,13 @@ public class MainActivity extends Activity {
 					}
 					break;
 				case 10:
-					if((Long.valueOf(displayValue + "3", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "3", currentBase) <= INT_MAX))
-					{
-						displayValue += "3";
+					try {
+						if((Integer.valueOf(displayValue + "3", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "3", currentBase) <= INT_MAX))
+						{
+							displayValue += "3";
+						}
 					}
+					catch(Exception e) {}
 					break;
 				case 16:
 					if((Long.valueOf(displayValue + "3", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "3", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
@@ -635,10 +647,13 @@ public class MainActivity extends Activity {
 					}
 					break;
 				case 10:
-					if((Long.valueOf(displayValue + "4", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "4", currentBase) <= INT_MAX))
-					{
-						displayValue += "4";
+					try {
+						if((Integer.valueOf(displayValue + "4", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "4", currentBase) <= INT_MAX))
+						{
+							displayValue += "4";
+						}
 					}
+					catch(Exception e) {}
 					break;
 				case 16:
 					if((Long.valueOf(displayValue + "4", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "4", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
@@ -670,10 +685,13 @@ public class MainActivity extends Activity {
 					}
 					break;
 				case 10:
-					if((Long.valueOf(displayValue + "5", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "5", currentBase) <= INT_MAX))
-					{
-						displayValue += "5";
+					try {
+						if((Integer.valueOf(displayValue + "5", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "5", currentBase) <= INT_MAX))
+						{
+							displayValue += "5";
+						}
 					}
+					catch(Exception e) {}
 					break;
 				case 16:
 					if((Long.valueOf(displayValue + "5", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "5", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
@@ -705,10 +723,13 @@ public class MainActivity extends Activity {
 					}
 					break;
 				case 10:
-					if((Long.valueOf(displayValue + "6", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "6", currentBase) <= INT_MAX))
-					{
-						displayValue += "6";
+					try {
+						if((Integer.valueOf(displayValue + "6", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "6", currentBase) <= INT_MAX))
+						{
+							displayValue += "6";
+						}
 					}
+					catch(Exception e) {}
 					break;
 				case 16:
 					if((Long.valueOf(displayValue + "6", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "6", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
@@ -741,10 +762,13 @@ public class MainActivity extends Activity {
 					}
 					break;
 				case 10:
-					if((Long.valueOf(displayValue + "7", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "7", currentBase) <= INT_MAX))
-					{
-						displayValue += "7";
+					try {
+						if((Integer.valueOf(displayValue + "7", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "7", currentBase) <= INT_MAX))
+						{
+							displayValue += "7";
+						}
 					}
+					catch(Exception e) {}
 					break;
 				case 16:
 					if((Long.valueOf(displayValue + "7", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "7", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
@@ -770,10 +794,13 @@ public class MainActivity extends Activity {
 		else {
 			switch(currentBase) {
 				case 10:
-					if((Long.valueOf(displayValue + "8", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "8", currentBase) <= INT_MAX))
-					{
-						displayValue += "8";
+					try {
+						if((Integer.valueOf(displayValue + "8", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "8", currentBase) <= INT_MAX))
+						{
+							displayValue += "8";
+						}
 					}
+					catch(Exception e) {}
 					break;
 				case 16:
 					if((Long.valueOf(displayValue + "8", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "8", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
@@ -799,10 +826,13 @@ public class MainActivity extends Activity {
 		else {
 			switch(currentBase) {
 				case 10:
-					if((Long.valueOf(displayValue + "8", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "8", currentBase) <= INT_MAX))
-					{
-						displayValue += "9";
+					try {
+						if((Integer.valueOf(displayValue + "9", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "9", currentBase) <= INT_MAX))
+						{
+							displayValue += "9";
+						}
 					}
+					catch(Exception e) {}
 					break;
 				case 16:
 					if((Long.valueOf(displayValue + "9", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "9", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
