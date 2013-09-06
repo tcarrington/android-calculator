@@ -474,7 +474,7 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "0";
 		else {
-			switch(currentBase) {
+			/*switch(currentBase) {
 				case 2:
 					if((Long.valueOf(displayValue + "1", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "1", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_BIN_LENGTH))
 					{
@@ -505,7 +505,14 @@ public class MainActivity extends Activity {
 				default:
 					displayValue += "";
 					break;
+			}*/
+			try {
+				if((Integer.valueOf(displayValue + "0", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "0", currentBase) <= INT_MAX))
+				{
+					displayValue += "0";
+				}
 			}
+			catch(Exception e) {}
 		}
 		display_main.setText(displayValue);
 	}
@@ -518,7 +525,7 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "1";
 		else {
-			switch(currentBase) {
+			/*switch(currentBase) {
 				case 2:
 					if((Long.valueOf(displayValue + "1", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "1", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_BIN_LENGTH))
 					{
@@ -546,10 +553,14 @@ public class MainActivity extends Activity {
 						displayValue += "1";
 					}
 					break;
-				default:
-					displayValue += "";
-					break;
+			}*/
+			try {
+				if((Integer.valueOf(displayValue + "1", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "1", currentBase) <= INT_MAX))
+				{
+					displayValue += "1";
+				}
 			}
+			catch(Exception e) {}
 		}
 		display_main.setText(displayValue);
 	}
@@ -562,7 +573,7 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "2";
 		else {
-			switch(currentBase) {
+			/*switch(currentBase) {
 				case 8:
 					if((Long.valueOf(displayValue + "2", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "2", currentBase) <= INT_MAX))
 					{
@@ -587,7 +598,14 @@ public class MainActivity extends Activity {
 				default:
 					displayValue += "";
 					break;
+			}*/
+			try {
+				if((Integer.valueOf(displayValue + "2", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "2", currentBase) <= INT_MAX))
+				{
+					displayValue += "2";
+				}
 			}
+			catch(Exception e) {}
 		}
 		display_main.setText(displayValue);
 	}	
@@ -600,7 +618,7 @@ public class MainActivity extends Activity {
 		if(displayValue == "0")
 			displayValue = "3";
 		else {
-			switch(currentBase) {
+			/*switch(currentBase) {
 				case 8:
 					if((Long.valueOf(displayValue + "3", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "3", currentBase) <= INT_MAX))
 					{
@@ -625,7 +643,14 @@ public class MainActivity extends Activity {
 				default:
 					displayValue += "";
 					break;
+			}*/
+			try {
+				if((Integer.valueOf(displayValue + "3", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "3", currentBase) <= INT_MAX))
+				{
+					displayValue += "3";
+				}
 			}
+			catch(Exception e) {}
 		}
 		display_main.setText(displayValue);
 	}	
