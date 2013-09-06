@@ -1063,21 +1063,18 @@ public class MainActivity extends Activity {
 	public void send_plusminus(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		int holdNegative;
+		holdNegative = ~Integer.valueOf(displayValue, currentBase) + 1;
 		switch (currentBase) {
 			case 2:
-				holdNegative = ~Integer.valueOf(displayValue, currentBase) + 1;
 				displayValue = Integer.toBinaryString(holdNegative);
 				break;
 			case 8:
-				holdNegative = ~Integer.valueOf(displayValue, currentBase) + 1;
 				displayValue = Integer.toOctalString(holdNegative);
 				break;
 			case 10:
-				holdNegative = ~Integer.valueOf(displayValue, currentBase) + 1;
 				displayValue = Integer.toString(holdNegative);
 				break;
 			case 16:
-				holdNegative = ~Integer.valueOf(displayValue, currentBase) + 1;
 				displayValue = Integer.toHexString(holdNegative);
 				break;
 		}
