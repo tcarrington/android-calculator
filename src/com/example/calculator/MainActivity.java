@@ -1062,23 +1062,27 @@ public class MainActivity extends Activity {
 	}
 	public void send_plusminus(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		int holdNegative;
-		holdNegative = ~Integer.valueOf(displayValue, currentBase) + 1;
+		long holdInverse = 0;
+		if((Long.valueOf(displayValue, currentBase).intValue() > INT_MIN) && (Long.valueOf(displayValue, currentBase).intValue() <= INT_MAX)) {
+			holdInverse = ~Long.valueOf(displayValue, currentBase).intValue() + 1;
+		}
+		else if(Integer.valueOf(displayValue, currentBase) == 0) {
+			holdInverse = 0;
+		}
 		switch (currentBase) {
 			case 2:
-				displayValue = Integer.toBinaryString(holdNegative);
+				displayValue = Integer.toBinaryString(Long.valueOf(holdInverse).intValue());
 				break;
 			case 8:
-				displayValue = Integer.toOctalString(holdNegative);
+				displayValue = Integer.toOctalString(Long.valueOf(holdInverse).intValue());
 				break;
 			case 10:
-				displayValue = Integer.toString(holdNegative);
+				displayValue = Integer.toString(Long.valueOf(holdInverse).intValue());
 				break;
 			case 16:
-				displayValue = Integer.toHexString(holdNegative);
+				displayValue = Integer.toHexString(Long.valueOf(holdInverse).intValue());
 				break;
-		}
-
+	}
 		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 	}
 	public void send_equal(View view) {
@@ -1126,7 +1130,6 @@ public class MainActivity extends Activity {
 				case 2:
 					solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
-					
 					break;
 				case 8:
 					solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
