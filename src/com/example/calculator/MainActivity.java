@@ -1514,25 +1514,12 @@ public class MainActivity extends Activity {
 /****************************************************************
 PROBLEMS & BUGS:
 
-1) bases do not convert if base conversion is done after an equals + operation
-	- type equation ie: 9 * 9 =
-	- insert operation ie: *
-	- switch between bases: NO CONVERSION
-	- *fix* add a flag for sequential calculations
-2) does not allow max integer inputs
-	- hit 'F' until string full
-	- notice can only input 7 'F's (not full integer)
-	- *fix* maybe use some bitwise operations?
-3 ***FIXED***) hex values do not get capitalized after equals + operation
-	- switch to hex
-	- type in equation ie: F * F =
-	- insert operation ie: *
-	- notice the secondary display shows lower case hex values
-4 ***FIXED***) integers are not signed 
-5) high values calculations throw exceptions some times when doing equations sequentially
-7) +/- does not work to flip back to positive
+1) +/- from positive to negative
+2) Octal/Decimal value control on input strings
+3) base switch with single input number and no-op
+4) General UI improvements
 
-6 ***not required***) general UI improvements
+
 
 ****************************************************************/
 
