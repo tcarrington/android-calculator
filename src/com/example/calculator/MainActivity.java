@@ -1061,6 +1061,7 @@ public class MainActivity extends Activity {
 		
 	}
 	public void send_plusminus(View view) {
+		//conversion from hex -> decimal gives inverse values if +/- is pushed on a negative hex value
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		long holdInverse = 0;
 		if((Long.valueOf(displayValue, currentBase).intValue() > INT_MIN) && (Long.valueOf(displayValue, currentBase).intValue() <= INT_MAX)) {
