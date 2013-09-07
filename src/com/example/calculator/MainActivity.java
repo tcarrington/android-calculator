@@ -703,7 +703,7 @@ public class MainActivity extends Activity {
 			displayValue = "9";
 		else {
 			try {
-				if((Long.valueOf(displayValue + "9", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "9", currentBase).intValue() <= INT_MAX))
+				if((Integer.valueOf(displayValue + "9", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "9", currentBase) <= INT_MAX))
 				{
 					displayValue += "9";
 				}
@@ -1001,74 +1001,56 @@ public class MainActivity extends Activity {
 		//Integer.toOctalString(Long.valueOf(displayValue, currentBase).intValue())
 		
 		if(operation == "+") {
+			solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
 			switch (currentBase) {
 				case 2:
-					solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
 					break;
 				case 8:
-					solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toOctalString(Long.valueOf(solutionInt).intValue());
 					break;
 				case 10:
-					solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toString(Long.valueOf(solutionInt).intValue());
 					break;
 				case 16:
-					solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
 					break;
 			}
-			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
-			display_secondary.setText("");
-			display_operation.setText("");
 		}
 		else if(operation == "-") {
+			solutionInt = Long.valueOf(operand1, currentBase).intValue() - Long.valueOf(operand2, currentBase).intValue();
 			switch (currentBase) {
 				case 2:
-					solutionInt = Long.valueOf(operand1, currentBase).intValue() - Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
 					break;
 				case 8:
-					solutionInt = Long.valueOf(operand1, currentBase).intValue() - Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toOctalString(Long.valueOf(solutionInt).intValue());
 					break;
 				case 10:
-					solutionInt = Long.valueOf(operand1, currentBase).intValue() - Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toString(Long.valueOf(solutionInt).intValue());
 					break;
 				case 16:
-					solutionInt = Long.valueOf(operand1, currentBase).intValue() - Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
 					break;
 			}
-			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
-			display_secondary.setText("");
-			display_operation.setText("");
 		}
 
 		else if(operation == "*") {
+			solutionInt = Long.valueOf(operand1, currentBase).intValue() * Long.valueOf(operand2, currentBase).intValue();
 			switch (currentBase) {
 				case 2:
-					solutionInt = Long.valueOf(operand1, currentBase).intValue() * Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
 					break;
 				case 8:
-					solutionInt = Long.valueOf(operand1, currentBase).intValue() * Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toOctalString(Long.valueOf(solutionInt).intValue());
 					break;
 				case 10:
-					solutionInt = Long.valueOf(operand1, currentBase).intValue() * Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toString(Long.valueOf(solutionInt).intValue());
 					break;
 				case 16:
-					solutionInt = Long.valueOf(operand1, currentBase).intValue() * Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
 					break;
 			}
-			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
-			display_secondary.setText("");
-			display_operation.setText("");
 		}
 
 		else if(operation == "/") {
@@ -1106,58 +1088,44 @@ public class MainActivity extends Activity {
 		    	delete_button.setEnabled(false);
 		    	
 			}
-			else {
+			else if(operation == "/"){
+				solutionInt = Long.valueOf(operand1, currentBase).intValue() / Long.valueOf(operand2, currentBase).intValue();
 				switch (currentBase) {
 					case 2:
-						solutionInt = Long.valueOf(operand1, currentBase).intValue() / Long.valueOf(operand2, currentBase).intValue();
 						displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
 						break;
 					case 8:
-						solutionInt = Long.valueOf(operand1, currentBase).intValue() / Long.valueOf(operand2, currentBase).intValue();
 						displayValue = Integer.toOctalString(Long.valueOf(solutionInt).intValue());
 						break;
 					case 10:
-						solutionInt = Long.valueOf(operand1, currentBase).intValue() / Long.valueOf(operand2, currentBase).intValue();
 						displayValue = Integer.toString(Long.valueOf(solutionInt).intValue());
 						break;
 					case 16:
-						solutionInt = Long.valueOf(operand1, currentBase).intValue() / Long.valueOf(operand2, currentBase).intValue();
 						displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
 						break;
 				}
-				display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
-				display_secondary.setText("");
-				display_operation.setText("");
 			}
 		}
 		else if(operation == "%") {
+			solutionInt = Long.valueOf(operand1, currentBase).intValue() % Long.valueOf(operand2, currentBase).intValue();
 			switch (currentBase) {
 				case 2:
-					solutionInt = Long.valueOf(operand1, currentBase).intValue() % Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
 					break;
 				case 8:
-					solutionInt = Long.valueOf(operand1, currentBase).intValue() % Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toOctalString(Long.valueOf(solutionInt).intValue());
 					break;
 				case 10:
-					solutionInt = Long.valueOf(operand1, currentBase).intValue() % Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toString(Long.valueOf(solutionInt).intValue());
 					break;
 				case 16:
-					solutionInt = Long.valueOf(operand1, currentBase).intValue() % Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
 					break;
 			}
-			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
-			display_secondary.setText("");
-			display_operation.setText("");
 		}
-
-		
-		operand1 = displayValue;
-		operand2 = "0";
-
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
+		display_secondary.setText("");
+		display_operation.setText("");
 		focusFlag = true;
 	}
 	
