@@ -994,65 +994,19 @@ public class MainActivity extends Activity {
 		Button hex_select = (Button) findViewById(R.id.hex_select);
 		Button delete_button = (Button) findViewById(R.id.delete_button);
 
-		operand2 = display_main.getText().toString();
+		operand2 = displayValue;
 		long solutionInt = 0;
-
-		
-		//Integer.toOctalString(Long.valueOf(displayValue, currentBase).intValue())
 		
 		if(operation == "+") {
 			solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
-			switch (currentBase) {
-				case 2:
-					displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
-					break;
-				case 8:
-					displayValue = Integer.toOctalString(Long.valueOf(solutionInt).intValue());
-					break;
-				case 10:
-					displayValue = Integer.toString(Long.valueOf(solutionInt).intValue());
-					break;
-				case 16:
-					displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
-					break;
-			}
 		}
 		else if(operation == "-") {
 			solutionInt = Long.valueOf(operand1, currentBase).intValue() - Long.valueOf(operand2, currentBase).intValue();
-			switch (currentBase) {
-				case 2:
-					displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
-					break;
-				case 8:
-					displayValue = Integer.toOctalString(Long.valueOf(solutionInt).intValue());
-					break;
-				case 10:
-					displayValue = Integer.toString(Long.valueOf(solutionInt).intValue());
-					break;
-				case 16:
-					displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
-					break;
-			}
 		}
 
 		else if(operation == "*") {
 			solutionInt = Long.valueOf(operand1, currentBase).intValue() * Long.valueOf(operand2, currentBase).intValue();
-			switch (currentBase) {
-				case 2:
-					displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
-					break;
-				case 8:
-					displayValue = Integer.toOctalString(Long.valueOf(solutionInt).intValue());
-					break;
-				case 10:
-					displayValue = Integer.toString(Long.valueOf(solutionInt).intValue());
-					break;
-				case 16:
-					displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
-					break;
-			}
 		}
-
 		else if(operation == "/") {
 			if(operand2 == "0") {
 				display_secondary.setText("ERROR:");
@@ -1086,42 +1040,27 @@ public class MainActivity extends Activity {
 		    	dec_select.setEnabled(false);
 		    	hex_select.setEnabled(false);
 		    	delete_button.setEnabled(false);
-		    	
 			}
 			else if(operation == "/"){
 				solutionInt = Long.valueOf(operand1, currentBase).intValue() / Long.valueOf(operand2, currentBase).intValue();
-				switch (currentBase) {
-					case 2:
-						displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
-						break;
-					case 8:
-						displayValue = Integer.toOctalString(Long.valueOf(solutionInt).intValue());
-						break;
-					case 10:
-						displayValue = Integer.toString(Long.valueOf(solutionInt).intValue());
-						break;
-					case 16:
-						displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
-						break;
-				}
 			}
 		}
 		else if(operation == "%") {
 			solutionInt = Long.valueOf(operand1, currentBase).intValue() % Long.valueOf(operand2, currentBase).intValue();
-			switch (currentBase) {
-				case 2:
-					displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
-					break;
-				case 8:
-					displayValue = Integer.toOctalString(Long.valueOf(solutionInt).intValue());
-					break;
-				case 10:
-					displayValue = Integer.toString(Long.valueOf(solutionInt).intValue());
-					break;
-				case 16:
-					displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
-					break;
-			}
+		}
+		switch (currentBase) {
+			case 2:
+				displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
+				break;
+			case 8:
+				displayValue = Integer.toOctalString(Long.valueOf(solutionInt).intValue());
+				break;
+			case 10:
+				displayValue = Integer.toString(Long.valueOf(solutionInt).intValue());
+				break;
+			case 16:
+				displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
+				break;
 		}
 		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 		display_secondary.setText("");
