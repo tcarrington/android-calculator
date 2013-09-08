@@ -29,9 +29,6 @@ public class MainActivity extends Activity {
 
 	int INT_MAX = 2147483647;
 	int INT_MIN = -2147483648;
-	int MAX_HEX_LENGTH = 8;
-	int MAX_OCT_LENGTH = 11;
-	int MAX_BIN_LENGTH = 32;
 	
 	//global variables
 	String operand1;
@@ -42,6 +39,7 @@ public class MainActivity extends Activity {
 	boolean focusFlag = false;
 	boolean operationFlag = false;
 	int currentBase;
+	int currentBaseStr;
 	
 	
 	//start of main code
@@ -185,12 +183,13 @@ public class MainActivity extends Activity {
     	operand2 = "0";
 		displayValue = "0";
 		currentBase = 2;
+		focusFlag = true;
 
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		//getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 	
@@ -240,7 +239,7 @@ public class MainActivity extends Activity {
     	dec_select.setTextColor(Color.parseColor("#FFFFFF"));
     	hex_select.setTextColor(Color.parseColor("#FFFFFF"));
     	
-    	
+    	/*
     	//text_display conversion
     	if(displayValue != "0") {
 	    	TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -258,8 +257,26 @@ public class MainActivity extends Activity {
 	    	operand2 = Integer.toBinaryString(Long.valueOf(operand2, currentBase).intValue());
 	    	display_secondary.setText(operand1);
     	}
+    	*/
+    	
+    	
+    	//text_display conversion
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+		
+    	displayValue = Integer.toBinaryString(Long.valueOf(displayValue, currentBase).intValue());
+    	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
+    	
+    	operand1 = Integer.toBinaryString(Long.valueOf(operand1, currentBase).intValue());
+	    if(!focusFlag){
+	    	display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
+    	}
+    	
+    	operand2 = Integer.toBinaryString(Long.valueOf(operand2, currentBase).intValue());
+    	
     	
     	currentBase = 2;
+    	currentBaseStr = 32;
 	}
 	public void oct_select(View view){
 		
@@ -309,25 +326,21 @@ public class MainActivity extends Activity {
     	
     	
     	//text_display conversion
-
-    	if(displayValue != "0") {
-	    	TextView display_main = (TextView) findViewById(R.id.display_main);
-	    	//displayValue = Integer.toOctalString(Integer.parseInt(displayValue, currentBase));
-	    	//operand1 = Integer.toOctalString(Integer.parseInt(operand1, currentBase));
-	    	displayValue = Integer.toOctalString(Long.valueOf(displayValue, currentBase).intValue());
-	    	operand1 = Integer.toOctalString(Long.valueOf(operand1, currentBase).intValue());
-	    	display_main.setText(displayValue);
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+		
+    	displayValue = Integer.toOctalString(Long.valueOf(displayValue, currentBase).intValue());
+    	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
+    	
+    	operand1 = Integer.toOctalString(Long.valueOf(operand1, currentBase).intValue());
+	    if(!focusFlag){
+	    	display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
     	}
-    	if((operand1 != "0") && (!focusFlag)) {
-	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-	    	//needs to be commented out or will receive double conversion from previous statement
-	    	//operand1 = Long.toOctalString(Long.parseLong(operand1, currentBase));
-	    	//operand2 = Integer.toOctalString(Integer.parseInt(operand2, currentBase));
-	    	operand2 = Integer.toOctalString(Long.valueOf(operand2, currentBase).intValue());
-	    	display_secondary.setText(operand1);
-    	}
-
+	    
+    	operand2 = Integer.toOctalString(Long.valueOf(operand2, currentBase).intValue());
+    	
     	currentBase = 8;
+    	currentBaseStr = 11;
 	}
 	public void dec_select(View view){
 		
@@ -374,22 +387,20 @@ public class MainActivity extends Activity {
     	oct_select.setTextColor(Color.parseColor("#FFFFFF"));
     	dec_select.setTextColor(Color.parseColor("#33B5E5"));
     	hex_select.setTextColor(Color.parseColor("#FFFFFF"));
-    	
-    	//text_display conversion
 
-    	if(displayValue != "0") {
-	    	TextView display_main = (TextView) findViewById(R.id.display_main);
-	    	displayValue = Integer.toString(Long.valueOf(displayValue, currentBase).intValue());
-	    	operand1 = Integer.toString(Long.valueOf(operand1, currentBase).intValue());
-	    	display_main.setText(displayValue);
-    	}
-    	if((operand1 != "0") && (!focusFlag)) {
-	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-	    	//needs to be commented out or will receive double conversion from previous statement
-	    	//operand1 = Long.toString(Long.parseLong(operand1, currentBase));
-	    	operand2 = Integer.toString(Long.valueOf(operand2, currentBase).intValue());
-	    	display_secondary.setText(operand1);
-    	}
+    	//text_display conversion
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+		
+    	displayValue = Integer.toString(Long.valueOf(displayValue, currentBase).intValue());
+    	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
+    	
+    	
+	    operand1 = Integer.toString(Long.valueOf(operand1, currentBase).intValue());
+	    display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
+
+	    
+    	operand2 = Integer.toString(Long.valueOf(operand2, currentBase).intValue());
     	
 
     	
@@ -442,42 +453,54 @@ public class MainActivity extends Activity {
     	
     	
     	//text_display conversion
-
-    	if(displayValue != "0"){
-    		TextView display_main = (TextView) findViewById(R.id.display_main);
-	    	//displayValue = Integer.toHexString(Integer.parseInt(displayValue, currentBase));
-	    	//operand1 = Integer.toHexString(Integer.parseInt(operand1, currentBase));
-	    	displayValue = Integer.toHexString(Long.valueOf(displayValue, currentBase).intValue());
-	    	operand1 = Integer.toHexString(Long.valueOf(operand1, currentBase).intValue());
-	    	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
-    	}
-    	if((operand1 != "0") && (!focusFlag)) {
-	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-	    	//needs to be commented out or will receive double conversion from previous statement
-	    	//operand1 = Long.toHexString(Long.parseLong(operand1, currentBase));
-	    	operand2 = Integer.toHexString(Long.valueOf(operand2, currentBase).intValue());
-	    	//operand2 = Integer.toHexString(Integer.parseInt(operand2, currentBase));
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+		
+    	displayValue = Integer.toHexString(Long.valueOf(displayValue, currentBase).intValue());
+    	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
+    	
+    	operand1 = Integer.toHexString(Long.valueOf(operand1, currentBase).intValue());
+	    if(!focusFlag){
 	    	display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
     	}
-
+    	
+    	operand2 = Integer.toHexString(Long.valueOf(operand2, currentBase).intValue());
     	
     	currentBase = 16;
+    	currentBaseStr = 8;
 	}
 	
 	//input buttons
 	public void send_0(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(focusFlag) {
+		String buttonValue = "0";
+		if(focusFlag) { //reset values if "clr" is not pressed
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "0";
+			displayValue = buttonValue;
 		else {
 			try {
-				if((Integer.valueOf(displayValue + "0", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "0", currentBase) <= INT_MAX))
-				{
-					displayValue += "0";
+				if(currentBase == 10) { 
+					if((Integer.valueOf(displayValue + buttonValue, currentBase) >= INT_MIN) && 
+							(Integer.valueOf(displayValue + buttonValue, currentBase) <= INT_MAX))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 16) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
+							(displayValue.length() < currentBaseStr))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 8) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX)) {
+						if((displayValue.length() == currentBaseStr - 1) && (Integer.valueOf(displayValue.substring(0, 1)) <= 3))
+							displayValue += buttonValue;
+						else if(displayValue.length() < (currentBaseStr))
+							displayValue += buttonValue;
+					}
 				}
 			}
 			catch(Exception e) {}
@@ -486,14 +509,36 @@ public class MainActivity extends Activity {
 	}
 	public void send_1(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		String buttonValue = "1";
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "1";
+			displayValue = buttonValue;
 		else {
-			/*switch(currentBase) {
+			try {
+				if(currentBase == 10) { 
+					if((Integer.valueOf(displayValue + buttonValue, currentBase) >= INT_MIN) && 
+							(Integer.valueOf(displayValue + buttonValue, currentBase) <= INT_MAX))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 16) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
+							(displayValue.length() < currentBaseStr))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 8) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX)) {
+						if((displayValue.length() == currentBaseStr - 1) && (Integer.valueOf(displayValue.substring(0, 1)) <= 3))
+							displayValue += buttonValue;
+						else if(displayValue.length() < (currentBaseStr))
+							displayValue += buttonValue;
+					}
+				}
+				/*switch(currentBase) {
 				case 2:
 					if((Long.valueOf(displayValue + "1", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "1", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_BIN_LENGTH))
 					{
@@ -522,11 +567,6 @@ public class MainActivity extends Activity {
 					}
 					break;
 			}*/
-			try {
-				if((Integer.valueOf(displayValue + "1", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "1", currentBase) <= INT_MAX))
-				{
-					displayValue += "1";
-				}
 			}
 			catch(Exception e) {}
 		}
@@ -534,43 +574,34 @@ public class MainActivity extends Activity {
 	}
 	public void send_2(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		String buttonValue = "2";
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "2";
+			displayValue = buttonValue;
 		else {
-			/*switch(currentBase) {
-				case 8:
-					if((Long.valueOf(displayValue + "2", currentBase) >= INT_MIN) && (Long.valueOf(displayValue + "2", currentBase) <= INT_MAX))
-					{
-						displayValue += "2";
-					}
-					break;
-				case 10:
-					try {
-						if((Integer.valueOf(displayValue + "2", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "2", currentBase) <= INT_MAX))
-						{
-							displayValue += "2";
-						}
-					}
-					catch(Exception e) {}
-					break;
-				case 16:
-					if((Long.valueOf(displayValue + "2", currentBase).intValue() >= INT_MIN) && (Long.valueOf(displayValue + "2", currentBase).intValue() <= INT_MAX) && (displayValue.length() < MAX_HEX_LENGTH))
-					{
-						displayValue += "2";
-					}
-					break;
-				default:
-					displayValue += "";
-					break;
-			}*/
 			try {
-				if((Integer.valueOf(displayValue + "2", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "2", currentBase) <= INT_MAX))
-				{
-					displayValue += "2";
+				if(currentBase == 10) { 
+					if((Integer.valueOf(displayValue + buttonValue, currentBase) >= INT_MIN) && 
+							(Integer.valueOf(displayValue + buttonValue, currentBase) <= INT_MAX))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 16) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
+							(displayValue.length() < currentBaseStr))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 8) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX)) {
+						if((displayValue.length() == currentBaseStr - 1) && (Integer.valueOf(displayValue.substring(0, 1)) <= 3))
+							displayValue += buttonValue;
+						else if(displayValue.length() < (currentBaseStr))
+							displayValue += buttonValue;
+					}
 				}
 			}
 			catch(Exception e) {}
@@ -579,17 +610,34 @@ public class MainActivity extends Activity {
 	}	
 	public void send_3(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		String buttonValue = "3";
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "3";
+			displayValue = buttonValue;
 		else {
 			try {
-				if((Integer.valueOf(displayValue + "3", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "3", currentBase) <= INT_MAX))
-				{
-					displayValue += "3";
+				if(currentBase == 10) { 
+					if((Integer.valueOf(displayValue + buttonValue, currentBase) >= INT_MIN) && 
+							(Integer.valueOf(displayValue + buttonValue, currentBase) <= INT_MAX))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 16) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
+							(displayValue.length() < currentBaseStr))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 8) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX)) {
+						if((displayValue.length() == currentBaseStr - 1) && (Integer.valueOf(displayValue.substring(0, 1)) <= 3))
+							displayValue += buttonValue;
+						else if(displayValue.length() < (currentBaseStr))
+							displayValue += buttonValue;
+					}
 				}
 			}
 			catch(Exception e) {}
@@ -599,17 +647,34 @@ public class MainActivity extends Activity {
 	
 	public void send_4(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		String buttonValue = "4";
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "4";
+			displayValue = buttonValue;
 		else {
 			try {
-				if((Integer.valueOf(displayValue + "4", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "4", currentBase) <= INT_MAX))
-				{
-					displayValue += "4";
+				if(currentBase == 10) { 
+					if((Integer.valueOf(displayValue + buttonValue, currentBase) >= INT_MIN) && 
+							(Integer.valueOf(displayValue + buttonValue, currentBase) <= INT_MAX))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 16) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
+							(displayValue.length() < currentBaseStr))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 8) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX)) {
+						if((displayValue.length() == currentBaseStr - 1) && (Integer.valueOf(displayValue.substring(0, 1)) <= 3))
+							displayValue += buttonValue;
+						else if(displayValue.length() < (currentBaseStr))
+							displayValue += buttonValue;
+					}
 				}
 			}
 			catch(Exception e) {}
@@ -618,17 +683,34 @@ public class MainActivity extends Activity {
 	}
 	public void send_5(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		String buttonValue = "5";
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "5";
+			displayValue = buttonValue;
 		else {
 			try {
-				if((Integer.valueOf(displayValue + "5", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "5", currentBase) <= INT_MAX))
-				{
-					displayValue += "5";
+				if(currentBase == 10) { 
+					if((Integer.valueOf(displayValue + buttonValue, currentBase) >= INT_MIN) && 
+							(Integer.valueOf(displayValue + buttonValue, currentBase) <= INT_MAX))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 16) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
+							(displayValue.length() < currentBaseStr))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 8) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX)) {
+						if((displayValue.length() == currentBaseStr - 1) && (Integer.valueOf(displayValue.substring(0, 1)) <= 3))
+							displayValue += buttonValue;
+						else if(displayValue.length() < (currentBaseStr))
+							displayValue += buttonValue;
+					}
 				}
 			}
 			catch(Exception e) {}
@@ -637,17 +719,34 @@ public class MainActivity extends Activity {
 	}
 	public void send_6(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		String buttonValue = "6";
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "6";
+			displayValue = buttonValue;
 		else {
 			try {
-				if((Integer.valueOf(displayValue + "6", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "6", currentBase) <= INT_MAX))
-				{
-					displayValue += "6";
+				if(currentBase == 10) { 
+					if((Integer.valueOf(displayValue + buttonValue, currentBase) >= INT_MIN) && 
+							(Integer.valueOf(displayValue + buttonValue, currentBase) <= INT_MAX))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 16) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
+							(displayValue.length() < currentBaseStr))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 8) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX)) {
+						if((displayValue.length() == currentBaseStr - 1) && (Integer.valueOf(displayValue.substring(0, 1)) <= 3))
+							displayValue += buttonValue;
+						else if(displayValue.length() < (currentBaseStr))
+							displayValue += buttonValue;
+					}
 				}
 			}
 			catch(Exception e) {}
@@ -657,17 +756,34 @@ public class MainActivity extends Activity {
 
 	public void send_7(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		String buttonValue = "7";
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "7";
+			displayValue = buttonValue;
 		else {
 			try {
-				if((Integer.valueOf(displayValue + "7", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "7", currentBase) <= INT_MAX))
-				{
-					displayValue += "7";
+				if(currentBase == 10) { 
+					if((Integer.valueOf(displayValue + buttonValue, currentBase) >= INT_MIN) && 
+							(Integer.valueOf(displayValue + buttonValue, currentBase) <= INT_MAX))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 16) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
+							(displayValue.length() < currentBaseStr))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 8) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX)) {
+						if((displayValue.length() == currentBaseStr - 1) && (Integer.valueOf(displayValue.substring(1, 2)) <= 3))
+							displayValue += buttonValue;
+						else if(displayValue.length() < (currentBaseStr))
+							displayValue += buttonValue;
+					}
 				}
 			}
 			catch(Exception e) {}
@@ -676,17 +792,25 @@ public class MainActivity extends Activity {
 	}
 	public void send_8(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		String buttonValue = "8";
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "8";
+			displayValue = buttonValue;
 		else {
 			try {
-				if((Integer.valueOf(displayValue + "8", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "8", currentBase) <= INT_MAX))
-				{
-					displayValue += "8";
+				if(currentBase == 10) { 
+					if((Integer.valueOf(displayValue + buttonValue, currentBase) >= INT_MIN) && 
+							(Integer.valueOf(displayValue + buttonValue, currentBase) <= INT_MAX))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 16) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
+							(displayValue.length() < currentBaseStr))
+						displayValue += buttonValue;
 				}
 			}
 			catch(Exception e) {}
@@ -695,17 +819,25 @@ public class MainActivity extends Activity {
 	}
 	public void send_9(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		String buttonValue = "9";
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "9";
+			displayValue = buttonValue;
 		else {
 			try {
-				if((Integer.valueOf(displayValue + "9", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "9", currentBase) <= INT_MAX))
-				{
-					displayValue += "9";
+				if(currentBase == 10) { 
+					if((Integer.valueOf(displayValue + buttonValue, currentBase) >= INT_MIN) && 
+							(Integer.valueOf(displayValue + buttonValue, currentBase) <= INT_MAX))
+						displayValue += buttonValue;
+				}
+				else if(currentBase == 16) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
+							(displayValue.length() < currentBaseStr))
+						displayValue += buttonValue;
 				}
 			}
 			catch(Exception e) {}
@@ -715,17 +847,20 @@ public class MainActivity extends Activity {
 
 	public void send_a(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		String buttonValue = "A";
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "A";
+			displayValue = buttonValue;
 		else {
 			try {
-				if((Integer.valueOf(displayValue + "A", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "A", currentBase) <= INT_MAX))
-				{
-					displayValue += "A";
+				if(currentBase == 16) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
+							(displayValue.length() < currentBaseStr))
+						displayValue += buttonValue;
 				}
 			}
 			catch(Exception e) {}
@@ -734,17 +869,20 @@ public class MainActivity extends Activity {
 	}
 	public void send_b(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		String buttonValue = "B";
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "B";
+			displayValue = buttonValue;
 		else {
 			try {
-				if((Integer.valueOf(displayValue + "B", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "B", currentBase) <= INT_MAX))
-				{
-					displayValue += "B";
+				if(currentBase == 16) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
+							(displayValue.length() < currentBaseStr))
+						displayValue += buttonValue;
 				}
 			}
 			catch(Exception e) {}
@@ -753,17 +891,20 @@ public class MainActivity extends Activity {
 	}
 	public void send_c(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		String buttonValue = "C";
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "C";
+			displayValue = buttonValue;
 		else {
 			try {
-				if((Integer.valueOf(displayValue + "C", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "C", currentBase) <= INT_MAX))
-				{
-					displayValue += "C";
+				if(currentBase == 16) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
+							(displayValue.length() < currentBaseStr))
+						displayValue += buttonValue;
 				}
 			}
 			catch(Exception e) {}
@@ -773,17 +914,20 @@ public class MainActivity extends Activity {
 	
 	public void send_d(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		String buttonValue = "D";
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "D";
+			displayValue = buttonValue;
 		else {
 			try {
-				if((Integer.valueOf(displayValue + "D", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "D", currentBase) <= INT_MAX))
-				{
-					displayValue += "D";
+				if(currentBase == 16) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
+							(displayValue.length() < currentBaseStr))
+						displayValue += buttonValue;
 				}
 			}
 			catch(Exception e) {}
@@ -792,17 +936,20 @@ public class MainActivity extends Activity {
 	}
 	public void send_e(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		String buttonValue = "E";
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "E";
+			displayValue = buttonValue;
 		else {
 			try {
-				if((Integer.valueOf(displayValue + "E", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "E", currentBase) <= INT_MAX))
-				{
-					displayValue += "E";
+				if(currentBase == 16) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
+							(displayValue.length() < currentBaseStr))
+						displayValue += buttonValue;
 				}
 			}
 			catch(Exception e) {}
@@ -811,17 +958,20 @@ public class MainActivity extends Activity {
 	}
 	public void send_f(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
+		String buttonValue = "F";
 		if(focusFlag) {
 			displayValue = "0";
 			focusFlag = false;
 		}
 		if(displayValue == "0")
-			displayValue = "F";
+			displayValue = buttonValue;
 		else {
 			try {
-				if((Integer.valueOf(displayValue + "F", currentBase) >= INT_MIN) && (Integer.valueOf(displayValue + "F", currentBase) <= INT_MAX))
-				{
-					displayValue += "F";
+				if(currentBase == 16) {
+					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
+							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
+							(displayValue.length() < currentBaseStr))
+						displayValue += buttonValue;
 				}
 			}
 			catch(Exception e) {}
