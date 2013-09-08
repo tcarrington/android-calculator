@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
 	String operand2;
 	String displayValue;
 	String baseLength;
-	boolean focusFlag = false;
+	boolean recentEqualFlag = false;
 	boolean operationFlag = false;
 	boolean divZeroFlag = false;
 	int currentBase;
@@ -185,7 +185,7 @@ public class MainActivity extends Activity {
 		displayValue = "0";
 		currentBase = 2;
 		currentBaseStr = 32;
-		focusFlag = true;
+		recentEqualFlag = true;
 
 	}
 	@Override
@@ -251,7 +251,7 @@ public class MainActivity extends Activity {
 	    	operand1 = Integer.toBinaryString(Long.valueOf(operand1, currentBase).intValue());
 	    	display_main.setText(displayValue);
     	}
-    	if((operand1 != "0") && (!focusFlag)) {
+    	if((operand1 != "0") && (!recentEqualFlag)) {
 	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 	    	//needs to be commented out or will receive double conversion from previous statement
 	    	//operand1 = Long.toString(Long.parseLong(operand1, currentBase));
@@ -270,9 +270,7 @@ public class MainActivity extends Activity {
     	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
     	
     	operand1 = Integer.toBinaryString(Long.valueOf(operand1, currentBase).intValue());
-	    if(!focusFlag){
-	    	display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
-    	}
+	    display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
     	
     	operand2 = Integer.toBinaryString(Long.valueOf(operand2, currentBase).intValue());
     	
@@ -335,7 +333,7 @@ public class MainActivity extends Activity {
     	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
     	
     	operand1 = Integer.toOctalString(Long.valueOf(operand1, currentBase).intValue());
-	    if(!focusFlag){
+	    if(!recentEqualFlag){
 	    	display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
     	}
 	    
@@ -462,7 +460,7 @@ public class MainActivity extends Activity {
     	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
     	
     	operand1 = Integer.toHexString(Long.valueOf(operand1, currentBase).intValue());
-	    if(!focusFlag){
+	    if(!recentEqualFlag){
 	    	display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
     	}
     	
@@ -476,9 +474,9 @@ public class MainActivity extends Activity {
 	public void send_0(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		String buttonValue = "0";
-		if(focusFlag) { //reset values if "clr" is not pressed
+		if(recentEqualFlag) { //reset values if "clr" is not pressed
 			displayValue = "0";
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 		if(displayValue == "0")
 			displayValue = buttonValue;
@@ -512,9 +510,9 @@ public class MainActivity extends Activity {
 	public void send_1(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		String buttonValue = "1";
-		if(focusFlag) {
+		if(recentEqualFlag) {
 			displayValue = "0";
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 		if(displayValue == "0")
 			displayValue = buttonValue;
@@ -577,9 +575,9 @@ public class MainActivity extends Activity {
 	public void send_2(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		String buttonValue = "2";
-		if(focusFlag) {
+		if(recentEqualFlag) {
 			displayValue = "0";
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 		if(displayValue == "0")
 			displayValue = buttonValue;
@@ -613,9 +611,9 @@ public class MainActivity extends Activity {
 	public void send_3(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		String buttonValue = "3";
-		if(focusFlag) {
+		if(recentEqualFlag) {
 			displayValue = "0";
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 		if(displayValue == "0")
 			displayValue = buttonValue;
@@ -650,9 +648,9 @@ public class MainActivity extends Activity {
 	public void send_4(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		String buttonValue = "4";
-		if(focusFlag) {
+		if(recentEqualFlag) {
 			displayValue = "0";
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 		if(displayValue == "0")
 			displayValue = buttonValue;
@@ -686,9 +684,9 @@ public class MainActivity extends Activity {
 	public void send_5(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		String buttonValue = "5";
-		if(focusFlag) {
+		if(recentEqualFlag) {
 			displayValue = "0";
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 		if(displayValue == "0")
 			displayValue = buttonValue;
@@ -722,9 +720,9 @@ public class MainActivity extends Activity {
 	public void send_6(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		String buttonValue = "6";
-		if(focusFlag) {
+		if(recentEqualFlag) {
 			displayValue = "0";
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 		if(displayValue == "0")
 			displayValue = buttonValue;
@@ -759,9 +757,9 @@ public class MainActivity extends Activity {
 	public void send_7(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		String buttonValue = "7";
-		if(focusFlag) {
+		if(recentEqualFlag) {
 			displayValue = "0";
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 		if(displayValue == "0")
 			displayValue = buttonValue;
@@ -795,9 +793,9 @@ public class MainActivity extends Activity {
 	public void send_8(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		String buttonValue = "8";
-		if(focusFlag) {
+		if(recentEqualFlag) {
 			displayValue = "0";
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 		if(displayValue == "0")
 			displayValue = buttonValue;
@@ -822,9 +820,9 @@ public class MainActivity extends Activity {
 	public void send_9(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		String buttonValue = "9";
-		if(focusFlag) {
+		if(recentEqualFlag) {
 			displayValue = "0";
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 		if(displayValue == "0")
 			displayValue = buttonValue;
@@ -850,9 +848,9 @@ public class MainActivity extends Activity {
 	public void send_a(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		String buttonValue = "A";
-		if(focusFlag) {
+		if(recentEqualFlag) {
 			displayValue = "0";
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 		if(displayValue == "0")
 			displayValue = buttonValue;
@@ -872,9 +870,9 @@ public class MainActivity extends Activity {
 	public void send_b(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		String buttonValue = "B";
-		if(focusFlag) {
+		if(recentEqualFlag) {
 			displayValue = "0";
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 		if(displayValue == "0")
 			displayValue = buttonValue;
@@ -894,9 +892,9 @@ public class MainActivity extends Activity {
 	public void send_c(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		String buttonValue = "C";
-		if(focusFlag) {
+		if(recentEqualFlag) {
 			displayValue = "0";
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 		if(displayValue == "0")
 			displayValue = buttonValue;
@@ -917,9 +915,9 @@ public class MainActivity extends Activity {
 	public void send_d(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		String buttonValue = "D";
-		if(focusFlag) {
+		if(recentEqualFlag) {
 			displayValue = "0";
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 		if(displayValue == "0")
 			displayValue = buttonValue;
@@ -939,9 +937,9 @@ public class MainActivity extends Activity {
 	public void send_e(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		String buttonValue = "E";
-		if(focusFlag) {
+		if(recentEqualFlag) {
 			displayValue = "0";
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 		if(displayValue == "0")
 			displayValue = buttonValue;
@@ -961,9 +959,9 @@ public class MainActivity extends Activity {
 	public void send_f(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		String buttonValue = "F";
-		if(focusFlag) {
+		if(recentEqualFlag) {
 			displayValue = "0";
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 		if(displayValue == "0")
 			displayValue = buttonValue;
@@ -1077,7 +1075,7 @@ public class MainActivity extends Activity {
     	}
 
 		displayValue = display_main.getText().toString();
-		focusFlag = false;
+		recentEqualFlag = false;
 		displayValue = "0";
 		operand1 = "0";
 		operand2 = "0";
@@ -1254,7 +1252,7 @@ public class MainActivity extends Activity {
 			display_secondary.setText("");
 			display_operation.setText("");
 		}
-		focusFlag = true;
+		recentEqualFlag = true;
 		divZeroFlag = false;
 	}
 	
@@ -1272,7 +1270,7 @@ public class MainActivity extends Activity {
 			operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
-		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
+		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
 			//only needed once take out of case statements
 			solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
 			switch (currentBase) {
@@ -1304,7 +1302,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 			display_operation.setText(operation);
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 
 	}
@@ -1321,7 +1319,7 @@ public class MainActivity extends Activity {
 			operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
-		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
+		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
 			solutionInt = Long.valueOf(operand1, currentBase).intValue() - Long.valueOf(operand2, currentBase).intValue();
 			switch (currentBase) {
 				case 2:
@@ -1348,7 +1346,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 			display_operation.setText(operation);
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 	}
 	public void send_mult(View view) {
@@ -1364,7 +1362,7 @@ public class MainActivity extends Activity {
 			operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
-		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
+		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
 			solutionInt = Long.valueOf(operand1, currentBase).intValue() * Long.valueOf(operand2, currentBase).intValue();
 			switch (currentBase) {
 				case 2:
@@ -1391,7 +1389,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 			display_operation.setText(operation);
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 	}
 	public void send_div(View view) {
@@ -1407,7 +1405,7 @@ public class MainActivity extends Activity {
 			operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
-		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
+		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
 			solutionInt = Long.valueOf(operand1, currentBase).intValue() / Long.valueOf(operand2, currentBase).intValue();
 			switch (currentBase) {
 				case 2:
@@ -1434,7 +1432,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 			display_operation.setText(operation);
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 	}
 	public void send_mod(View view) {
@@ -1450,7 +1448,7 @@ public class MainActivity extends Activity {
 			operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
-		if((operand1 != "0") && (operand2 != "0") && !focusFlag) {
+		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
 			solutionInt = Long.valueOf(operand1, currentBase).intValue() % Long.valueOf(operand2, currentBase).intValue();
 			switch (currentBase) {
 				case 2:
@@ -1477,7 +1475,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			display_main.setText(displayValue);
 			display_operation.setText(operation);
-			focusFlag = false;
+			recentEqualFlag = false;
 		}
 	}
 }
