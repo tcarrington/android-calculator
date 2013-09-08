@@ -183,6 +183,7 @@ public class MainActivity extends Activity {
     	operand2 = "0";
 		displayValue = "0";
 		currentBase = 2;
+		currentBaseStr = 32;
 		focusFlag = true;
 
 	}
@@ -487,7 +488,7 @@ public class MainActivity extends Activity {
 							(Integer.valueOf(displayValue + buttonValue, currentBase) <= INT_MAX))
 						displayValue += buttonValue;
 				}
-				else if(currentBase == 16) {
+				else if((currentBase == 2) || (currentBase == 16)) {
 					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
 							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
 							(displayValue.length() < currentBaseStr))
@@ -523,7 +524,7 @@ public class MainActivity extends Activity {
 							(Integer.valueOf(displayValue + buttonValue, currentBase) <= INT_MAX))
 						displayValue += buttonValue;
 				}
-				else if(currentBase == 16) {
+				else if((currentBase == 2) || (currentBase == 16)) {
 					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
 							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX) && 
 							(displayValue.length() < currentBaseStr))
