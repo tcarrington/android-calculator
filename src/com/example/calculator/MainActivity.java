@@ -498,7 +498,7 @@ public class MainActivity extends Activity {
 							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX)) {
 						if((displayValue.length() == currentBaseStr - 1) && (Integer.valueOf(displayValue.substring(0, 1)) <= 3))
 							displayValue += buttonValue;
-						else if(displayValue.length() < (currentBaseStr))
+						else if(displayValue.length() < (currentBaseStr - 1))
 							displayValue += buttonValue;
 					}
 				}
@@ -534,7 +534,7 @@ public class MainActivity extends Activity {
 							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX)) {
 						if((displayValue.length() == currentBaseStr - 1) && (Integer.valueOf(displayValue.substring(0, 1)) <= 3))
 							displayValue += buttonValue;
-						else if(displayValue.length() < (currentBaseStr))
+						else if(displayValue.length() < (currentBaseStr - 1))
 							displayValue += buttonValue;
 					}
 				}
@@ -599,7 +599,7 @@ public class MainActivity extends Activity {
 							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX)) {
 						if((displayValue.length() == currentBaseStr - 1) && (Integer.valueOf(displayValue.substring(0, 1)) <= 3))
 							displayValue += buttonValue;
-						else if(displayValue.length() < (currentBaseStr))
+						else if(displayValue.length() < (currentBaseStr - 1))
 							displayValue += buttonValue;
 					}
 				}
@@ -635,7 +635,7 @@ public class MainActivity extends Activity {
 							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX)) {
 						if((displayValue.length() == currentBaseStr - 1) && (Integer.valueOf(displayValue.substring(0, 1)) <= 3))
 							displayValue += buttonValue;
-						else if(displayValue.length() < (currentBaseStr))
+						else if(displayValue.length() < (currentBaseStr - 1))
 							displayValue += buttonValue;
 					}
 				}
@@ -672,7 +672,7 @@ public class MainActivity extends Activity {
 							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX)) {
 						if((displayValue.length() == currentBaseStr - 1) && (Integer.valueOf(displayValue.substring(0, 1)) <= 3))
 							displayValue += buttonValue;
-						else if(displayValue.length() < (currentBaseStr))
+						else if(displayValue.length() < (currentBaseStr - 1))
 							displayValue += buttonValue;
 					}
 				}
@@ -708,7 +708,7 @@ public class MainActivity extends Activity {
 							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX)) {
 						if((displayValue.length() == currentBaseStr - 1) && (Integer.valueOf(displayValue.substring(0, 1)) <= 3))
 							displayValue += buttonValue;
-						else if(displayValue.length() < (currentBaseStr))
+						else if(displayValue.length() < (currentBaseStr - 1))
 							displayValue += buttonValue;
 					}
 				}
@@ -744,7 +744,7 @@ public class MainActivity extends Activity {
 							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX)) {
 						if((displayValue.length() == currentBaseStr - 1) && (Integer.valueOf(displayValue.substring(0, 1)) <= 3))
 							displayValue += buttonValue;
-						else if(displayValue.length() < (currentBaseStr))
+						else if(displayValue.length() < (currentBaseStr - 1))
 							displayValue += buttonValue;
 					}
 				}
@@ -779,9 +779,9 @@ public class MainActivity extends Activity {
 				else if(currentBase == 8) {
 					if((Long.valueOf(displayValue + buttonValue, currentBase).intValue() >= INT_MIN) && 
 							(Long.valueOf(displayValue + buttonValue, currentBase).intValue() <= INT_MAX)) {
-						if((displayValue.length() == currentBaseStr - 1) && (Integer.valueOf(displayValue.substring(1, 2)) <= 3))
+						if((displayValue.length() == currentBaseStr - 1) && (Integer.valueOf(displayValue.substring(0, 1)) <= 3))
 							displayValue += buttonValue;
-						else if(displayValue.length() < (currentBaseStr))
+						else if(displayValue.length() < (currentBaseStr - 1))
 							displayValue += buttonValue;
 					}
 				}
