@@ -38,6 +38,7 @@ public class MainActivity extends Activity {
 	String baseLength;
 	boolean focusFlag = false;
 	boolean operationFlag = false;
+	boolean divZeroFlag = false;
 	int currentBase;
 	int currentBaseStr;
 	
@@ -1191,13 +1192,48 @@ public class MainActivity extends Activity {
 		    	dec_select.setEnabled(false);
 		    	hex_select.setEnabled(false);
 		    	delete_button.setEnabled(false);
+		    	divZeroFlag = true;
 			}
-			else if(operation == "/"){
+			else
 				solutionInt = Long.valueOf(operand1, currentBase).intValue() / Long.valueOf(operand2, currentBase).intValue();
-			}
 		}
 		else if(operation == "%") {
-			solutionInt = Long.valueOf(operand1, currentBase).intValue() % Long.valueOf(operand2, currentBase).intValue();
+			if(operand2 == "0") {
+				display_secondary.setText("ERROR:");
+				display_main.setText("MODULO BY ZERO");
+				display_operation.setText(null);
+		    	f_button.setEnabled(false);
+		    	e_button.setEnabled(false);
+		    	d_button.setEnabled(false);
+		    	c_button.setEnabled(false);
+		    	b_button.setEnabled(false);
+		    	a_button.setEnabled(false);
+		    	button_9.setEnabled(false);
+		    	button_8.setEnabled(false);
+		    	button_7.setEnabled(false);
+		    	button_6.setEnabled(false);
+		    	button_5.setEnabled(false);
+		    	button_4.setEnabled(false);
+		    	button_3.setEnabled(false);
+		    	button_2.setEnabled(false);
+		    	button_1.setEnabled(false);
+		    	button_0.setEnabled(false);
+		    	plusminus_button.setEnabled(false);
+		    	add_button.setEnabled(false);
+		    	sub_button.setEnabled(false);
+		    	mult_button.setEnabled(false);
+		    	div_button.setEnabled(false);
+		    	mod_button.setEnabled(false);
+		    	equal_button.setEnabled(false);
+		    	bin_select.setEnabled(false);
+		    	oct_select.setEnabled(false);
+		    	dec_select.setEnabled(false);
+		    	hex_select.setEnabled(false);
+		    	delete_button.setEnabled(false);
+		    	divZeroFlag = true;
+			}
+			else
+				solutionInt = Long.valueOf(operand1, currentBase).intValue() % Long.valueOf(operand2, currentBase).intValue();
 		}
 		switch (currentBase) {
 			case 2:
@@ -1213,10 +1249,13 @@ public class MainActivity extends Activity {
 				displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
 				break;
 		}
-		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
-		display_secondary.setText("");
-		display_operation.setText("");
+		if(!divZeroFlag) {
+			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
+			display_secondary.setText("");
+			display_operation.setText("");
+		}
 		focusFlag = true;
+		divZeroFlag = false;
 	}
 	
 	//operations
@@ -1447,9 +1486,9 @@ public class MainActivity extends Activity {
 /****************************************************************
 PROBLEMS & BUGS:
 
-1) +/- from positive to negative
-2) Octal/Decimal value control on input strings
+
 3) base switch with single input number and no-op
 4) General UI improvements
+5) switch operation on sequential
 
 ****************************************************************/
