@@ -36,8 +36,9 @@ public class MainActivity extends Activity {
 	String operand2;
 	String displayValue;
 	String baseLength;
+	String operationLock;
 	boolean recentEqualFlag = false;
-	boolean operationFlag = false;
+	boolean chooseOperationFlag = false;
 	boolean divZeroFlag = false;
 	int currentBase;
 	int currentBaseStr;
@@ -270,7 +271,8 @@ public class MainActivity extends Activity {
     	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
     	
     	operand1 = Integer.toBinaryString(Long.valueOf(operand1, currentBase).intValue());
-	    display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
+    	if((operand1 != "0") && (!recentEqualFlag))
+    		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
     	
     	operand2 = Integer.toBinaryString(Long.valueOf(operand2, currentBase).intValue());
     	
@@ -333,9 +335,8 @@ public class MainActivity extends Activity {
     	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
     	
     	operand1 = Integer.toOctalString(Long.valueOf(operand1, currentBase).intValue());
-	    if(!recentEqualFlag){
-	    	display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
-    	}
+    	if((operand1 != "0") && (!recentEqualFlag))
+    		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 	    
     	operand2 = Integer.toOctalString(Long.valueOf(operand2, currentBase).intValue());
     	
@@ -397,12 +398,10 @@ public class MainActivity extends Activity {
     	
     	
 	    operand1 = Integer.toString(Long.valueOf(operand1, currentBase).intValue());
-	    display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
-
+    	if((operand1 != "0") && (!recentEqualFlag))
+    		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 	    
     	operand2 = Integer.toString(Long.valueOf(operand2, currentBase).intValue());
-    	
-
     	
     	currentBase = 10;
 	}
@@ -460,9 +459,8 @@ public class MainActivity extends Activity {
     	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
     	
     	operand1 = Integer.toHexString(Long.valueOf(operand1, currentBase).intValue());
-	    if(!recentEqualFlag){
-	    	display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
-    	}
+    	if((operand1 != "0") && (!recentEqualFlag))
+    		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
     	
     	operand2 = Integer.toHexString(Long.valueOf(operand2, currentBase).intValue());
     	
@@ -1264,30 +1262,25 @@ public class MainActivity extends Activity {
 		long solutionInt = 0;
 		operation = "+";
 		if(operand1 != "0") {
-			operand2 = display_main.getText().toString();
+			operand2 = displayValue;
 		}
 		else {
 			operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
-			//only needed once take out of case statements
 			solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
 			switch (currentBase) {
 				case 2:
-					//solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
 					break;
 				case 8:
-					//solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toOctalString(Long.valueOf(solutionInt).intValue());
 					break;
 				case 10:
-					//solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toString(Long.valueOf(solutionInt).intValue());
 					break;
 				case 16:
-					//solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
 					displayValue = Integer.toHexString(Long.valueOf(solutionInt).intValue());
 					break;
 			}
@@ -1355,6 +1348,7 @@ public class MainActivity extends Activity {
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		int solutionInt = 0;
 		operation = "*";
+		
 		if(operand1 != "0") {
 			operand2 = display_main.getText().toString();
 		}
@@ -1402,7 +1396,7 @@ public class MainActivity extends Activity {
 			operand2 = display_main.getText().toString();
 		}
 		else {
-			operand1 = display_main.getText().toString();
+			//operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
@@ -1445,7 +1439,7 @@ public class MainActivity extends Activity {
 			operand2 = display_main.getText().toString();
 		}
 		else {
-			operand1 = display_main.getText().toString();
+			//operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
