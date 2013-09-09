@@ -1574,6 +1574,5 @@ PROBLEMS & BUGS:
 
 3) base switch with single input number and no-op
 4) General UI improvements
-5) switch operation on sequential
 
 ****************************************************************/
