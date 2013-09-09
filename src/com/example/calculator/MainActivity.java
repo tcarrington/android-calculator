@@ -195,9 +195,10 @@ public class MainActivity extends Activity {
 		displayValue = "0";
 		currentBase = 2;
 		currentBaseStr = 32;
-		recentEqualFlag = true;
+		recentEqualFlag = false;
 
 	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -255,35 +256,33 @@ public class MainActivity extends Activity {
     	//text_display conversion
     	if(displayValue != "0") {
 	    	TextView display_main = (TextView) findViewById(R.id.display_main);
-	    	//displayValue = Integer.toBinaryString(Integer.parseInt(displayValue, currentBase));
-	    	//operand1 = Integer.toBinaryString(Integer.parseInt(operand1, currentBase));
 	    	displayValue = Integer.toBinaryString(Long.valueOf(displayValue, currentBase).intValue());
 	    	operand1 = Integer.toBinaryString(Long.valueOf(operand1, currentBase).intValue());
 	    	display_main.setText(displayValue);
     	}
     	if((operand1 != "0") && (!recentEqualFlag)) {
 	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-	    	//needs to be commented out or will receive double conversion from previous statement
-	    	//operand1 = Long.toString(Long.parseLong(operand1, currentBase));
-	    	//operand2 = Integer.toBinaryString(Integer.parseInt(operand2, currentBase));
 	    	operand2 = Integer.toBinaryString(Long.valueOf(operand2, currentBase).intValue());
 	    	display_secondary.setText(operand1);
-    	}
-    	*/
+    	}*/
+    	
     	
     	
     	//text_display conversion
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-		
+		operand1 = "0";
     	displayValue = Integer.toBinaryString(Long.valueOf(displayValue, currentBase).intValue());
+    	operand1 = Integer.toBinaryString(Long.valueOf(operand1, currentBase).intValue());
+    	operand2 = Integer.toBinaryString(Long.valueOf(operand2, currentBase).intValue());
+    	
     	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
     	
-    	operand1 = Integer.toBinaryString(Long.valueOf(operand1, currentBase).intValue());
-    	if((operand1 != "0") && (!recentEqualFlag))
-    		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
     	
-    	operand2 = Integer.toBinaryString(Long.valueOf(operand2, currentBase).intValue());
+    	if((!operand1.equals("0")) && (!recentEqualFlag)) {
+    		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
+    	}
+    	
     	
     	
     	currentBase = 2;
@@ -341,13 +340,15 @@ public class MainActivity extends Activity {
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		
     	displayValue = Integer.toOctalString(Long.valueOf(displayValue, currentBase).intValue());
+    	operand1 = Integer.toOctalString(Long.valueOf(operand1, currentBase).intValue());
+    	operand2 = Integer.toOctalString(Long.valueOf(operand2, currentBase).intValue());
+    	
     	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
     	
-    	operand1 = Integer.toOctalString(Long.valueOf(operand1, currentBase).intValue());
-    	if((operand1 != "0") && (!recentEqualFlag))
+    	if((!operand1.equals("0")) && (!recentEqualFlag)) {
     		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
-	    
-    	operand2 = Integer.toOctalString(Long.valueOf(operand2, currentBase).intValue());
+    	}
+
     	
     	currentBase = 8;
     	currentBaseStr = 11;
@@ -403,14 +404,16 @@ public class MainActivity extends Activity {
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		
     	displayValue = Integer.toString(Long.valueOf(displayValue, currentBase).intValue());
-    	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
-    	
-    	
-	    operand1 = Integer.toString(Long.valueOf(operand1, currentBase).intValue());
-    	if((operand1 != "0") && (!recentEqualFlag))
-    		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
-	    
+    	operand1 = Integer.toString(Long.valueOf(operand1, currentBase).intValue());
     	operand2 = Integer.toString(Long.valueOf(operand2, currentBase).intValue());
+    	
+    	
+    	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
+	    
+    	if((!operand1.equals("0")) && (!recentEqualFlag)) {
+    		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
+    	}
+    	
     	
     	currentBase = 10;
 	}
@@ -465,13 +468,15 @@ public class MainActivity extends Activity {
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		
     	displayValue = Integer.toHexString(Long.valueOf(displayValue, currentBase).intValue());
+    	operand1 = Integer.toHexString(Long.valueOf(operand1, currentBase).intValue());
+    	operand2 = Integer.toHexString(Long.valueOf(operand2, currentBase).intValue());
+    	
+    	
     	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
     	
-    	operand1 = Integer.toHexString(Long.valueOf(operand1, currentBase).intValue());
-    	if((operand1 != "0") && (!recentEqualFlag))
+    	if((!operand1.equals("0")) && (!recentEqualFlag)) {
     		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
-    	
-    	operand2 = Integer.toHexString(Long.valueOf(operand2, currentBase).intValue());
+    	}
     	
     	currentBase = 16;
     	currentBaseStr = 8;
