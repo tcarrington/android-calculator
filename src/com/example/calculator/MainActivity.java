@@ -1274,7 +1274,7 @@ public class MainActivity extends Activity {
 			operand2 = displayValue;
 		}
 		else {
-			operand1 = display_main.getText().toString();
+			operand1 = displayValue;
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
@@ -1392,7 +1392,7 @@ public class MainActivity extends Activity {
 		operation = "*";
 		
 		if(operand1 != "0") {
-			operand2 = display_main.getText().toString();
+			operand2 = displayValue;
 		}
 		else {
 			operand1 = displayValue;
@@ -1452,10 +1452,10 @@ public class MainActivity extends Activity {
 		int solutionInt = 0;
 		operation = "/";
 		if(operand1 != "0") {
-			operand2 = display_main.getText().toString();
+			operand2 = displayValue;
 		}
 		else {
-			//operand1 = display_main.getText().toString();
+			operand1 = displayValue;
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
@@ -1512,10 +1512,10 @@ public class MainActivity extends Activity {
 		int solutionInt = 0;
 		operation = "%";
 		if(operand1 != "0") {
-			operand2 = display_main.getText().toString();
+			operand2 = displayValue;
 		}
 		else {
-			//operand1 = display_main.getText().toString();
+			operand1 = displayValue;
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
