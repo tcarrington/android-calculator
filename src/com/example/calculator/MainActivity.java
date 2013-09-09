@@ -35,13 +35,22 @@ public class MainActivity extends Activity {
 	String operation;
 	String operand2;
 	String displayValue;
-	String solutionHold;
 	
 	boolean recentEqualFlag = false;
 	boolean divZeroFlag = false;
 	
 	int currentBase;
 	int currentBaseStr;
+	
+	//cannot switch on string, using numbers
+	/*
+	 * 1: "+"
+	 * 2: "-"
+	 * 3: "*"
+	 * 4: "/"
+	 * 5: "%"
+	 */
+	int previousOperation;
 	
 	
 	//start of main code
@@ -1269,7 +1278,23 @@ public class MainActivity extends Activity {
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
-			solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
+			switch (previousOperation) {
+				case 1:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 2:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() - Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 3:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() * Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 4:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() / Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 5:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() % Long.valueOf(operand2, currentBase).intValue();
+					break;
+			}
 			switch (currentBase) {
 				case 2:
 					displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
@@ -1297,7 +1322,7 @@ public class MainActivity extends Activity {
 			display_operation.setText(operation);
 			recentEqualFlag = false;
 		}
-
+		previousOperation = 1;
 	}
 	public void send_sub(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -1313,7 +1338,23 @@ public class MainActivity extends Activity {
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
-			solutionInt = Long.valueOf(operand1, currentBase).intValue() - Long.valueOf(operand2, currentBase).intValue();
+			switch (previousOperation) {
+				case 1:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 2:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() - Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 3:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() * Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 4:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() / Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 5:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() % Long.valueOf(operand2, currentBase).intValue();
+					break;
+			}
 			switch (currentBase) {
 				case 2:
 					displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
@@ -1341,6 +1382,7 @@ public class MainActivity extends Activity {
 			display_operation.setText(operation);
 			recentEqualFlag = false;
 		}
+		previousOperation = 2;
 	}
 	public void send_mult(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -1357,7 +1399,23 @@ public class MainActivity extends Activity {
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
-			solutionInt = Long.valueOf(operand1, currentBase).intValue() * Long.valueOf(operand2, currentBase).intValue();
+			switch (previousOperation) {
+				case 1:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 2:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() - Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 3:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() * Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 4:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() / Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 5:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() % Long.valueOf(operand2, currentBase).intValue();
+					break;
+			}
 			switch (currentBase) {
 				case 2:
 					displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
@@ -1385,6 +1443,7 @@ public class MainActivity extends Activity {
 			display_operation.setText(operation);
 			recentEqualFlag = false;
 		}
+		previousOperation = 3;
 	}
 	public void send_div(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -1400,7 +1459,23 @@ public class MainActivity extends Activity {
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
-			solutionInt = Long.valueOf(operand1, currentBase).intValue() / Long.valueOf(operand2, currentBase).intValue();
+			switch (previousOperation) {
+				case 1:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 2:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() - Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 3:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() * Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 4:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() / Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 5:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() % Long.valueOf(operand2, currentBase).intValue();
+					break;
+			}
 			switch (currentBase) {
 				case 2:
 					displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
@@ -1428,6 +1503,7 @@ public class MainActivity extends Activity {
 			display_operation.setText(operation);
 			recentEqualFlag = false;
 		}
+		previousOperation = 4;
 	}
 	public void send_mod(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -1443,7 +1519,23 @@ public class MainActivity extends Activity {
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
-			solutionInt = Long.valueOf(operand1, currentBase).intValue() % Long.valueOf(operand2, currentBase).intValue();
+			switch (previousOperation) {
+				case 1:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 2:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() - Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 3:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() * Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 4:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() / Long.valueOf(operand2, currentBase).intValue();
+					break;
+				case 5:
+					solutionInt = Long.valueOf(operand1, currentBase).intValue() % Long.valueOf(operand2, currentBase).intValue();
+					break;
+			}
 			switch (currentBase) {
 				case 2:
 					displayValue = Integer.toBinaryString(Long.valueOf(solutionInt).intValue());
@@ -1471,6 +1563,7 @@ public class MainActivity extends Activity {
 			display_operation.setText(operation);
 			recentEqualFlag = false;
 		}
+		previousOperation = 5;
 	}
 }
 
