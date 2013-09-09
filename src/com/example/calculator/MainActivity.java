@@ -35,11 +35,11 @@ public class MainActivity extends Activity {
 	String operation;
 	String operand2;
 	String displayValue;
-	String baseLength;
-	String operationLock;
+	String solutionHold;
+	
 	boolean recentEqualFlag = false;
-	boolean chooseOperationFlag = false;
 	boolean divZeroFlag = false;
+	
 	int currentBase;
 	int currentBaseStr;
 	
@@ -1353,7 +1353,7 @@ public class MainActivity extends Activity {
 			operand2 = display_main.getText().toString();
 		}
 		else {
-			operand1 = display_main.getText().toString();
+			operand1 = displayValue;
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
 		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
