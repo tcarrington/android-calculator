@@ -490,7 +490,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			recentEqualFlag = false;
 		}
-		if(displayValue == "0")
+		if(displayValue.equals("0"))
 			displayValue = buttonValue;
 		else {
 			try {
@@ -526,7 +526,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			recentEqualFlag = false;
 		}
-		if(displayValue == "0")
+		if(displayValue.equals("0"))
 			displayValue = buttonValue;
 		else {
 			try {
@@ -591,7 +591,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			recentEqualFlag = false;
 		}
-		if(displayValue == "0")
+		if(displayValue.equals("0"))
 			displayValue = buttonValue;
 		else {
 			try {
@@ -627,7 +627,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			recentEqualFlag = false;
 		}
-		if(displayValue == "0")
+		if(displayValue.equals("0"))
 			displayValue = buttonValue;
 		else {
 			try {
@@ -664,7 +664,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			recentEqualFlag = false;
 		}
-		if(displayValue == "0")
+		if(displayValue.equals("0"))
 			displayValue = buttonValue;
 		else {
 			try {
@@ -700,7 +700,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			recentEqualFlag = false;
 		}
-		if(displayValue == "0")
+		if(displayValue.equals("0"))
 			displayValue = buttonValue;
 		else {
 			try {
@@ -736,7 +736,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			recentEqualFlag = false;
 		}
-		if(displayValue == "0")
+		if(displayValue.equals("0"))
 			displayValue = buttonValue;
 		else {
 			try {
@@ -773,7 +773,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			recentEqualFlag = false;
 		}
-		if(displayValue == "0")
+		if(displayValue.equals("0"))
 			displayValue = buttonValue;
 		else {
 			try {
@@ -809,7 +809,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			recentEqualFlag = false;
 		}
-		if(displayValue == "0")
+		if(displayValue.equals("0"))
 			displayValue = buttonValue;
 		else {
 			try {
@@ -836,7 +836,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			recentEqualFlag = false;
 		}
-		if(displayValue == "0")
+		if(displayValue.equals("0"))
 			displayValue = buttonValue;
 		else {
 			try {
@@ -864,7 +864,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			recentEqualFlag = false;
 		}
-		if(displayValue == "0")
+		if(displayValue.equals("0"))
 			displayValue = buttonValue;
 		else {
 			try {
@@ -886,7 +886,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			recentEqualFlag = false;
 		}
-		if(displayValue == "0")
+		if(displayValue.equals("0"))
 			displayValue = buttonValue;
 		else {
 			try {
@@ -908,7 +908,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			recentEqualFlag = false;
 		}
-		if(displayValue == "0")
+		if(displayValue.equals("0"))
 			displayValue = buttonValue;
 		else {
 			try {
@@ -931,7 +931,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			recentEqualFlag = false;
 		}
-		if(displayValue == "0")
+		if(displayValue.equals("0"))
 			displayValue = buttonValue;
 		else {
 			try {
@@ -953,7 +953,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			recentEqualFlag = false;
 		}
-		if(displayValue == "0")
+		if(displayValue.equals("0"))
 			displayValue = buttonValue;
 		else {
 			try {
@@ -975,7 +975,7 @@ public class MainActivity extends Activity {
 			displayValue = "0";
 			recentEqualFlag = false;
 		}
-		if(displayValue == "0")
+		if(displayValue.equals("0"))
 			displayValue = buttonValue;
 		else {
 			try {
@@ -1260,6 +1260,7 @@ public class MainActivity extends Activity {
 				break;
 		}
 		if(!divZeroFlag) {
+			operand1 = displayValue;
 			display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 			display_secondary.setText("");
 			display_operation.setText("");
@@ -1275,14 +1276,14 @@ public class MainActivity extends Activity {
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);		
 		long solutionInt = 0;
 		operation = "+";
-		if(operand1 != "0") {
+		if(!operand1.equals("0")) {
 			operand2 = displayValue;
 		}
 		else {
 			operand1 = displayValue;
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
-		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
+		if((!operand1.equals("0")) && (!operand2.equals("0")) && !recentEqualFlag) {
 			switch (previousOperation) {
 				case 1:
 					solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
@@ -1335,14 +1336,14 @@ public class MainActivity extends Activity {
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		int solutionInt = 0;
 		operation = "-";
-		if(operand1 != "0") {
+		if(!operand1.equals("0")) {
 			operand2 = display_main.getText().toString();
 		}
 		else {
 			operand1 = display_main.getText().toString();
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
-		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
+		if((!operand1.equals("0")) && (!operand2.equals("0")) && !recentEqualFlag) {
 			switch (previousOperation) {
 				case 1:
 					solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
@@ -1396,14 +1397,14 @@ public class MainActivity extends Activity {
 		int solutionInt = 0;
 		operation = "*";
 		
-		if(operand1 != "0") {
+		if(!operand1.equals("0")) {
 			operand2 = displayValue;
 		}
 		else {
 			operand1 = displayValue;
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
-		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
+		if((!operand1.equals("0")) && (!operand2.equals("0")) && !recentEqualFlag) {
 			switch (previousOperation) {
 				case 1:
 					solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
@@ -1456,14 +1457,15 @@ public class MainActivity extends Activity {
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		int solutionInt = 0;
 		operation = "/";
-		if(operand1 != "0") {
+		
+		if(!operand1.equals("0")) {
 			operand2 = displayValue;
 		}
 		else {
 			operand1 = displayValue;
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
-		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
+		if((!operand1.equals("0")) && (!operand2.equals("0")) && !recentEqualFlag) {
 			switch (previousOperation) {
 				case 1:
 					solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
@@ -1516,14 +1518,15 @@ public class MainActivity extends Activity {
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
 		int solutionInt = 0;
 		operation = "%";
-		if(operand1 != "0") {
+		
+		if(!operand1.equals("0")) {
 			operand2 = displayValue;
 		}
 		else {
 			operand1 = displayValue;
 		}
 		display_secondary.setText(operand1.toUpperCase(Locale.ENGLISH));
-		if((operand1 != "0") && (operand2 != "0") && !recentEqualFlag) {
+		if((!operand1.equals("0")) && (!operand2.equals("0")) && !recentEqualFlag) {
 			switch (previousOperation) {
 				case 1:
 					solutionInt = Long.valueOf(operand1, currentBase).intValue() + Long.valueOf(operand2, currentBase).intValue();
