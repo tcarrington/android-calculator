@@ -9,6 +9,10 @@ Description:	Programming Calculator - Do calculations and convert numbers in bin
 Notes:			This is my first Java and Android project.  Lots of mistakes but learning lots! : )
 Goal:			Post on Google Play!
 
+
+Release 	v1.0: 	September 8, 2013
+Beta    	v1.0.1: September 9, 2013	
+
 ********************************************************************************/
 
 package programming.calculator;
@@ -20,6 +24,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Menu;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -41,6 +46,7 @@ public class MainActivity extends Activity {
 	
 	int currentBase;
 	int currentBaseStr;
+	
 	
 	//cannot switch on string, using numbers
 	/*
@@ -252,19 +258,9 @@ public class MainActivity extends Activity {
     	dec_select.setTextColor(Color.parseColor("#FFFFFF"));
     	hex_select.setTextColor(Color.parseColor("#FFFFFF"));
     	
-    	/*
-    	//text_display conversion
-    	if(displayValue != "0") {
-	    	TextView display_main = (TextView) findViewById(R.id.display_main);
-	    	displayValue = Integer.toBinaryString(Long.valueOf(displayValue, currentBase).intValue());
-	    	operand1 = Integer.toBinaryString(Long.valueOf(operand1, currentBase).intValue());
-	    	display_main.setText(displayValue);
-    	}
-    	if((operand1 != "0") && (!recentEqualFlag)) {
-	    	TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-	    	operand2 = Integer.toBinaryString(Long.valueOf(operand2, currentBase).intValue());
-	    	display_secondary.setText(operand1);
-    	}*/
+    	
+    	((TextView) findViewById(R.id.display_main)).setTextSize(13);
+    	((TextView) findViewById(R.id.display_secondary)).setTextSize(13);
     	
     	
     	
@@ -334,6 +330,8 @@ public class MainActivity extends Activity {
     	dec_select.setTextColor(Color.parseColor("#FFFFFF"));
     	hex_select.setTextColor(Color.parseColor("#FFFFFF"));
     	
+    	((TextView) findViewById(R.id.display_main)).setTextSize(35);
+    	((TextView) findViewById(R.id.display_secondary)).setTextSize(35);
     	
     	//text_display conversion
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -398,6 +396,9 @@ public class MainActivity extends Activity {
     	oct_select.setTextColor(Color.parseColor("#FFFFFF"));
     	dec_select.setTextColor(Color.parseColor("#33B5E5"));
     	hex_select.setTextColor(Color.parseColor("#FFFFFF"));
+    	
+    	((TextView) findViewById(R.id.display_main)).setTextSize(35);
+    	((TextView) findViewById(R.id.display_secondary)).setTextSize(35);
 
     	//text_display conversion
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -462,6 +463,8 @@ public class MainActivity extends Activity {
     	dec_select.setTextColor(Color.parseColor("#FFFFFF"));
     	hex_select.setTextColor(Color.parseColor("#33B5E5"));
     	
+    	((TextView) findViewById(R.id.display_main)).setTextSize(35);
+    	((TextView) findViewById(R.id.display_secondary)).setTextSize(35);
     	
     	//text_display conversion
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -1544,6 +1547,101 @@ public class MainActivity extends Activity {
 			recentEqualFlag = false;
 		}
 		previousOperation = 5;
+	}
+
+	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+		TextView display_main = (TextView) findViewById(R.id.display_main);
+		TextView display_operation = (TextView) findViewById(R.id.display_operation);
+		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
+		//button unlocking
+		Button d_button = (Button) findViewById(R.id.d_button);
+		Button e_button = (Button) findViewById(R.id.e_button);
+		Button f_button = (Button) findViewById(R.id.f_button);
+		Button a_button = (Button) findViewById(R.id.a_button);
+		Button b_button = (Button) findViewById(R.id.b_button);
+		Button c_button = (Button) findViewById(R.id.c_button);
+		Button button_7 = (Button) findViewById(R.id.button_7);
+		Button button_8 = (Button) findViewById(R.id.button_8);
+		Button button_9 = (Button) findViewById(R.id.button_9);
+		Button button_4 = (Button) findViewById(R.id.button_4);
+		Button button_5 = (Button) findViewById(R.id.button_5);
+		Button button_6 = (Button) findViewById(R.id.button_6);
+		Button button_1 = (Button) findViewById(R.id.button_1);
+		Button button_2 = (Button) findViewById(R.id.button_2);
+		Button button_3 = (Button) findViewById(R.id.button_3);
+		Button button_0 = (Button) findViewById(R.id.button_0);
+		Button plusminus_button = (Button) findViewById(R.id.plusminus_button);
+		Button equal_button = (Button) findViewById(R.id.equal_button);
+		Button mod_button = (Button) findViewById(R.id.mod_button);
+		Button div_button = (Button) findViewById(R.id.div_button);
+		Button mult_button = (Button) findViewById(R.id.mult_button);
+		Button sub_button = (Button) findViewById(R.id.sub_button);
+		Button add_button = (Button) findViewById(R.id.add_button);
+		Button bin_select = (Button) findViewById(R.id.bin_select);
+		Button oct_select = (Button) findViewById(R.id.oct_select);
+		Button dec_select = (Button) findViewById(R.id.dec_select);
+		Button hex_select = (Button) findViewById(R.id.hex_select);
+		Button delete_button = (Button) findViewById(R.id.delete_button);
+		plusminus_button.setEnabled(true);
+    	add_button.setEnabled(true);
+    	sub_button.setEnabled(true);
+    	mult_button.setEnabled(true);
+    	div_button.setEnabled(true);
+    	mod_button.setEnabled(true);
+    	equal_button.setEnabled(true);
+    	bin_select.setEnabled(true);
+    	oct_select.setEnabled(true);
+    	dec_select.setEnabled(true);
+    	hex_select.setEnabled(true);
+    	button_1.setEnabled(true);
+    	button_0.setEnabled(true);
+    	delete_button.setEnabled(true);
+    	
+    	switch(currentBase) {
+    		case 8: 
+    	    	button_7.setEnabled(true);
+    	    	button_6.setEnabled(true);
+    	    	button_5.setEnabled(true);
+    	    	button_4.setEnabled(true);
+    	    	button_3.setEnabled(true);
+    	    	button_2.setEnabled(true);
+    	    	break;
+    		case 10:
+    	    	button_9.setEnabled(true);
+    	    	button_8.setEnabled(true);
+    	    	button_7.setEnabled(true);
+    	    	button_6.setEnabled(true);
+    	    	button_5.setEnabled(true);
+    	    	button_4.setEnabled(true);
+    	    	button_3.setEnabled(true);
+    	    	button_2.setEnabled(true);
+    	    	break;
+    		case 16:
+    			f_button.setEnabled(true);
+    	    	e_button.setEnabled(true);
+    	    	d_button.setEnabled(true);
+    	    	c_button.setEnabled(true);
+    	    	b_button.setEnabled(true);
+    	    	a_button.setEnabled(true);
+    	    	button_9.setEnabled(true);
+    	    	button_8.setEnabled(true);
+    	    	button_7.setEnabled(true);
+    	    	button_6.setEnabled(true);
+    	    	button_5.setEnabled(true);
+    	    	button_4.setEnabled(true);
+    	    	button_3.setEnabled(true);
+    	    	button_2.setEnabled(true);	
+    	}
+
+		displayValue = display_main.getText().toString();
+		recentEqualFlag = false;
+		displayValue = "0";
+		operand1 = "0";
+		operand2 = "0";
+		display_operation.setText("");
+		display_main.setText(displayValue);
+		display_secondary.setText("");
+		return true;
 	}
 }
 
