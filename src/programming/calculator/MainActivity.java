@@ -23,6 +23,7 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
@@ -178,29 +179,30 @@ public class MainActivity extends Activity {
     	c_button.setEnabled(false);
     	b_button.setEnabled(false);
     	a_button.setEnabled(false);
-    	button_9.setEnabled(false);
-    	button_8.setEnabled(false);
-    	button_7.setEnabled(false);
-    	button_6.setEnabled(false);
-    	button_5.setEnabled(false);
-    	button_4.setEnabled(false);
-    	button_3.setEnabled(false);
-    	button_2.setEnabled(false);
+    	button_9.setEnabled(true);
+    	button_8.setEnabled(true);
+    	button_7.setEnabled(true);
+    	button_6.setEnabled(true);
+    	button_5.setEnabled(true);
+    	button_4.setEnabled(true);
+    	button_3.setEnabled(true);
+    	button_2.setEnabled(true);
     	button_1.setEnabled(true);
     	button_0.setEnabled(true);
     	plusminus_button.setEnabled(true);
-    	bin_select.setTextColor(Color.parseColor("#33B5E5"));
+    	bin_select.setTextColor(Color.parseColor("#FFFFFF"));
     	oct_select.setTextColor(Color.parseColor("#FFFFFF"));
-    	dec_select.setTextColor(Color.parseColor("#FFFFFF"));
+    	dec_select.setTextColor(Color.parseColor("#33B5E5"));
     	hex_select.setTextColor(Color.parseColor("#FFFFFF"));
     	
+    	((TextView) findViewById(R.id.display_main)).setTextSize(35);
+    	((TextView) findViewById(R.id.display_secondary)).setTextSize(35);
     	
 		//required assignment for leading zero at onCreate()
     	operand1 = "0";
     	operand2 = "0";
 		displayValue = "0";
-		currentBase = 2;
-		currentBaseStr = 32;
+		currentBase = 10;
 		recentEqualFlag = false;
 
 	}
