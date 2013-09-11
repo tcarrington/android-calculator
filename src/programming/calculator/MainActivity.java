@@ -23,7 +23,6 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
@@ -1651,8 +1650,9 @@ public class MainActivity extends Activity {
 /****************************************************************
 PROBLEMS & BUGS:
 
-
-3) base switch with single input number and no-op
-4) General UI improvements
+1) General UI improvements
+2) Code cleanup... add method to end of object
+	-do not need to create new variables for each object
+	-try to abstract into other function/class?
 
 ****************************************************************/
