@@ -22,8 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_toLeftOf="@id/display_operation"
         android:gravity="right|center_vertical"
-        android:text="@string/display_secondary"
-        android:textSize="20sp" />
+        android:text="@string/display_secondary" />
 
     <!-- beginning of main display and delete button -->
     <Button
@@ -44,8 +43,7 @@
         android:layout_below="@id/display_operation"
         android:layout_toLeftOf="@id/delete_button"
         android:gravity="right|center_vertical"
-        android:text="@string/display_main"
-        android:textSize="20sp" />
+        android:text="@string/display_main" />
 
     <!-- beginning of main display and delete button -->
 
