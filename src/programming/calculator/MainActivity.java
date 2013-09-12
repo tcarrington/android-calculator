@@ -1654,5 +1654,6 @@ PROBLEMS & BUGS:
 2) Code cleanup... add method to end of object
 	-do not need to create new variables for each object
 	-try to abstract into other function/class?
+3) gen files throwing error on R.Java file, removal does not fix problem
 
 ****************************************************************/
