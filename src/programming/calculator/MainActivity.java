@@ -9,9 +9,12 @@ Description:	Programming Calculator - Do calculations and convert numbers in bin
 Notes:			This is my first Java and Android project.  Lots of mistakes but learning lots! : )
 Goal:			Post on Google Play!
 
+//List of builds that have been pushed to play (alpha, beta, production)
+Production 	v1.0: 	September 8, 2013
+Beta    	v1.0.1: September 9, 2013
 
-Release 	v1.0: 	September 8, 2013
-Beta    	v1.0.1: September 9, 2013	
+//Projected Release Dates
+Production	v1.1.0: September 14, 2013
 
 ********************************************************************************/
 
