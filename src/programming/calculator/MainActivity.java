@@ -217,47 +217,28 @@ public class MainActivity extends Activity {
 	public void bin_select(View view){
 		
 		//button locking
-		Button d_button = (Button) findViewById(R.id.d_button);
-		Button e_button = (Button) findViewById(R.id.e_button);
-		Button f_button = (Button) findViewById(R.id.f_button);
-		Button a_button = (Button) findViewById(R.id.a_button);
-		Button b_button = (Button) findViewById(R.id.b_button);
-		Button c_button = (Button) findViewById(R.id.c_button);
-		Button button_7 = (Button) findViewById(R.id.button_7);
-		Button button_8 = (Button) findViewById(R.id.button_8);
-		Button button_9 = (Button) findViewById(R.id.button_9);
-		Button button_4 = (Button) findViewById(R.id.button_4);
-		Button button_5 = (Button) findViewById(R.id.button_5);
-		Button button_6 = (Button) findViewById(R.id.button_6);
-		Button button_1 = (Button) findViewById(R.id.button_1);
-		Button button_2 = (Button) findViewById(R.id.button_2);
-		Button button_3 = (Button) findViewById(R.id.button_3);
-		Button button_0 = (Button) findViewById(R.id.button_0);
-    	f_button.setEnabled(false);
-    	e_button.setEnabled(false);
-    	d_button.setEnabled(false);
-    	c_button.setEnabled(false);
-    	b_button.setEnabled(false);
-    	a_button.setEnabled(false);
-    	button_9.setEnabled(false);
-    	button_8.setEnabled(false);
-    	button_7.setEnabled(false);
-    	button_6.setEnabled(false);
-    	button_5.setEnabled(false);
-    	button_4.setEnabled(false);
-    	button_3.setEnabled(false);
-    	button_2.setEnabled(false);
-    	button_1.setEnabled(true);
-    	button_0.setEnabled(true);
+		((Button) findViewById(R.id.d_button)).setEnabled(false);
+		((Button) findViewById(R.id.e_button)).setEnabled(false);
+		((Button) findViewById(R.id.f_button)).setEnabled(false);
+		((Button) findViewById(R.id.a_button)).setEnabled(false);
+		((Button) findViewById(R.id.b_button)).setEnabled(false);
+		((Button) findViewById(R.id.c_button)).setEnabled(false);
+		((Button) findViewById(R.id.button_7)).setEnabled(false);
+		((Button) findViewById(R.id.button_8)).setEnabled(false);
+		((Button) findViewById(R.id.button_9)).setEnabled(false);
+		((Button) findViewById(R.id.button_4)).setEnabled(false);
+		((Button) findViewById(R.id.button_5)).setEnabled(false);
+		((Button) findViewById(R.id.button_6)).setEnabled(false);
+		((Button) findViewById(R.id.button_1)).setEnabled(true);
+		((Button) findViewById(R.id.button_2)).setEnabled(false);
+		((Button) findViewById(R.id.button_3)).setEnabled(false);
+		((Button) findViewById(R.id.button_0)).setEnabled(true);
 
-    	Button bin_select = (Button) findViewById(R.id.bin_select);
-    	Button oct_select = (Button) findViewById(R.id.oct_select);
-    	Button dec_select = (Button) findViewById(R.id.dec_select);
-    	Button hex_select = (Button) findViewById(R.id.hex_select);
-    	bin_select.setTextColor(Color.parseColor("#33B5E5"));
-    	oct_select.setTextColor(Color.parseColor("#FFFFFF"));
-    	dec_select.setTextColor(Color.parseColor("#FFFFFF"));
-    	hex_select.setTextColor(Color.parseColor("#FFFFFF"));
+		((Button) findViewById(R.id.bin_select)).setTextColor(Color.parseColor("#33B5E5"));
+    	((Button) findViewById(R.id.oct_select)).setTextColor(Color.parseColor("#FFFFFF"));
+    	((Button) findViewById(R.id.dec_select)).setTextColor(Color.parseColor("#FFFFFF"));
+    	((Button) findViewById(R.id.hex_select)).setTextColor(Color.parseColor("#FFFFFF"));
+
     	
     	
     	((TextView) findViewById(R.id.display_main)).setTextSize(13);
