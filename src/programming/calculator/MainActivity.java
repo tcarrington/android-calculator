@@ -890,12 +890,13 @@ public class MainActivity extends Activity {
 	//control buttons
 	public void send_delete(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
-		if(displayValue.length() > 0){
+		if(displayValue.length() > 0) {
 			displayValue = displayValue.substring(0, displayValue.length() - 1);
 			if(displayValue.length() == 0){
 				displayValue = "0";
 			}
 		}
+		operand1 = displayValue;
 		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 	}
 	public void send_clear(View view) {
