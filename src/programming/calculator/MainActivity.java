@@ -1469,15 +1469,7 @@ public class MainActivity extends Activity {
 		previousOperation = 5;
 	}
 	
-//work in progress...
-//add functionality to swipe to clear!
-	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-		
-		return true;
-	}
 }
-
-
 /****************************************************************
 PROBLEMS & BUGS:
 
