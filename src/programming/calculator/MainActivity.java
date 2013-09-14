@@ -27,7 +27,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Menu;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -67,6 +66,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		
 		
 		//calculate metrics
 		DisplayMetrics metrics = new DisplayMetrics();
@@ -1477,6 +1478,4 @@ PROBLEMS & BUGS:
 2) Code cleanup... add method to end of object
 	-do not need to create new variables for each object
 	-try to abstract into other function/class?
-3) gen files throwing error on R.Java file, removal does not fix problem
-
 ****************************************************************/
