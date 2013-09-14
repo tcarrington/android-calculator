@@ -248,7 +248,7 @@ public class MainActivity extends Activity {
     	//text_display conversion
 		TextView display_main = (TextView) findViewById(R.id.display_main);
 		TextView display_secondary = (TextView) findViewById(R.id.display_secondary);
-		operand1 = "0";
+		
     	displayValue = Integer.toBinaryString(Long.valueOf(displayValue, currentBase).intValue());
     	operand1 = Integer.toBinaryString(Long.valueOf(operand1, currentBase).intValue());
     	operand2 = Integer.toBinaryString(Long.valueOf(operand2, currentBase).intValue());
@@ -266,7 +266,6 @@ public class MainActivity extends Activity {
     	currentBaseStr = 32;
 	}
 	public void oct_select(View view){
-		
 		
 		//button locking
 		((Button) findViewById(R.id.d_button)).setEnabled(false);
