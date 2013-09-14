@@ -381,8 +381,8 @@ public class MainActivity extends Activity {
 
 		((Button) findViewById(R.id.bin_select)).setTextColor(Color.parseColor("#FFFFFF"));
     	((Button) findViewById(R.id.oct_select)).setTextColor(Color.parseColor("#FFFFFF"));
-    	((Button) findViewById(R.id.dec_select)).setTextColor(Color.parseColor("#33B5E5"));
-    	((Button) findViewById(R.id.hex_select)).setTextColor(Color.parseColor("#FFFFFF"));
+    	((Button) findViewById(R.id.dec_select)).setTextColor(Color.parseColor("#FFFFFF"));
+    	((Button) findViewById(R.id.hex_select)).setTextColor(Color.parseColor("#33B5E5"));
     	
     	((TextView) findViewById(R.id.display_main)).setTextSize(35);
     	((TextView) findViewById(R.id.display_secondary)).setTextSize(35);
