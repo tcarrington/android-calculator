@@ -441,7 +441,7 @@ public class MainActivity extends Activity {
 			}
 			catch(Exception e) {}
 		}
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));;
 	}
 	public void send_1(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -478,7 +478,7 @@ public class MainActivity extends Activity {
 			}
 			catch(Exception e) {}
 		}
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));;
 	}
 	public void send_2(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -514,7 +514,7 @@ public class MainActivity extends Activity {
 			}
 			catch(Exception e) {}
 		}
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));;
 	}	
 	public void send_3(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -550,7 +550,7 @@ public class MainActivity extends Activity {
 			}
 			catch(Exception e) {}
 		}
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));;
 	}	
 	
 	public void send_4(View view) {
@@ -587,7 +587,7 @@ public class MainActivity extends Activity {
 			}
 			catch(Exception e) {}
 		}
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));;
 	}
 	public void send_5(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -623,7 +623,7 @@ public class MainActivity extends Activity {
 			}
 			catch(Exception e) {}
 		}
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));;
 	}
 	public void send_6(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -659,7 +659,7 @@ public class MainActivity extends Activity {
 			}
 			catch(Exception e) {}
 		}
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));;
 	}
 
 	public void send_7(View view) {
@@ -696,7 +696,7 @@ public class MainActivity extends Activity {
 			}
 			catch(Exception e) {}
 		}
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));;
 	}
 	public void send_8(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -723,7 +723,7 @@ public class MainActivity extends Activity {
 			}
 			catch(Exception e) {}
 		}
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));;
 	}
 	public void send_9(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -750,7 +750,7 @@ public class MainActivity extends Activity {
 			}
 			catch(Exception e) {}
 		}
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));;
 	}	
 
 	public void send_a(View view) {
@@ -773,7 +773,7 @@ public class MainActivity extends Activity {
 			}
 			catch(Exception e) {}
 		}
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));;
 	}
 	public void send_b(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -795,7 +795,7 @@ public class MainActivity extends Activity {
 			}
 			catch(Exception e) {}
 		}
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));;
 	}
 	public void send_c(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -817,7 +817,7 @@ public class MainActivity extends Activity {
 			}
 			catch(Exception e) {}
 		}
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));;
 	}
 	
 	public void send_d(View view) {
@@ -840,7 +840,7 @@ public class MainActivity extends Activity {
 			}
 			catch(Exception e) {}
 		}
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));;
 	}
 	public void send_e(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -862,7 +862,7 @@ public class MainActivity extends Activity {
 			}
 			catch(Exception e) {}
 		}
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));;
 	}
 	public void send_f(View view) {
 		TextView display_main = (TextView) findViewById(R.id.display_main);
@@ -884,7 +884,7 @@ public class MainActivity extends Activity {
 			}
 			catch(Exception e) {}
 		}
-		display_main.setText(displayValue);
+		display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
 	}
 
 	//control buttons
