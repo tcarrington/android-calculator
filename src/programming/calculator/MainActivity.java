@@ -12,9 +12,12 @@ Goal:			Post on Google Play!
 //List of builds that have been pushed to play (alpha, beta, production)
 Production 	v1.0: 	September 8, 2013
 Beta    	v1.0.1: September 9, 2013
+Production	v1.1.0: September 13, 2013
+Production  v1.1.1: September 14, 2013
+
 
 //Projected Release Dates
-Production	v1.1.0: September 14, 2013
+
 
 ********************************************************************************/
 
