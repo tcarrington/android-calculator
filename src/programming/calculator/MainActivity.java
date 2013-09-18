@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
 	
 	int currentBase;
 	int currentBaseStr;
-	
+
 	
 	//cannot switch on string, using numbers
 	/*
