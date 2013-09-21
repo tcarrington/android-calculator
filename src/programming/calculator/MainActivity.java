@@ -1487,6 +1487,4 @@ public class MainActivity extends Activity {
 /****************************************************************
 PROBLEMS & BUGS:
 
-1) hitting equals after inserting 1 number causes problems...
-    - looking into setting flags to fix issue
 ****************************************************************/

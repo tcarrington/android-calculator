@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/programming/calculator/MainActivity.java" line="50" />
     <bookmark url="file://$PROJECT_DIR$/src/programming/calculator/MainActivity.java" line="57" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c5d5dc1-cd32-4945-80f6-0cc40325b424" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/programming/calculator/MainActivity.java" afterPath="$PROJECT_DIR$/src/programming/calculator/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Calculator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,10 +80,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/programming/calculator/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="395" column="115" selection-start="16935" selection-end="16935" vertical-scroll-proportion="0.0" vertical-offset="6065" max-vertical-offset="7344">
+            <state line="1488" column="0" selection-start="57201" selection-end="57201" vertical-scroll-proportion="0.77886176" vertical-offset="6695" max-vertical-offset="7310">
               <folding>
                 <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
                 <element signature="e#7635#7707#0" expanded="false" />
@@ -110,21 +117,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="View.class" pinned="false" current="true" current-in-tab="true">
-        <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/view/View.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1141" column="0" selection-start="51217" selection-end="51217" vertical-scroll-proportion="0.8305648" vertical-offset="18880" max-vertical-offset="19482">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="C:\Users\Taylor\Desktop\anroid_projects\calculator_key" />
+    <option name="KEY_ALIAS" value="tcarrington" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -138,6 +140,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/programming/calculator/MainActivity.java" />
       </list>
     </option>
@@ -251,11 +254,15 @@
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="ExportedApkPath" value="C:\my_repositories\android\projects\CalculatorAPK\Calculator.apk" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="ExportedModule" value="Calculator" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/anroid_projects/calculator_key" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="AndroidRunProguardForReleaseBuild" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
@@ -841,9 +848,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/view/View.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1141" column="0" selection-start="51217" selection-end="51217" vertical-scroll-proportion="0.8305648" vertical-offset="18880" max-vertical-offset="19482">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="30" selection-start="203" selection-end="203" vertical-scroll-proportion="0.110569105" vertical-offset="0" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/programming/calculator/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="395" column="115" selection-start="16935" selection-end="16935" vertical-scroll-proportion="0.0" vertical-offset="6065" max-vertical-offset="7344">
+        <state line="1488" column="0" selection-start="57201" selection-end="57201" vertical-scroll-proportion="0.77886176" vertical-offset="6695" max-vertical-offset="7310">
           <folding>
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="e#7635#7707#0" expanded="false" />
@@ -873,13 +894,6 @@
             <element signature="method#send_div#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_mod#0;class#MainActivity#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/view/View.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1141" column="0" selection-start="51217" selection-end="51217" vertical-scroll-proportion="0.8305648" vertical-offset="18880" max-vertical-offset="19482">
-          <folding />
         </state>
       </provider>
     </entry>
