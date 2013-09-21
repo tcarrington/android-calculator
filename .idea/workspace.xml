@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/programming/calculator/MainActivity.java" line="49" />
-    <bookmark url="file://$PROJECT_DIR$/src/programming/calculator/MainActivity.java" line="56" />
+    <bookmark url="file://$PROJECT_DIR$/src/programming/calculator/MainActivity.java" line="50" />
+    <bookmark url="file://$PROJECT_DIR$/src/programming/calculator/MainActivity.java" line="57" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c5d5dc1-cd32-4945-80f6-0cc40325b424" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/programming/calculator/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/programming/calculator/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calculator.iml" afterPath="$PROJECT_DIR$/Calculator.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/programming/calculator/MainActivity.java" afterPath="$PROJECT_DIR$/src/programming/calculator/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Calculator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,10 +76,10 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/programming/calculator/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1052" column="8" selection-start="41307" selection-end="41307" vertical-scroll-proportion="0.502439" vertical-offset="5658" max-vertical-offset="8296">
+            <state line="984" column="27" selection-start="38161" selection-end="38161" vertical-scroll-proportion="0.4894309" vertical-offset="4935" max-vertical-offset="5780">
               <folding>
                 <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#7564#7636#0" expanded="false" />
+                <element signature="e#7635#7707#0" expanded="false" />
                 <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
@@ -106,6 +102,7 @@
                 <element signature="method#send_f#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#send_delete#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#send_plusminus#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#send_equal#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#send_add#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#send_sub#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#send_mult#0;class#MainActivity#0" expanded="false" />
@@ -247,14 +244,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="recentsLimit" value="5" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Android Application.Calculator">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -436,9 +437,9 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3137045" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -449,7 +450,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20535715" sideWeight="0.6862955" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28431374" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28372592" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
@@ -502,7 +503,7 @@
         <state line="1151" column="78" selection-start="44914" selection-end="44914" vertical-scroll-proportion="0.0" vertical-offset="4182" max-vertical-offset="4182">
           <folding>
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#7564#7636#0" expanded="false" />
+            <element signature="e#7635#7707#0" expanded="false" />
             <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
@@ -525,6 +526,7 @@
             <element signature="method#send_f#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_delete#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_plusminus#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#send_equal#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_add#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_sub#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_mult#0;class#MainActivity#0" expanded="false" />
@@ -539,7 +541,7 @@
         <state line="1460" column="49" selection-start="55927" selection-end="55927" vertical-scroll-proportion="0.0" vertical-offset="24803" max-vertical-offset="24990">
           <folding>
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#7564#7636#0" expanded="false" />
+            <element signature="e#7635#7707#0" expanded="false" />
             <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
@@ -562,6 +564,7 @@
             <element signature="method#send_f#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_delete#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_plusminus#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#send_equal#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_add#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_sub#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_mult#0;class#MainActivity#0" expanded="false" />
@@ -576,7 +579,7 @@
         <state line="1471" column="45" selection-start="56183" selection-end="56183" vertical-scroll-proportion="0.0" vertical-offset="24803" max-vertical-offset="24990">
           <folding>
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#7564#7636#0" expanded="false" />
+            <element signature="e#7635#7707#0" expanded="false" />
             <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
@@ -599,6 +602,7 @@
             <element signature="method#send_f#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_delete#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_plusminus#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#send_equal#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_add#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_sub#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_mult#0;class#MainActivity#0" expanded="false" />
@@ -613,7 +617,7 @@
         <state line="1471" column="45" selection-start="56183" selection-end="56183" vertical-scroll-proportion="0.0" vertical-offset="24837" max-vertical-offset="24990">
           <folding>
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#7564#7636#0" expanded="false" />
+            <element signature="e#7635#7707#0" expanded="false" />
             <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
@@ -636,6 +640,7 @@
             <element signature="method#send_f#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_delete#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_plusminus#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#send_equal#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_add#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_sub#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_mult#0;class#MainActivity#0" expanded="false" />
@@ -650,7 +655,7 @@
         <state line="10" column="0" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="25024">
           <folding>
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#7564#7636#0" expanded="false" />
+            <element signature="e#7635#7707#0" expanded="false" />
             <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
@@ -673,6 +678,7 @@
             <element signature="method#send_f#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_delete#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_plusminus#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#send_equal#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_add#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_sub#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_mult#0;class#MainActivity#0" expanded="false" />
@@ -687,7 +693,7 @@
         <state line="10" column="0" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="25024">
           <folding>
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#7564#7636#0" expanded="false" />
+            <element signature="e#7635#7707#0" expanded="false" />
             <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
@@ -710,6 +716,7 @@
             <element signature="method#send_f#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_delete#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_plusminus#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#send_equal#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_add#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_sub#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_mult#0;class#MainActivity#0" expanded="false" />
@@ -729,7 +736,7 @@
         <state line="116" column="45" selection-start="4203" selection-end="4203" vertical-scroll-proportion="0.0" vertical-offset="1802" max-vertical-offset="25194">
           <folding>
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#7564#7636#0" expanded="false" />
+            <element signature="e#7635#7707#0" expanded="false" />
             <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
@@ -752,6 +759,7 @@
             <element signature="method#send_f#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_delete#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_plusminus#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#send_equal#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_add#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_sub#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_mult#0;class#MainActivity#0" expanded="false" />
@@ -766,7 +774,7 @@
         <state line="116" column="45" selection-start="4203" selection-end="4203" vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="24837">
           <folding>
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#7564#7636#0" expanded="false" />
+            <element signature="e#7635#7707#0" expanded="false" />
             <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
@@ -789,6 +797,7 @@
             <element signature="method#send_f#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_delete#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_plusminus#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#send_equal#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_add#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_sub#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_mult#0;class#MainActivity#0" expanded="false" />
@@ -803,7 +812,7 @@
         <state line="66" column="23" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.0" vertical-offset="1155" max-vertical-offset="48213">
           <folding>
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#7564#7636#0" expanded="false" />
+            <element signature="e#7635#7707#0" expanded="false" />
             <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
@@ -826,6 +835,7 @@
             <element signature="method#send_f#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_delete#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_plusminus#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#send_equal#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_add#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_sub#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_mult#0;class#MainActivity#0" expanded="false" />
@@ -854,10 +864,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/programming/calculator/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1052" column="8" selection-start="41307" selection-end="41307" vertical-scroll-proportion="0.502439" vertical-offset="5658" max-vertical-offset="8296">
+        <state line="984" column="27" selection-start="38161" selection-end="38161" vertical-scroll-proportion="0.4894309" vertical-offset="4935" max-vertical-offset="5780">
           <folding>
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#7564#7636#0" expanded="false" />
+            <element signature="e#7635#7707#0" expanded="false" />
             <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
@@ -880,6 +890,7 @@
             <element signature="method#send_f#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_delete#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_plusminus#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#send_equal#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_add#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_sub#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_mult#0;class#MainActivity#0" expanded="false" />

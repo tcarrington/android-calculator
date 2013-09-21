@@ -35,6 +35,7 @@ public class MainActivity extends Activity {
 	String operation;
 	String operand2;
 	String displayValue;
+    String holdRecentEqualOperand;
 	
 	boolean recentEqualFlag = false;
 	boolean divZeroFlag = false;
@@ -199,6 +200,7 @@ public class MainActivity extends Activity {
     	operand2 = "0";
 		displayValue = "0";
         operation="";
+        holdRecentEqualOperand="0";
 		currentBase = 10;
 		recentEqualFlag = false;
 
@@ -978,6 +980,7 @@ public class MainActivity extends Activity {
     	}
 
 		displayValue = display_main.getText().toString();
+        holdRecentEqualOperand = "0";
 		recentEqualFlag = false;
 		displayValue = "0";
 		operand1 = "0";
@@ -1050,7 +1053,11 @@ public class MainActivity extends Activity {
 
         if(operation != "")
 		    operand2 = displayValue;
-        
+        if(recentEqualFlag){
+            operand2 =  holdRecentEqualOperand;
+        }
+
+
 		long solutionInt = 0;
 		
 		if(operation == "+") {
@@ -1059,7 +1066,6 @@ public class MainActivity extends Activity {
 		else if(operation == "-") {
 			solutionInt = Long.valueOf(operand1, currentBase).intValue() - Long.valueOf(operand2, currentBase).intValue();
 		}
-
 		else if(operation == "*") {
 			solutionInt = Long.valueOf(operand1, currentBase).intValue() * Long.valueOf(operand2, currentBase).intValue();
 		}
@@ -1139,6 +1145,7 @@ public class MainActivity extends Activity {
 			else
 				solutionInt = Long.valueOf(operand1, currentBase).intValue() % Long.valueOf(operand2, currentBase).intValue();
 		}
+
         if (operation != ""){
             switch (currentBase) {
                 case 2:
@@ -1155,8 +1162,8 @@ public class MainActivity extends Activity {
                     break;
             }
 
-
             if(!divZeroFlag) {
+                holdRecentEqualOperand = operand2;
                 operand1 = displayValue;
                 display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
                 display_secondary.setText("");
