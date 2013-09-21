@@ -249,6 +249,7 @@ public class MainActivity extends Activity {
     	displayValue = Integer.toBinaryString(Long.valueOf(displayValue, currentBase).intValue());
     	operand1 = Integer.toBinaryString(Long.valueOf(operand1, currentBase).intValue());
     	operand2 = Integer.toBinaryString(Long.valueOf(operand2, currentBase).intValue());
+        holdRecentEqualOperand = Integer.toBinaryString(Long.valueOf(holdRecentEqualOperand, currentBase).intValue());
     	
     	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
     	
@@ -297,6 +298,7 @@ public class MainActivity extends Activity {
     	displayValue = Integer.toOctalString(Long.valueOf(displayValue, currentBase).intValue());
     	operand1 = Integer.toOctalString(Long.valueOf(operand1, currentBase).intValue());
     	operand2 = Integer.toOctalString(Long.valueOf(operand2, currentBase).intValue());
+        holdRecentEqualOperand = Integer.toOctalString(Long.valueOf(holdRecentEqualOperand, currentBase).intValue());
     	
     	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
     	
@@ -344,6 +346,7 @@ public class MainActivity extends Activity {
     	displayValue = Integer.toString(Long.valueOf(displayValue, currentBase).intValue());
     	operand1 = Integer.toString(Long.valueOf(operand1, currentBase).intValue());
     	operand2 = Integer.toString(Long.valueOf(operand2, currentBase).intValue());
+        holdRecentEqualOperand = Integer.toString(Long.valueOf(holdRecentEqualOperand, currentBase).intValue());
     	
     	
     	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
@@ -390,6 +393,7 @@ public class MainActivity extends Activity {
     	displayValue = Integer.toHexString(Long.valueOf(displayValue, currentBase).intValue());
     	operand1 = Integer.toHexString(Long.valueOf(operand1, currentBase).intValue());
     	operand2 = Integer.toHexString(Long.valueOf(operand2, currentBase).intValue());
+        holdRecentEqualOperand = Integer.toHexString(Long.valueOf(holdRecentEqualOperand, currentBase).intValue());
     	
     	
     	display_main.setText(displayValue.toUpperCase(Locale.ENGLISH));
