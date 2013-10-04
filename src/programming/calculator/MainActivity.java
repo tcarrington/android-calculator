@@ -1485,6 +1485,10 @@ public class MainActivity extends Activity {
 	
 }
 /****************************************************************
-PROBLEMS & BUGS:
+New features list:
+
+ Swipe to clear!
+ More color options
+ More operations
 
 ****************************************************************/

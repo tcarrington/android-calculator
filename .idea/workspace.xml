@@ -11,7 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c5d5dc1-cd32-4945-80f6-0cc40325b424" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/programming/calculator/BuildConfig.class" afterPath="$PROJECT_DIR$/bin/classes/programming/calculator/BuildConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/programming/calculator/MainActivity.class" afterPath="$PROJECT_DIR$/bin/classes/programming/calculator/MainActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/programming/calculator/MainActivity.java" afterPath="$PROJECT_DIR$/src/programming/calculator/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -34,7 +35,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -71,6 +71,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -83,10 +84,15 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/programming/calculator/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1488" column="0" selection-start="57201" selection-end="57201" vertical-scroll-proportion="0.77886176" vertical-offset="6695" max-vertical-offset="7310">
+            <state line="1491" column="16" selection-start="57257" selection-end="57257" vertical-scroll-proportion="0.8081264" vertical-offset="1189" max-vertical-offset="1700">
               <folding>
+                <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
                 <element signature="e#7635#7707#0" expanded="false" />
+                <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#hex_select#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#send_0#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#send_1#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#send_2#0;class#MainActivity#0" expanded="false" />
@@ -146,10 +152,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1672" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1066" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -177,6 +183,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -247,8 +255,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -287,6 +293,7 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -385,6 +392,7 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="false" name="Calculator" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -401,6 +409,7 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <RunnerSettings RunnerId="AndroidDebugRunner" />
       <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
@@ -443,7 +452,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1672" y="-8" width="1696" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -452,24 +461,24 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3137045" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20373514" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3137045" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20373514" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20535715" sideWeight="0.6862955" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17878787" sideWeight="0.7962648" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28372592" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -515,8 +524,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="1151" column="78" selection-start="44914" selection-end="44914" vertical-scroll-proportion="0.0" vertical-offset="4182" max-vertical-offset="4182">
           <folding>
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="e#7635#7707#0" expanded="false" />
+            <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#hex_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_0#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_1#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_2#0;class#MainActivity#0" expanded="false" />
@@ -550,8 +564,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="1460" column="49" selection-start="55927" selection-end="55927" vertical-scroll-proportion="0.0" vertical-offset="24803" max-vertical-offset="24990">
           <folding>
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="e#7635#7707#0" expanded="false" />
+            <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#hex_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_0#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_1#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_2#0;class#MainActivity#0" expanded="false" />
@@ -585,8 +604,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="1471" column="45" selection-start="56183" selection-end="56183" vertical-scroll-proportion="0.0" vertical-offset="24803" max-vertical-offset="24990">
           <folding>
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="e#7635#7707#0" expanded="false" />
+            <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#hex_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_0#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_1#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_2#0;class#MainActivity#0" expanded="false" />
@@ -620,8 +644,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="1471" column="45" selection-start="56183" selection-end="56183" vertical-scroll-proportion="0.0" vertical-offset="24837" max-vertical-offset="24990">
           <folding>
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="e#7635#7707#0" expanded="false" />
+            <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#hex_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_0#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_1#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_2#0;class#MainActivity#0" expanded="false" />
@@ -655,8 +684,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="25024">
           <folding>
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="e#7635#7707#0" expanded="false" />
+            <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#hex_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_0#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_1#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_2#0;class#MainActivity#0" expanded="false" />
@@ -690,8 +724,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="25024">
           <folding>
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="e#7635#7707#0" expanded="false" />
+            <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#hex_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_0#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_1#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_2#0;class#MainActivity#0" expanded="false" />
@@ -730,8 +769,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="45" selection-start="4203" selection-end="4203" vertical-scroll-proportion="0.0" vertical-offset="1802" max-vertical-offset="25194">
           <folding>
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="e#7635#7707#0" expanded="false" />
+            <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#hex_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_0#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_1#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_2#0;class#MainActivity#0" expanded="false" />
@@ -765,8 +809,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="45" selection-start="4203" selection-end="4203" vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="24837">
           <folding>
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="e#7635#7707#0" expanded="false" />
+            <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#hex_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_0#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_1#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_2#0;class#MainActivity#0" expanded="false" />
@@ -800,8 +849,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="23" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.0" vertical-offset="1155" max-vertical-offset="48213">
           <folding>
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="e#7635#7707#0" expanded="false" />
+            <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#hex_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_0#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_1#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_2#0;class#MainActivity#0" expanded="false" />
@@ -850,9 +904,7 @@
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/view/View.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1141" column="0" selection-start="51217" selection-end="51217" vertical-scroll-proportion="0.8305648" vertical-offset="18880" max-vertical-offset="19482">
-          <folding />
-        </state>
+        <state line="1141" column="0" selection-start="51217" selection-end="51217" vertical-scroll-proportion="0.8305648" vertical-offset="18880" max-vertical-offset="19482" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
@@ -864,10 +916,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/programming/calculator/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1488" column="0" selection-start="57201" selection-end="57201" vertical-scroll-proportion="0.77886176" vertical-offset="6695" max-vertical-offset="7310">
+        <state line="1491" column="16" selection-start="57257" selection-end="57257" vertical-scroll-proportion="0.8081264" vertical-offset="1189" max-vertical-offset="1700">
           <folding>
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="e#7635#7707#0" expanded="false" />
+            <element signature="method#bin_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#oct_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#dec_select#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#hex_select#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_0#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_1#0;class#MainActivity#0" expanded="false" />
             <element signature="method#send_2#0;class#MainActivity#0" expanded="false" />
