@@ -1491,4 +1491,8 @@ New features list:
  More color options
  More operations
 
+
+Bug:
+
+ division by zero does not work when switching bases
 ****************************************************************/
