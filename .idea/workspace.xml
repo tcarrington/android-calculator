@@ -25,7 +25,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5c5d5dc1-cd32-4945-80f6-0cc40325b424" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/programming/calculator/MainActivity.java" afterPath="$PROJECT_DIR$/src/programming/calculator/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Calculator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,7 +94,7 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/programming/calculator/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1076" column="33" selection-start="42483" selection-end="42483" vertical-scroll-proportion="0.61377245" vertical-offset="3007" max-vertical-offset="5627">
+            <state line="1114" column="33" selection-start="43837" selection-end="43837" vertical-scroll-proportion="0.28293413" vertical-offset="3874" max-vertical-offset="5627">
               <folding>
                 <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
@@ -489,7 +488,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20321469" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20321469" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -883,7 +882,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/programming/calculator/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1076" column="33" selection-start="42483" selection-end="42483" vertical-scroll-proportion="0.61377245" vertical-offset="3007" max-vertical-offset="5627">
+        <state line="1114" column="33" selection-start="43837" selection-end="43837" vertical-scroll-proportion="0.28293413" vertical-offset="3874" max-vertical-offset="5627">
           <folding>
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
