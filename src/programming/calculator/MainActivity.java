@@ -1074,7 +1074,7 @@ public class MainActivity extends Activity {
 			solutionInt = Long.valueOf(operand1, currentBase).intValue() * Long.valueOf(operand2, currentBase).intValue();
 		}
 		else if(operation == "/") {
-			if(operand2 == "0") {
+			if(operand2.equals("0")) {
 				display_secondary.setText("ERROR:");
 				display_main.setText("DIV BY ZERO");
 				display_operation.setText(null);
